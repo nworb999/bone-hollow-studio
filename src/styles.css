@@ -1,9 +1,29 @@
+body {
+  text-align: center;
+  font-family: "Inconsolata", monospace;
+}
+
+.title {
+  color: #0e1f08;
+}
+
+.text {
+  font-family: "Open Sans", sans-serif;
+  color: #643333;
+  text-align: center;
+}
+
+.header {
+  font-family: "Chivo", sans-serif;
+  color: #0e1f08;
+}
+
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #526337;
-  color: white;
-  text-align: center;
+  background-color: #263430;
+  color: #989c9b;
+  text-align: left;
 }
