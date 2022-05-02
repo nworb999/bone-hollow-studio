@@ -50,10 +50,30 @@ a {
   text-align: center;
 }
 
+.para {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.pigImage {
+  width: 50%;
+}
+
 .footer {
   position: fixed;
   left: 0;
+  height: 50px;
   bottom: 0;
+  padding-inline-start: 40px;
+  padding-inline-end: 40px;
   width: 100%;
   background-color: #263430;
   color: #989c9b;
