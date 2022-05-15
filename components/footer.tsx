@@ -7,18 +7,16 @@ export default function Footer() {
     <>
       <footer className={styles.footer}>
         <div className={styles.footer_title}>
-          <p>Bone Hollow</p>
+          <p>bone hollow</p>
         </div>
         <div className={styles.footer_contact}>
-          <p>Contact</p>
-          /* eslint-disable */
+          <p>contact</p>
           <Link href={"mailto:erika@bonehollow.studio"}>
             erika@bonehollow.studio
           </Link>
-          /* eslint-enable */
         </div>
         <div className={styles.footer_social}>
-          <p>Social</p>
+          <p>social</p>
           <Link href={"https://www.instagram.com/bonehollowstudio/"} passHref>
             <a target="_blank" rel="noopener noreferrer">
               instagram
@@ -27,7 +25,7 @@ export default function Footer() {
           <p>facebook</p>
         </div>
         <div className={styles.footer_copyright}>
-          © Copyright Bone Hollow LLC
+          © copyright bone hollow llc
         </div>
       </footer>
     </>
