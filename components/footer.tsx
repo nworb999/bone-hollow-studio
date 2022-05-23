@@ -6,23 +6,25 @@ export default function Footer() {
   return (
     <>
       <footer className={styles.footer}>
-        <div className={styles.footer_title}>
-          <p>bone hollow</p>
-        </div>
+        <div className={styles.footer_title}>bone hollow</div>
         <div className={styles.footer_contact}>
-          <p>contact</p>
+          <h3>contact</h3>
           <Link href={"mailto:erika@bonehollow.studio"}>
             erika@bonehollow.studio
           </Link>
         </div>
         <div className={styles.footer_social}>
-          <p>social</p>
+          <h3>social</h3>
           <Link href={"https://www.instagram.com/bonehollowstudio/"} passHref>
             <a target="_blank" rel="noopener noreferrer">
-              instagram
+              instagram <br></br>
             </a>
           </Link>
-          <p>facebook</p>
+          <Link href={"https://www.instagram.com/bonehollowstudio/"} passHref>
+            <a target="_blank" rel="noopener noreferrer">
+              facebook
+            </a>
+          </Link>
         </div>
         <div className={styles.footer_copyright}>
           © copyright bone hollow llc

@@ -19,7 +19,7 @@ main {
   max-width: 1000px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 4rem 0;
+  /* padding: 4rem 0; */
   flex: 1;
   display: grid;
   grid-row: span;
@@ -52,10 +52,15 @@ section {
   }
 }
 
+p {
+  font-family: "Libre Franklin", sans-serif;
+}
+
 nav {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 10px;
+  z-index: 5;
   position: sticky;
   top: 0;
   gap: 1rem;
@@ -67,6 +72,10 @@ nav {
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+nav.scrolled {
+  background-color: #eee7d6;
 }
 
 ul {
@@ -83,20 +92,9 @@ a {
 
 h2 {
   color: #0e1f08;
-}
-
-.flexRow {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
 }
 
 img {
   max-width: 50%;
-}
-
-.pigImage {
-  width: 50%;
 }

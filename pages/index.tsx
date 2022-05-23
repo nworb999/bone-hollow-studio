@@ -44,25 +44,25 @@ const Home: NextPage = () => {
           />
         </article>
         <article className={styles.article}>
-          <p id="para1">
+          <h2 id="para1">
             each home is designed and built with the surroundings taking the
             lead role
-          </p>
+          </h2>
         </article>
       </main>
       <main className={styles.main}>
         <article className={styles.article}>
-          <p>
+          <h2>
             the result is a rendezvous of rural tranquility and custom design
-          </p>
+          </h2>
           <div id="para2">
-            <p>
+            <h2>
               we love living in the Hudson Valley and want to help maintain its
               special rural community
               <br />
               there's something about this place that sparks creativity and
               innovation
-            </p>
+            </h2>
           </div>
         </article>
       </main>
