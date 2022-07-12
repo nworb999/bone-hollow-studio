@@ -1,0 +1,13 @@
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.caption {
+  font-family: "Inconsolata", monospace;
+  font-weight: 500;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
