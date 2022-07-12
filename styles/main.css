@@ -1,0 +1,17 @@
+html {
+  background: url(../public/clouds.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.caption {
+  font-family: "Inconsolata", monospace;
+  color: #0e1f08;
+  font-weight: 500;
+  position: absolute;
+  font-size: 8vw;
+  top: 25px;
+  left: 30px;
+}
