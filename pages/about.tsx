@@ -26,8 +26,8 @@ const Home: NextPage = () => {
         </article>
 
         <article className={styles.article}>
-          <h2 id="owner">owner</h2>
-          <p id="para1Text">
+          <h2 id="ownerHeading">owner</h2>
+          <p id="ownerPara1">
             Erika grew up in Berlin, Germany and the American Midwest. A
             graduate of Northwestern University, she has over 15 years of
             experience in producing commercials and special effects for an
