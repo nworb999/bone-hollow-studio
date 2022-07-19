@@ -1,4 +1,5 @@
 import Head from "next/head";
+import NavBar from "../components/NavBar";
 import { Global } from "@emotion/react";
 import xw from "xwind";
 
@@ -14,6 +15,7 @@ function App({ Component, pageProps }) {
         styles={xw`XWIND_BASE XWIND_GLOBAL`}
       />
       <Component {...pageProps} />
+      <Component {...NavBar} />
     </>
   );
 }
