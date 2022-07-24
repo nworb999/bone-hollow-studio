@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import pigPic from "../public/assets/sample.jpeg";
 import backyard from "../public/assets/accord-spring-209.jpg";
 import coverPhoto from "../public/assets/accord-spring-446.jpg";
 
@@ -12,7 +10,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <article className={styles.article}>
           {" "}
-          <div className={styles.home_cover}>
+          <div id="coverPhoto" className={styles.home_cover}>
             {" "}
             <Image
               alt="Catskills"
@@ -23,6 +21,7 @@ const Home: NextPage = () => {
           </div>
         </article>
       </main>
+      <div id="empty-div-row"></div>
       <main className={styles.main}>
         <article className={styles.article}>
           <div className={styles.home_cover_overlay}>

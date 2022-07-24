@@ -36,28 +36,13 @@ section {
   gap: 2rem;
 }
 
-@supports (display: grid) {
-  main {
-    max-width: 10000px;
-    margin: 0;
-  }
-  article {
-    margin: 0;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  section {
-    grid-template-columns: none;
-  }
-}
-
 p {
   font-family: "Libre Franklin", sans-serif;
 }
 
 nav {
   display: grid;
+  background-color: #eee7d6;
   grid-template-columns: repeat(7, 1fr);
   gap: 10px;
   z-index: 5;
@@ -74,8 +59,8 @@ nav {
   justify-content: center;
 }
 
-nav.scrolled {
-  background-color: #eee7d6;
+body.transparent-nav nav {
+  background-color: transparent;
 }
 
 ul {
@@ -97,4 +82,24 @@ h2 {
 
 img {
   max-width: 50%;
+}
+
+div.empty-div-row {
+  font-size: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    grid-template-columns: none;
+  }
+}
+
+@supports (display: grid) {
+  main {
+    max-width: 10000px;
+    margin: 0;
+  }
+  article {
+    margin: 0;
+  }
 }
