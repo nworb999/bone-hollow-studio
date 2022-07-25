@@ -37,9 +37,9 @@ const Home: NextPage = () => {
           <Image
             alt="poolhouse shot"
             src={backyard}
-            width={500}
-            height={500}
-            objectFit="contain"
+            width={1000}
+            height={1000}
+            objectFit="cover"
           />
         </article>
         <article className={styles.article}>

@@ -14,21 +14,29 @@ export default function NavBar() {
       <Script src="main.js" strategy="lazyOnload" />
       <nav>
         <div className={styles.nav_about}>
-          <Link href="/about">about</Link>
+          <Link href="/about">
+            <a>about</a>
+          </Link>
         </div>
         <div className={styles.nav_homes}>
-          <Link href="/homes">homes</Link>
+          <Link href="/homes">
+            <a>homes</a>
+          </Link>
         </div>
         <div className={styles.nav_title}>
           <Link href="/" className={styles.nav_title}>
-            bone hollow
+            <a>bone hollow</a>
           </Link>
         </div>
         <div className={styles.nav_hudson_valley}>
-          <Link href="/hudsonValley">hudson valley</Link>
+          <Link href="/hudsonValley">
+            <a>hudson valley</a>
+          </Link>
         </div>
         <div className={styles.nav_contact}>
-          <Link href="/contact">contact</Link>
+          <Link href="/contact">
+            <a>contact</a>
+          </Link>
         </div>
       </nav>
     </>

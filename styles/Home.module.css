@@ -70,13 +70,13 @@
 }
 
 .footer_contact {
-  grid-column: 3 / 3;
+  grid-column: 4 / 4;
   grid-row: 1;
   padding-top: 60px;
 }
 
 .footer_social {
-  grid-column: 4 / 4;
+  grid-column: 3 / 3;
   grid-row: 1;
   padding-top: 60px;
 }

@@ -1,5 +1,8 @@
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 html {
   background-color: #eee7d6;
@@ -19,7 +22,6 @@ main {
   max-width: 1000px;
   min-height: 100vh;
   margin: 0 auto;
-  /* padding: 4rem 0; */
   flex: 1;
   display: grid;
   grid-row: span;
@@ -31,6 +33,7 @@ main {
 
 section {
   display: grid;
+  margin: 10%;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: fit-content(100%);
   gap: 2rem;
@@ -63,6 +66,28 @@ body.transparent-nav nav {
   background-color: transparent;
 }
 
+nav a {
+  transition: 0.3s ease-in;
+  border-bottom: solid 2px rgba(0, 0, 0, 0);
+  padding-bottom: 3px;
+}
+
+nav a:hover {
+  border-color: #555;
+}
+
+nav a:active {
+  border-color: #555;
+}
+
+h1 {
+  margin-top: 15%;
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  color: #515151;
+  gap: 4vh;
+}
+
 ul {
   padding-inline-start: 40px;
   padding-inline-end: 40px;
@@ -91,6 +116,24 @@ div.empty-div-row {
 @media only screen and (max-width: 600px) {
   section {
     grid-template-columns: none;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  * {
+    overflow-wrap: normal;
+  }
+  nav {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 260px) {
+  * {
+    overflow-wrap: break-word;
+  }
+  img {
+    max-width: 100%;
   }
 }
 
