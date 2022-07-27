@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import fall from "../public/assets/accord-fall-172.jpg";
-import headshot from "../public/assets/headshot.png";
+import door from "../public/assets/erika/doorway.jpg";
+import headshot from "../public/assets/erika/outside.jpg";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
             <article>
               <Image
                 alt="fall shot with dark brown pool house in the foreground, shot from the side"
-                src={fall}
+                src={door}
                 width={500}
                 height={500}
                 objectFit="cover"

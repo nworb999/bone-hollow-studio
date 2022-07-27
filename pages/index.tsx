@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import backyard from "../public/assets/accord-spring-209.jpg";
-import coverPhoto from "../public/assets/accord-spring-446.jpg";
+import backyard from "../public/assets/poolhouse/aerial.jpg";
+import coverPhoto from "../public/assets/clouds1.jpg";
 
 const Home: NextPage = () => {
   return (
