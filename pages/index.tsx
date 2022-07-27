@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <article className={styles.article}>
           <div className={styles.home_cover_overlay}>
-            <h2 id="heading">
+            <h2>
               bone hollow is a boutique development company located in Ulster
               County
             </h2>
@@ -43,16 +43,29 @@ const Home: NextPage = () => {
           />
         </article>
         <article className={styles.article}>
-          <h2 id="para1">
+          <h2>
             each home is designed and built with the surroundings taking the
             lead role
+          </h2>
+          <h2>
+            the result is a combination of rural tranquility and custom design
           </h2>
         </article>
       </main>
       <main className={styles.main}>
         <article className={styles.article}>
           <h2>
-            the result is a rendezvous of rural tranquility and custom design
+            our work is founded in the belief that form and function are both
+            requisite for a well-designed home{" "}
+          </h2>
+          <h2>
+            we apply that perspective to projects of every size, from
+            furnishings to new builds
+          </h2>
+          <h2>
+            the spaces we create are characterized by luxurious textures,
+            quality materials, and a minimalistic style, because we believe that
+            the way your home feels is just as significant as how it looks
           </h2>
           <div id="para2">
             <h2>

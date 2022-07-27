@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
           <section className={styles.section}>
             {[...Array(8)].map((_, i) => (
-              <article>
+              <article className={styles.article}>
                 <Link href="/project">
                   <a>
                     <Image

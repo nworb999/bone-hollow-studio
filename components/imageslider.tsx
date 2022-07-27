@@ -7,7 +7,7 @@ import frontDetail from "../public/assets/181bonehollow/frontdetail.jpg";
 import Link from "next/link";
 import Script from "next/script";
 
-export default function NavBar() {
+export default function ImageSlider() {
   return (
     <>
       <Script src="slider.js" strategy="lazyOnload" />
