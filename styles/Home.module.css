@@ -1,6 +1,5 @@
 .container {
-  /* padding: 0 2rem; */
-  padding: 0;
+  padding: 0 2rem;
   grid-column: 1/-1;
 }
 
@@ -42,6 +41,15 @@
   overflow: visible;
 }
 
+.big_bold_text {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.bold_text {
+  font-size: large;
+}
+
 .footer {
   background-color: #263430;
   color: #94a491;
@@ -52,7 +60,7 @@
   grid-auto-rows: minmax(100px, auto);
   text-align: left;
   height: 320px;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .footer a {
@@ -102,6 +110,11 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+}
+
+.filter_bone {
+  filter: invert(68%) sepia(9%) saturate(467%) hue-rotate(64deg) brightness(93%)
+    contrast(89%);
 }
 
 .title,

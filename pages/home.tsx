@@ -1,10 +1,41 @@
 import type { NextPage } from "next";
-import Image from "next/image";
-import ImageSlider from "../components/imageslider";
+import Image, { StaticImageData } from "next/image";
 import styles from "../styles/Home.module.css";
 import spring1 from "../public/assets/poolhouse/spring1.jpg";
 import spring2 from "../public/assets/poolhouse/spring2.jpg";
+import fall1 from "../public/assets/poolhouse/fall1.jpg";
 import aerial from "../public/assets/poolhouse/aerial.jpg";
+import entrance from "../public/assets/181bonehollow/entrance.jpeg";
+import hall from "../public/assets/181bonehollow/hall.jpeg";
+import front from "../public/assets/181bonehollow/front.jpg";
+import mirror from "../public/assets/181bonehollow/mirror.jpg";
+
+export enum HomeType {
+  poolHouse = "poolHouse",
+  oneEightOne = "oneEightOne",
+}
+
+const HomePhotos: HomePhoto[] = [
+  {
+    name: HomeType.poolHouse,
+    coverPhoto: aerial,
+    photoArray: [spring1, spring2],
+    footerPhoto: fall1,
+  },
+  {
+    name: HomeType.oneEightOne,
+    coverPhoto: entrance,
+    photoArray: [hall, front],
+    footerPhoto: mirror,
+  },
+];
+
+interface HomePhoto {
+  name: HomeType;
+  coverPhoto: StaticImageData;
+  photoArray: StaticImageData[];
+  footerPhoto: StaticImageData;
+}
 
 const Home: NextPage = () => {
   return (

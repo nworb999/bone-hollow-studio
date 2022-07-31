@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import Head from "next/head";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import fall from "../public/assets/poolhouse/fall1.jpg";
 import styles from "../styles/Home.module.css";
 
-const Home: NextPage = () => {
+const Homes: NextPage = () => {
   return (
     <>
       <div id="empty-div-row"></div>
@@ -15,14 +15,10 @@ const Home: NextPage = () => {
             <title>bone hollow studio - homes</title>
           </Head>
 
-          <h1>
-            <u>projects</u>
-          </h1>
-
           <section className={styles.section}>
             {[...Array(8)].map((_, i) => (
               <article className={styles.article}>
-                <Link href="/project">
+                <Link href="/home">
                   <a>
                     <Image
                       alt="fall shot with dark brown pool house in the foreground, shot from the side"
@@ -43,4 +39,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Homes;
