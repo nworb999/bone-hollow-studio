@@ -1,43 +1,19 @@
 import type { NextPage } from "next";
-import Image, { StaticImageData } from "next/image";
-import styles from "../styles/Home.module.css";
-import spring1 from "../public/assets/poolhouse/spring1.jpg";
-import spring2 from "../public/assets/poolhouse/spring2.jpg";
-import fall1 from "../public/assets/poolhouse/fall1.jpg";
-import aerial from "../public/assets/poolhouse/aerial.jpg";
-import entrance from "../public/assets/181bonehollow/entrance.jpeg";
-import hall from "../public/assets/181bonehollow/hall.jpeg";
-import front from "../public/assets/181bonehollow/front.jpg";
-import mirror from "../public/assets/181bonehollow/mirror.jpg";
-
-export enum HomeType {
-  poolHouse = "poolHouse",
-  oneEightOne = "oneEightOne",
-}
-
-const HomePhotos: HomePhoto[] = [
-  {
-    name: HomeType.poolHouse,
-    coverPhoto: aerial,
-    photoArray: [spring1, spring2],
-    footerPhoto: fall1,
-  },
-  {
-    name: HomeType.oneEightOne,
-    coverPhoto: entrance,
-    photoArray: [hall, front],
-    footerPhoto: mirror,
-  },
-];
-
-interface HomePhoto {
-  name: HomeType;
-  coverPhoto: StaticImageData;
-  photoArray: StaticImageData[];
-  footerPhoto: StaticImageData;
-}
+import { useRouter } from "next/router";
+import Image from "next/image";
+import Script from "next/script";
+import styles from "../../styles/Home.module.css";
+import { homesArray } from ".";
+import fallBackPhoto from "../../public/assets/poolhouse/spring1.jpg";
 
 const Home: NextPage = () => {
+  const router = useRouter();
+  console.log(router.asPath);
+  () => router.reload();
+  const [home] = homesArray.filter(
+    ({ name }) => name === router.asPath.toString().replace("/homes/", "")
+  );
+  console.log({ home });
   return (
     <>
       <div id="empty-div-row"></div>
@@ -49,7 +25,7 @@ const Home: NextPage = () => {
               {" "}
               <Image
                 alt="Catskills"
-                src={aerial}
+                src={home?.coverPhoto ?? fallBackPhoto}
                 layout="fill"
                 objectFit="cover"
               />
@@ -61,7 +37,7 @@ const Home: NextPage = () => {
             <article className={styles.article}>
               <Image
                 alt="fall shot with dark brown pool house in the foreground, shot from the side"
-                src={spring2}
+                src={home?.photoArray[0] ?? fallBackPhoto}
                 width={500}
                 height={500}
                 objectFit="cover"
@@ -87,7 +63,7 @@ const Home: NextPage = () => {
             <article className={styles.article}>
               <Image
                 alt="headshot"
-                src={spring1}
+                src={home?.photoArray[1] ?? fallBackPhoto}
                 width={500}
                 height={500}
                 objectFit="cover"
@@ -95,11 +71,16 @@ const Home: NextPage = () => {
             </article>
           </section>
           <main className={styles.main}>
-            <section className={styles.section}>
-              <article className={styles.article}>
-                {/* <ImageSlider></ImageSlider> */}
-              </article>
-            </section>
+            <article className={styles.article}>
+              <div id="coverPhoto" className={styles.home_cover}>
+                <Image
+                  alt="Catskills"
+                  src={home?.footerPhoto ?? fallBackPhoto}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </article>
           </main>
         </main>
       </div>
