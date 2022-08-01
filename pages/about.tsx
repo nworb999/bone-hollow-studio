@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import fall from "../public/assets/accord-fall-172.jpg";
-import headshot from "../public/assets/headshot.png";
+import door from "../public/assets/erika/doorway.jpg";
+import headshot from "../public/assets/erika/outside.jpg";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -11,16 +11,16 @@ const Home: NextPage = () => {
       <main>
         <div className={styles.container}>
           <section className={styles.section}>
-            <article>
+            <article className={styles.article}>
               <Image
                 alt="fall shot with dark brown pool house in the foreground, shot from the side"
-                src={fall}
+                src={door}
                 width={500}
                 height={500}
                 objectFit="cover"
               />
             </article>
-            <article>
+            <article className={styles.article}>
               <h2 id="whoWeAre">who we are</h2>
               <p>
                 At Bone Hollow Studio we specialize in curated and welcoming
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
                 setting.
               </p>
             </article>
-            <article>
+            <article className={styles.article}>
               <h2 id="ownerHeading">owner</h2>
               <p id="ownerPara1">
                 Erika grew up in Berlin, Germany and the American Midwest. A
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
                 comfortable.
               </p>
             </article>
-            <article>
+            <article className={styles.article}>
               <Image
                 alt="headshot"
                 src={headshot}
