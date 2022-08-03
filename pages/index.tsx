@@ -4,10 +4,14 @@ import styles from "../styles/Home.module.css";
 import aerial from "../public/assets/poolhouse/aerial.jpg";
 import spring from "../public/assets/poolhouse/spring1.jpg";
 import coverPhoto from "../public/assets/clouds1.jpg";
+import Head from "next/head";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
+      <Head>
+        <title>bone hollow studio - homepage</title>
+      </Head>
       <main className={styles.main}>
         <article className={styles.article}>
           {" "}
@@ -84,7 +88,7 @@ const Home: NextPage = () => {
           </p>
         </article>
       </main>
-    </div>
+    </>
   );
 };
 

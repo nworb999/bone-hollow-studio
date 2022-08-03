@@ -52,38 +52,35 @@ const Homes: NextPage = () => {
     });
   return (
     <>
-      <div id="empty-div-row"></div>
       <main>
-        <div className={styles.container}>
-          <Head>
-            <title>bone hollow studio - homes</title>
-          </Head>
+        <Head>
+          <title>bone hollow studio - homes</title>
+        </Head>
 
-          <section className={styles.section}>
-            {homesArray.map((home, i) => (
-              <article className={styles.article} key={i}>
-                <Link
-                  href={`/homes/${encodeURIComponent(
-                    home.name ? home.name : `${HomeType.poolHouse}`
-                  )}`}
-                  passHref
-                  key={i}
-                >
-                  <a onClick={() => handleClick({ home })} key={i}>
-                    <Image
-                      alt="fall shot with dark brown pool house in the foreground, shot from the side"
-                      src={home.thumbnailPhoto}
-                      width={500}
-                      height={300}
-                      objectFit="contain"
-                      key={i}
-                    />
-                  </a>
-                </Link>
-              </article>
-            ))}
-          </section>
-        </div>
+        <section className={styles.section}>
+          {homesArray.map((home, i) => (
+            <article className={styles.article} key={i}>
+              <Link
+                href={`/homes/${encodeURIComponent(
+                  home.name ? home.name : `${HomeType.poolHouse}`
+                )}`}
+                passHref
+                key={i}
+              >
+                <a onClick={() => handleClick({ home })} key={i}>
+                  <Image
+                    alt="fall shot with dark brown pool house in the foreground, shot from the side"
+                    src={home.thumbnailPhoto}
+                    width={500}
+                    height={300}
+                    objectFit="contain"
+                    key={i}
+                  />
+                </a>
+              </Link>
+            </article>
+          ))}
+        </section>
       </main>
     </>
   );

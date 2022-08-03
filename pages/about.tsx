@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import Image from "next/image";
 import door from "../public/assets/erika/doorway.jpg";
 import headshot from "../public/assets/erika/outside.jpg";
@@ -7,7 +8,10 @@ import styles from "../styles/Home.module.css";
 const Home: NextPage = () => {
   return (
     <>
-      <div id="empty-div-row"></div>
+      {" "}
+      <Head>
+        <title>bone hollow studio - about</title>
+      </Head>
       <main>
         <div className={styles.container}>
           <section className={styles.section}>

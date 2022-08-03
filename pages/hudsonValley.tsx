@@ -6,11 +6,10 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>bone hollow studio - contact</title>
+        <title>bone hollow studio - hudson valley</title>
       </Head>
-
       <main className={styles.main}>
-        <p>Contact </p>
+        <h1>Hudson Valley</h1>
       </main>
     </>
   );
