@@ -8,6 +8,7 @@ const Home: NextPage = () => {
       <Head>
         <title>bone hollow studio - contact</title>
       </Head>
+      <div id="empty-div-row"></div>
 
       <main className={styles.main}>
         <p>Contact </p>

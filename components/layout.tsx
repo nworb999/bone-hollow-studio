@@ -9,6 +9,10 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Chivo&family=Inconsolata&display=swap"
+        rel="stylesheet"
+      ></link>
       <div className={styles.container}>
         <Navbar />
         <main>{children}</main>

@@ -1,38 +1,5 @@
 .container {
-  padding: 0 2rem;
   grid-column: 1/-1;
-}
-
-.nav_about {
-  grid-column: 1 / 1;
-  grid-row: 1;
-}
-
-.nav_homes {
-  grid-column: 2 / 2;
-  grid-row: 1;
-}
-
-.nav_title {
-  grid-column: 3 / 6;
-  grid-row: 1;
-  font-size: 1.5rem;
-}
-
-.nav_hudson_valley {
-  grid-column: 6 / 6;
-  grid-row: 1;
-}
-
-.nav_contact {
-  grid-column: 7 / 7;
-  grid-row: 1;
-}
-
-.home_nav {
-  padding-inline-start: 40px;
-  padding-inline-end: 40px;
-  align-items: center;
 }
 
 .home_cover {

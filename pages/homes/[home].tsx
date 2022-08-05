@@ -28,6 +28,7 @@ const Home: NextPage = () => {
             />
           </div>
         </article>
+        <div id="empty-div-row"></div>
       </main>
       <main className={styles.main}>
         <section className={styles.section}>

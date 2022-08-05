@@ -8,6 +8,7 @@ const Home: NextPage = () => {
       <Head>
         <title>bone hollow studio - hudson valley</title>
       </Head>
+      <div id="empty-div-row"></div>
       <main className={styles.main}>
         <h1>Hudson Valley</h1>
       </main>

@@ -5,7 +5,7 @@ import type { AppProps } from "next/app";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
-      <div id="empty-div-row"></div> <Component {...pageProps} />
+      <Component {...pageProps} />
     </Layout>
   );
 }

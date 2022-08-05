@@ -12,6 +12,7 @@ const Home: NextPage = () => {
       <Head>
         <title>bone hollow studio - about</title>
       </Head>
+      <div id="empty-div-row"></div>
       <main>
         <div className={styles.container}>
           <section className={styles.section}>

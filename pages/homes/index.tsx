@@ -56,7 +56,7 @@ const Homes: NextPage = () => {
         <Head>
           <title>bone hollow studio - homes</title>
         </Head>
-
+        <div id="empty-div-row"></div>
         <section className={styles.section}>
           {homesArray.map((home, i) => (
             <article className={styles.article} key={i}>

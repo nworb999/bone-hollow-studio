@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Script from "next/script";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import navStyles from "../styles/navbar.module.css";
 
 export default function NavBar() {
   return (
@@ -17,27 +17,27 @@ export default function NavBar() {
       </Head>
       <Script src="transparent.js" strategy="lazyOnload" />
       <nav>
-        <div className={styles.nav_about}>
+        <div className={navStyles.nav_about}>
           <Link href="/about">
             <a>about</a>
           </Link>
         </div>
-        <div className={styles.nav_homes}>
+        <div className={navStyles.nav_homes}>
           <Link href="/homes">
             <a>homes</a>
           </Link>
         </div>
-        <div className={styles.nav_title}>
-          <Link href="/" className={styles.nav_title}>
+        <div className={navStyles.nav_title}>
+          <Link href="/" className={navStyles.nav_title}>
             <a>bone hollow</a>
           </Link>
         </div>
-        <div className={styles.nav_hudson_valley}>
+        <div className={navStyles.nav_hudson_valley}>
           <Link href="/hudsonValley">
             <a>hudson valley</a>
           </Link>
         </div>
-        <div className={styles.nav_contact}>
+        <div className={navStyles.nav_contact}>
           <Link href="/contact">
             <a>contact</a>
           </Link>
