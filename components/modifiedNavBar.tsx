@@ -4,7 +4,7 @@ import Script from "next/script";
 import navStyles from "../styles/navbar.module.css";
 
 export default function ModifiedNavBar() {
-  const handleClick = (e) => {
+  const handleClick = () => {
     document.body.classList.add("transparent-nav");
   };
   return (
