@@ -29,13 +29,15 @@ export default function Footer() {
         <div className={styles.footer_copyright}>
           © copyright bone hollow llc
         </div>
-        <Image
-          className={styles.footer_tree}
-          src="/tree.svg"
-          objectFit="fill"
-          width={100}
-          height={100}
-        />
+        <div className={styles.footer_tree}>
+          <Image
+            className={styles.filter_tree}
+            src="/tree.svg"
+            objectFit="fill"
+            width={150}
+            height={150}
+          />
+        </div>
       </footer>
     </>
   );

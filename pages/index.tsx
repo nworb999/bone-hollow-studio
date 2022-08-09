@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import aerial from "../public/assets/poolhouse/aerial.jpg";
 import spring from "../public/assets/poolhouse/spring1.jpg";
-import coverPhoto from "../public/assets/clouds1.jpg";
+import coverPhoto from "../public/assets/livingroom.jpg";
 import Head from "next/head";
 import Script from "next/script";
 
