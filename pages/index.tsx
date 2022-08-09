@@ -35,8 +35,8 @@ const Home: NextPage = () => {
       </main>
       <div id="empty-div-row"></div>
       <main>
-        <article>
-          <div className={styles.big_bold_text}>
+        <article className={styles.big_bold_text}>
+          <div>
             <p>
               bone hollow studio is a boutique development company located in
               Ulster County
@@ -53,12 +53,12 @@ const Home: NextPage = () => {
               objectFit="cover"
             />
           </article>
-          <article>
-            <p className={styles.bold_text}>
+          <article className={styles.bold_text}>
+            <p>
               each home is designed and built with the surroundings taking the
               lead role
             </p>
-            <p className={styles.bold_text}>
+            <p>
               the result is a combination of rural tranquility and custom design
             </p>
           </article>
@@ -77,12 +77,12 @@ const Home: NextPage = () => {
       </article>
       <main>
         <section>
-          <article>
-            <p className={styles.bold_text}>
+          <article className={styles.bold_text}>
+            <p>
               bone hollow studio is deeply committed to integrity, client
               service and creative design solutions
             </p>
-            <p className={styles.bold_text}>
+            <p>
               Erika brings her urban sophistication and true love of the land,
               nature, people, and art to inspire refined living solutions in
               this rural landscape
@@ -109,8 +109,8 @@ const Home: NextPage = () => {
               objectFit="cover"
             />
           </article>
-          <article>
-            <p className={styles.bold_text}>
+          <article className={styles.bold_text}>
+            <p>
               the spaces we create are characterized by luxurious textures,
               quality materials, and a minimalistic style, because we believe
               that the way your home feels is just as significant as how it
@@ -132,12 +132,12 @@ const Home: NextPage = () => {
       </article>
       <main>
         <section>
-          <article>
-            <p className={styles.bold_text}>
+          <article className={styles.bold_text}>
+            <p>
               our work is founded in the belief that form and function are both
               requisite for a well-designed home{" "}
             </p>
-            <p className={styles.bold_text}>
+            <p>
               we apply that perspective to projects of every size, from
               furnishings to new builds
             </p>
@@ -153,8 +153,8 @@ const Home: NextPage = () => {
           </article>
         </section>
 
-        <article>
-          <p className={styles.big_bold_text}>
+        <article className={styles.big_bold_text}>
+          <p>
             with our curated interiors, every element can build a dialogue
             <br />
             the spaces we live in give us a protected and intimate feeling. In

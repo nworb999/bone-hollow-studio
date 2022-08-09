@@ -16,7 +16,11 @@
 }
 
 .bold_text {
-  font-size: large;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 
 .title a {
