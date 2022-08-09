@@ -6,6 +6,7 @@ import beads from "../public/assets/beads.jpg";
 import fireplace from "../public/assets/fireplace.jpg";
 import couch from "../public/assets/couch.jpg";
 import hoya from "../public/assets/hoya.jpg";
+import spring from "../public/assets/poolhouse/spring1.jpg";
 import coverPhoto from "../public/assets/livingroom.jpg";
 import screen from "../public/assets/screen.jpg";
 import Head from "next/head";
@@ -44,15 +45,6 @@ const Home: NextPage = () => {
           </div>
         </article>
         <section>
-          <article>
-            <Image
-              alt="poolhouse shot"
-              src={beads}
-              width={500}
-              height={500}
-              objectFit="cover"
-            />
-          </article>
           <article className={styles.bold_text}>
             <p>
               each home is designed and built with the surroundings taking the
@@ -61,6 +53,15 @@ const Home: NextPage = () => {
             <p>
               the result is a combination of rural tranquility and custom design
             </p>
+          </article>
+          <article>
+            <Image
+              alt="poolhouse shot"
+              src={spring}
+              width={500}
+              height={500}
+              objectFit="cover"
+            />
           </article>
         </section>
       </main>

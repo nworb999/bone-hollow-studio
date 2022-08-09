@@ -10,7 +10,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <link
-        href="https://fonts.googleapis.com/css2?family=Chivo&family=Inconsolata&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Chivo&family=Inconsolata&family=Open+Sans&display=swap"
         rel="stylesheet"
       ></link>
       <div className={styles.container}>
