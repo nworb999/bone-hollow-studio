@@ -12,6 +12,7 @@ if ("IntersectionObserver" in window) {
   });
   observer.observe(document.getElementById("empty-div-row"));
 }
+
 window.addEventListener("load", () => {
   addTransparency();
 });

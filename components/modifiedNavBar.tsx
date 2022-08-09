@@ -3,7 +3,10 @@ import Link from "next/link";
 import Script from "next/script";
 import navStyles from "../styles/navbar.module.css";
 
-export default function NavBar() {
+export default function ModifiedNavBar() {
+  const handleClick = (e) => {
+    document.body.classList.add("transparent-nav");
+  };
   return (
     <>
       <Head>
@@ -17,29 +20,9 @@ export default function NavBar() {
       </Head>
       <Script src="transparent.js" strategy="lazyOnload" />
       <nav>
-        <div className={navStyles.nav_about}>
-          <Link href="/about">
-            <a>about</a>
-          </Link>
-        </div>
-        <div className={navStyles.nav_homes}>
-          <Link href="/homes">
-            <a>homes</a>
-          </Link>
-        </div>
         <div className={navStyles.nav_title}>
           <Link href="/" className={navStyles.nav_title}>
-            <a>bone hollow</a>
-          </Link>
-        </div>
-        <div className={navStyles.nav_hudson_valley}>
-          <Link href="/hudsonValley">
-            <a>hudson valley</a>
-          </Link>
-        </div>
-        <div className={navStyles.nav_contact}>
-          <Link href="/contact">
-            <a>contact</a>
+            <a onClick={handleClick}>bone hollow</a>
           </Link>
         </div>
       </nav>

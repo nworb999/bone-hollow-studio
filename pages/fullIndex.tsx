@@ -6,8 +6,13 @@ import spring from "../public/assets/poolhouse/spring1.jpg";
 import coverPhoto from "../public/assets/clouds1.jpg";
 import Head from "next/head";
 import Script from "next/script";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
+  const reload = () => {
+    const router = useRouter();
+    router.reload();
+  };
   return (
     <>
       {" "}
