@@ -37,7 +37,7 @@ const Home: NextPage = () => {
       <div id="empty-div-row"></div>
       <main className={styles.main}>
         <article className={styles.article}>
-          <div className={styles.home_cover_overlay}>
+          <div>
             <p className={styles.big_bold_text}>
               bone hollow is a boutique development company located in Ulster
               County

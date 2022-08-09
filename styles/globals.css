@@ -39,6 +39,10 @@ section {
   gap: 2rem;
 }
 
+article {
+  align-items: center;
+}
+
 p {
   font-family: "Libre Franklin", sans-serif;
   color: #515151;

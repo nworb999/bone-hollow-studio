@@ -11,6 +11,8 @@
 .big_bold_text {
   font-size: xx-large;
   font-weight: bold;
+  align-items: center;
+  padding: 5rem;
 }
 
 .bold_text {
