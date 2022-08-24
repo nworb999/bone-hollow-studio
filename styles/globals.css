@@ -39,9 +39,8 @@ section {
   gap: 2rem;
 }
 
-p {
-  font-family: "Libre Franklin", sans-serif;
-  color: #515151;
+article {
+  align-items: center;
 }
 
 nav {
@@ -68,8 +67,8 @@ body.transparent-nav nav {
 
 nav a {
   transition: 0.3s ease-in;
-  border-bottom: solid 2px rgba(0, 0, 0, 0);
-  padding-bottom: 3px;
+  border-bottom: solid 0.2rem rgba(0, 0, 0, 0);
+  padding-bottom: 0.2rem;
 }
 
 nav a:hover {

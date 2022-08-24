@@ -13,45 +13,60 @@ import front from "../../public/assets/181bonehollow/front.jpg";
 import mirror from "../../public/assets/181bonehollow/mirror.jpg";
 
 import styles from "../../styles/Home.module.css";
+import Script from "next/script";
 
 export enum HomeType {
   poolHouse = "poolHouse",
   oneEightOne = "oneEightOne",
 }
 
+interface Home {
+  name: HomeType;
+  thumbnailPhoto: HomeImage;
+  coverPhoto: HomeImage;
+  photoArray: HomeImage[];
+  footerPhoto: HomeImage;
+}
+
+interface HomeImage {
+  image: StaticImageData;
+  altText: string;
+}
+
 export const homesArray: Home[] = [
   {
     name: HomeType.poolHouse,
-    thumbnailPhoto: aerial,
-    coverPhoto: aerial,
-    photoArray: [spring1, spring2],
-    footerPhoto: fall,
+    thumbnailPhoto: { image: aerial, altText: "placeholder" },
+    coverPhoto: { image: aerial, altText: "placeholder" },
+    photoArray: [
+      { image: spring1, altText: "placeholder" },
+      { image: spring2, altText: "placeholder" },
+    ],
+    footerPhoto: { image: fall, altText: "placeholder" },
   },
   {
     name: HomeType.oneEightOne,
-    coverPhoto: entrance,
-    thumbnailPhoto: entrance,
-    photoArray: [front, hall],
-    footerPhoto: mirror,
+    coverPhoto: { image: entrance, altText: "placeholder" },
+    thumbnailPhoto: { image: entrance, altText: "placeholder" },
+    photoArray: [
+      { image: front, altText: "placeholder" },
+      { image: hall, altText: "placeholder" },
+    ],
+    footerPhoto: { image: mirror, altText: "placeholder" },
   },
 ];
 
-interface Home {
-  name: HomeType;
-  thumbnailPhoto: StaticImageData;
-  coverPhoto: StaticImageData;
-  photoArray: StaticImageData[];
-  footerPhoto: StaticImageData;
-}
-
 const Homes: NextPage = () => {
   const router = useRouter();
+
   const handleClick = ({ home }: { home: Home }) =>
     router.push({
       pathname: `/homes/${home.name}`,
     });
+
   return (
     <>
+      <Script src="transparent.js" strategy="lazyOnload" />
       <main>
         <Head>
           <title>bone hollow studio - homes</title>
@@ -67,10 +82,19 @@ const Homes: NextPage = () => {
                 passHref
                 key={i}
               >
-                <a onClick={() => handleClick({ home })} key={i}>
+                <a
+                  onClick={() => handleClick({ home })}
+                  key={i}
+                  href={`/homes/${encodeURIComponent(
+                    home.name ? home.name : `${HomeType.poolHouse}`
+                  )}`}
+                  ref={`/homes/${encodeURIComponent(
+                    home.name ? home.name : `${HomeType.poolHouse}`
+                  )}`}
+                >
                   <Image
-                    alt="fall shot with dark brown pool house in the foreground, shot from the side"
-                    src={home.thumbnailPhoto}
+                    alt={home.thumbnailPhoto.altText}
+                    src={home.thumbnailPhoto.image}
                     width={500}
                     height={300}
                     objectFit="contain"

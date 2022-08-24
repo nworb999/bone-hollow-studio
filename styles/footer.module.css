@@ -1,0 +1,74 @@
+.footer {
+  background-color: #263430;
+  color: #c0c0c0;
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  text-align: left;
+  height: 320px;
+  padding: 1.5rem;
+}
+
+.footer a {
+  text-align: left;
+  color: #c0c0c0;
+  text-decoration: none;
+}
+
+.footer_title {
+  font-family: "Inconsolata", monospace;
+  font-weight: 500;
+  grid-column: 1 / 2;
+  grid-row: 1;
+  font-size: 3rem;
+}
+
+.footer_contact {
+  grid-column: 4 / 4;
+  grid-row: 2;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer_social {
+  grid-column: 3 / 3;
+  grid-row: 2;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer_copyright {
+  grid-column: 1 / 4;
+  grid-row: 2;
+  font-size: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+
+.footer_tree {
+  grid-column: 4/4;
+  text-align: center;
+  padding-left: 3rem;
+  grid-row: 1;
+}
+
+.filter_tree {
+  filter: invert(83%) sepia(31%) saturate(0%) hue-rotate(159deg) brightness(93%)
+    contrast(78%);
+  /* https://codepen.io/sosuke/pen/Pjoqqp */
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .footer {
+    display: flow-root;
+    height: auto;
+  }
+}

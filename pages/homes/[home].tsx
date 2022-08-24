@@ -15,6 +15,7 @@ const Home: NextPage = () => {
   console.log({ home });
   return (
     <>
+      <Script src="transparent.js" strategy="lazyOnload" />
       <main className={styles.main}>
         <article className={styles.article}>
           {" "}
@@ -22,7 +23,7 @@ const Home: NextPage = () => {
             {" "}
             <Image
               alt="Catskills"
-              src={home?.coverPhoto ?? fallBackPhoto}
+              src={home?.coverPhoto.image ?? fallBackPhoto}
               layout="fill"
               objectFit="cover"
             />
@@ -35,7 +36,7 @@ const Home: NextPage = () => {
           <article className={styles.article}>
             <Image
               alt="fall shot with dark brown pool house in the foreground, shot from the side"
-              src={home?.photoArray[0] ?? fallBackPhoto}
+              src={home?.photoArray[0].image ?? fallBackPhoto}
               width={500}
               height={500}
               objectFit="cover"
@@ -59,7 +60,7 @@ const Home: NextPage = () => {
           <article className={styles.article}>
             <Image
               alt="headshot"
-              src={home?.photoArray[1] ?? fallBackPhoto}
+              src={home?.photoArray[1].image ?? fallBackPhoto}
               width={500}
               height={500}
               objectFit="cover"
@@ -71,7 +72,7 @@ const Home: NextPage = () => {
             <div id="coverPhoto" className={styles.home_cover}>
               <Image
                 alt="Catskills"
-                src={home?.footerPhoto ?? fallBackPhoto}
+                src={home?.footerPhoto.image ?? fallBackPhoto}
                 layout="fill"
                 objectFit="cover"
               />

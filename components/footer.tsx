@@ -1,19 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/footer.module.css";
 
 export default function Footer() {
   return (
     <>
       <footer className={styles.footer}>
         <div className={styles.footer_title}>bone hollow</div>
-        <Image
-          className={styles.filter_bone}
-          src="/tree.svg"
-          objectFit="fill"
-          width={100}
-          height={100}
-        />
         <div className={styles.footer_contact}>
           <h3>contact</h3>
           <Link href={"mailto:erika@bonehollow.studio"}>
@@ -35,6 +28,15 @@ export default function Footer() {
         </div>
         <div className={styles.footer_copyright}>
           © copyright bone hollow llc
+        </div>
+        <div className={styles.footer_tree}>
+          <Image
+            className={styles.filter_tree}
+            src="/tree.svg"
+            objectFit="fill"
+            width={150}
+            height={150}
+          />
         </div>
       </footer>
     </>
