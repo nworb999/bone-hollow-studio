@@ -8,7 +8,7 @@
   overflow: visible;
 }
 
-.big_bold_text {
+.huge_bold_text {
   font-size: xx-large;
   /* font-weight: bold; */
   font-family: "Chivo", sans-serif;
@@ -17,7 +17,7 @@
   color: #000000;
 }
 
-.bold_text {
+.big_bold_text {
   font-size: xx-large;
   display: flex;
   justify-content: center;
@@ -25,6 +25,38 @@
   align-content: center;
   flex-direction: column;
   color: #000000;
+}
+
+.bold_text {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans";
+  flex-direction: column;
+  color: #000000;
+}
+
+.small_bold_text {
+  font-size: medium;
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans";
+  flex-direction: column;
+  color: #000000;
+}
+
+.center_text {
+  max-width: 50%;
+}
+
+.text_left {
+  text-align: left;
+  align-content: center;
+}
+
+.text_right {
+  text-align: right;
+  align-content: center;
 }
 
 .grid {

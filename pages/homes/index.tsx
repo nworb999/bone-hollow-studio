@@ -13,6 +13,7 @@ import front from "../../public/assets/181bonehollow/front.jpg";
 import mirror from "../../public/assets/181bonehollow/mirror.jpg";
 
 import styles from "../../styles/Home.module.css";
+import homeStyles from "../../styles/homes.module.css";
 import Script from "next/script";
 
 export enum HomeType {
@@ -75,33 +76,35 @@ const Homes: NextPage = () => {
         <section className={styles.section}>
           {homesArray.map((home, i) => (
             <article className={styles.article} key={i}>
-              <Link
-                href={`/homes/${encodeURIComponent(
-                  home.name ? home.name : `${HomeType.poolHouse}`
-                )}`}
-                passHref
-                key={i}
-              >
-                <a
-                  onClick={() => handleClick({ home })}
-                  key={i}
+              <div className={homeStyles.project_container}>
+                <Link
                   href={`/homes/${encodeURIComponent(
                     home.name ? home.name : `${HomeType.poolHouse}`
                   )}`}
-                  ref={`/homes/${encodeURIComponent(
-                    home.name ? home.name : `${HomeType.poolHouse}`
-                  )}`}
+                  passHref
+                  key={i}
                 >
-                  <Image
-                    alt={home.thumbnailPhoto.altText}
-                    src={home.thumbnailPhoto.image}
-                    width={500}
-                    height={300}
-                    objectFit="contain"
+                  <a
+                    onClick={() => handleClick({ home })}
                     key={i}
-                  />
-                </a>
-              </Link>
+                    href={`/homes/${encodeURIComponent(
+                      home.name ? home.name : `${HomeType.poolHouse}`
+                    )}`}
+                    ref={`/homes/${encodeURIComponent(
+                      home.name ? home.name : `${HomeType.poolHouse}`
+                    )}`}
+                  >
+                    <Image
+                      alt={home.thumbnailPhoto.altText}
+                      src={home.thumbnailPhoto.image}
+                      width={500}
+                      height={300}
+                      objectFit="contain"
+                      key={i}
+                    />
+                  </a>
+                </Link>
+              </div>
             </article>
           ))}
         </section>

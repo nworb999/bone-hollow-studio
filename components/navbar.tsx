@@ -1,9 +1,15 @@
 import Head from "next/head";
 import Link from "next/link";
 import Script from "next/script";
+import { useRouter } from "next/router";
 import navStyles from "../styles/navbar.module.css";
 
 export default function NavBar() {
+  const handleClick = () => {
+    document.body.classList.add("transparent-nav");
+  };
+
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -19,27 +25,52 @@ export default function NavBar() {
       <nav>
         <div className={navStyles.nav_about}>
           <Link href="/about">
-            <a>about</a>
+            <a
+              onClick={handleClick}
+              className={router.pathname == "/about" ? "active" : ""}
+            >
+              about
+            </a>
           </Link>
         </div>
         <div className={navStyles.nav_homes}>
           <Link href="/homes">
-            <a>homes</a>
+            <a
+              onClick={handleClick}
+              className={router.pathname == "/homes" ? "active" : ""}
+            >
+              homes
+            </a>
           </Link>
         </div>
         <div className={navStyles.nav_title}>
           <Link href="/" className={navStyles.nav_title}>
-            <a>bone hollow</a>
+            <a
+              onClick={handleClick}
+              className={router.pathname == "/" ? "active" : ""}
+            >
+              bone hollow studio
+            </a>
           </Link>
         </div>
         <div className={navStyles.nav_hudson_valley}>
           <Link href="/hudsonValley">
-            <a>hudson valley</a>
+            <a
+              onClick={handleClick}
+              className={router.pathname == "/hudsonValley" ? "active" : ""}
+            >
+              hudson valley
+            </a>
           </Link>
         </div>
         <div className={navStyles.nav_contact}>
           <Link href="/contact">
-            <a>contact</a>
+            <a
+              onClick={handleClick}
+              className={router.pathname == "/contact" ? "active" : ""}
+            >
+              contact
+            </a>
           </Link>
         </div>
       </nav>

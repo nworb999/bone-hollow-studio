@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <footer className={styles.footer}>
-        <div className={styles.footer_title}>bone hollow</div>
+        <div className={styles.footer_title}>bone hollow studio</div>
         <div className={styles.footer_contact}>
           <h3>contact</h3>
           <Link href={"mailto:erika@bonehollow.studio"}>
