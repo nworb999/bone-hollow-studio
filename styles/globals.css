@@ -69,7 +69,7 @@ nav a {
   transition: 0.3s ease-in;
   border-bottom: solid 0.2rem rgba(0, 0, 0, 0);
   padding-bottom: 0.2rem;
-  line-height: 3em;
+  line-height: 1.5em;
 }
 
 nav a:hover {

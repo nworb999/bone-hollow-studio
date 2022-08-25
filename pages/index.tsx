@@ -88,7 +88,7 @@ const Home: NextPage = () => {
             <p className={styles.bold_text}>A boutique development company</p>
             <p className={styles.small_bold_text}>
               Our work is founded on the belief that form and function are the
-              sine qua non of a well designed home
+              sine qua non of a well-designed home.
             </p>
           </article>
         </section>
