@@ -1,22 +1,29 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import flowers from "../public/assets/poolhouse/flowers.jpg";
-import fireplace from "../public/assets/fireplace.jpg";
-import couch from "../public/assets/couch.jpg";
-import hoya from "../public/assets/hoya.jpg";
-import pool from "../public/assets/poolhouse/pool.jpg";
-import spring from "../public/assets/poolhouse/spring1.jpg";
-import coverPhoto from "../public/assets/livingroom.jpg";
-import screen from "../public/assets/screen.jpg";
+import {
+  coverPhoto,
+  spring,
+  flowers,
+  screen,
+  hoya,
+  pool,
+  fireplace,
+  couch,
+} from "../src/images";
 import Head from "next/head";
 import Script from "next/script";
+import { handleSyntaxError } from "../src/utils";
 
 const Home: NextPage = () => {
   return (
     <>
       {" "}
-      <Script src="transparent.js" strategy="lazyOnload" />
+      <Script
+        src="transparent.js"
+        strategy="lazyOnload"
+        onError={handleSyntaxError}
+      />
       <Head>
         <title>bone hollow studio - homepage</title>
       </Head>
@@ -36,14 +43,15 @@ const Home: NextPage = () => {
       </main>
       <div id="empty-div-row"></div>
       <main>
-        <article className={styles.huge_bold_text}>
-          <div>
-            <p>
-              Bone Hollow Studio is the meeting of rural tranquility and custom
-              design
-            </p>
-          </div>
+        <article className={styles.center_text}>
+          {/* <article> */}
+          <p className={styles.huge_bold_text}>
+            Bone Hollow Studio is the meeting of rural tranquility and custom
+            design
+          </p>
+          {/* </article> */}
         </article>
+
         <section>
           <article className={styles.text_left}>
             <p className={styles.bold_text}>
@@ -163,13 +171,11 @@ const Home: NextPage = () => {
         </div>
       </article>
       <main>
-        <article className={styles.huge_bold_text}>
-          <p>
+        <article>
+          <p className={styles.huge_bold_text}>
             The spaces we live in give us a protected and intimate feeling.{" "}
-          </p>{" "}
-          <p>
-            In an uncertain world, home is the calm in a turbulent sea.
             <br />
+            In an uncertain world, home is the calm in a turbulent sea.
             <br />
           </p>
         </article>

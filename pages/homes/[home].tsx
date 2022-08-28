@@ -2,9 +2,18 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Script from "next/script";
+import { handleSyntaxError } from "../../src/utils";
+
 import styles from "../../styles/Home.module.css";
-import { homesArray } from ".";
+import { HomeType } from "../../src/types";
+import { homesArray } from "../../src/constants";
 import fallBackPhoto from "../../public/assets/poolhouse/spring1.jpg";
+
+export const config = {
+  unstable_includeFiles: [
+    "node_modules/next/dist/compiled/@edge-runtime/primitives/**/*.+(js|json)",
+  ],
+};
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -15,28 +24,59 @@ const Home: NextPage = () => {
   console.log({ home });
   return (
     <>
-      <Script src="transparent.js" strategy="lazyOnload" />
+      <Script
+        src="transparent.js"
+        strategy="lazyOnload"
+        onError={handleSyntaxError}
+      />
+      <div id="empty-div-row"></div>
+
+      <article>
+        <h1>{HomeType.poolHouse}</h1>{" "}
+      </article>
       <main className={styles.main}>
-        <article className={styles.article}>
-          {" "}
-          <div id="coverPhoto" className={styles.home_cover}>
-            {" "}
+        <section>
+          <article>
             <Image
-              alt="Catskills"
-              src={home?.coverPhoto.image ?? fallBackPhoto}
-              layout="fill"
+              alt="poolhouse shot"
+              src={home?.coverImage.image ?? fallBackPhoto}
+              width={500}
+              height={500}
               objectFit="cover"
             />
-          </div>
-        </article>
-        <div id="empty-div-row"></div>
+          </article>
+          <article className={styles.text_right}>
+            <p className={styles.bold_text}>
+              In collaboration with local craftsmen
+            </p>
+            <p className={styles.small_bold_text}>
+              Through our partnership with a renowned local builder, Jeromy
+              Wells, of <i>Hudson Valley Homes & Renovations,</i> we offer clean
+              and gracious motifs that are thoughtfully sited in a quiet,
+              introspective setting.
+            </p>
+          </article>
+        </section>
       </main>
+      <article>
+        <div id="coverPhoto" className={styles.home_cover}>
+          {" "}
+          <Image
+            alt="Catskills"
+            src={home?.coverImage.image ?? fallBackPhoto}
+            layout="responsive"
+            objectPosition="relative"
+            objectFit="cover"
+          />
+        </div>
+      </article>
+
       <main className={styles.main}>
         <section className={styles.section}>
           <article className={styles.article}>
             <Image
               alt="fall shot with dark brown pool house in the foreground, shot from the side"
-              src={home?.photoArray[0].image ?? fallBackPhoto}
+              src={home?.imageArray[0].image ?? fallBackPhoto}
               width={500}
               height={500}
               objectFit="cover"
@@ -60,25 +100,13 @@ const Home: NextPage = () => {
           <article className={styles.article}>
             <Image
               alt="headshot"
-              src={home?.photoArray[1].image ?? fallBackPhoto}
+              src={home?.imageArray[1].image ?? fallBackPhoto}
               width={500}
               height={500}
               objectFit="cover"
             />
           </article>
         </section>
-        <main className={styles.main}>
-          <article className={styles.article}>
-            <div id="coverPhoto" className={styles.home_cover}>
-              <Image
-                alt="Catskills"
-                src={home?.footerPhoto.image ?? fallBackPhoto}
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-          </article>
-        </main>
       </main>
     </>
   );

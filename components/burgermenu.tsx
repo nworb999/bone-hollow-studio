@@ -1,11 +1,12 @@
 import Head from "next/head";
-import Link from "next/link";
 import Script from "next/script";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import { handleSyntaxError } from "../src/utils";
+import burgerStyles from "../styles/burgermenu.module.css";
 import navStyles from "../styles/navbar.module.css";
+import { useRouter } from "next/router";
 
-export default function NavBar() {
+export default function BurgerMenu() {
   const handleClick = () => {
     document.body.classList.add("transparent-nav");
   };

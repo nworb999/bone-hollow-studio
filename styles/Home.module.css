@@ -11,6 +11,7 @@
 .huge_bold_text {
   font-size: xx-large;
   /* font-weight: bold; */
+  justify-content: center;
   font-family: "Chivo", sans-serif;
   align-items: center;
   padding: 5rem;
@@ -46,7 +47,11 @@
 }
 
 .center_text {
-  max-width: 50%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  max-width: 80%;
+  display: flex;
 }
 
 .text_left {

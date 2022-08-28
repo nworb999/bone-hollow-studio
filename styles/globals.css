@@ -53,6 +53,9 @@ nav {
   top: 0;
   gap: 1rem;
   overflow: hidden;
+  -webkit-box-shadow: 0px 0rem 0.1rem rgb(48, 61, 37, 0.3);
+  -moz-box-shadow: 0px 0rem 0.1rem rgb(48, 61, 37, 0.3);
+  box-shadow: 0px 0rem 0.1rem rgb(48, 61, 37, 0.3);
   font-family: "Inconsolata", monospace;
   font-weight: 500;
   padding: 1rem;
@@ -63,11 +66,14 @@ nav {
 
 body.transparent-nav nav {
   background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px rgb(48, 61, 37, 1);
+  -moz-box-shadow: 0px 0px 0px rgb(48, 61, 37, 0.5);
+  box-shadow: 0px 0px 0px rgb(48, 61, 37, 0.5);
 }
 
 nav a {
   transition: 0.3s ease-in;
-  border-bottom: solid 0.2rem rgba(0, 0, 0, 0);
+  border-bottom: solid 0.1rem rgba(0, 0, 0, 0);
   padding-bottom: 0.2rem;
   line-height: 1.5em;
 }
