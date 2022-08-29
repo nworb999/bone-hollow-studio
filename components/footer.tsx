@@ -31,10 +31,11 @@ export default function Footer() {
         </div>
         <div className={styles.footer_tree}>
           <Image
-            className={styles.filter_tree}
+            className={styles.filter_silver}
             src="/tree.svg"
             objectFit="fill"
             width={150}
+            alt="silver tree with leaves falling"
             height={150}
           />
         </div>

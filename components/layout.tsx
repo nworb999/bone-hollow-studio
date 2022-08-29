@@ -1,12 +1,9 @@
 import NavBar from "./navbar";
 import BurgerMenu from "./burgermenu";
 import Footer from "./footer";
+import { LayoutProps } from "../src/types";
 import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
-
-interface LayoutProps {
-  children: React.ReactNode;
-}
 
 interface SetWindowSizeProps {
   width: undefined | number;
@@ -43,6 +40,7 @@ function useWindowSize() {
       return () => window.removeEventListener("resize", handleResize);
     }
   }, []); // Empty array ensures that effect is only run on mount
+  console.log({ windowSize });
   return windowSize;
 }
 

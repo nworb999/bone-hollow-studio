@@ -18,3 +18,7 @@ export interface Image {
   image: StaticImageData;
   altText: string;
 }
+
+export interface LayoutProps {
+  children: React.ReactNode;
+}

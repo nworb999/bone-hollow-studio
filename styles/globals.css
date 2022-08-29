@@ -39,10 +39,6 @@ section {
   gap: 2rem;
 }
 
-article {
-  align-items: center;
-}
-
 nav {
   display: grid;
   background-color: #eee7d6;
