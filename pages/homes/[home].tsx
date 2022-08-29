@@ -4,7 +4,7 @@ import Image from "next/image";
 import Script from "next/script";
 import { handleSyntaxError } from "../../src/utils";
 
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/index.module.css";
 import { HomeType } from "../../src/types";
 import { homesArray } from "../../src/constants";
 import fallBackPhoto from "../../public/assets/poolhouse/spring1.jpg";

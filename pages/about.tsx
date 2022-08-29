@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { chairs, door } from "../src/images";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/index.module.css";
 import { aboutTextArray, aboutImageArray } from "../src/constants";
 
 const Home: NextPage = () => {
