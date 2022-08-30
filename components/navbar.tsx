@@ -50,12 +50,7 @@ export default function NavBar() {
         </div>
         <div className={navStyles.nav_title}>
           <Link href="/" className={navStyles.nav_title}>
-            <a
-              onClick={handleClick}
-              className={router.pathname == "/" ? "active" : ""}
-            >
-              bone hollow studio
-            </a>
+            <a onClick={handleClick}>bone hollow studio</a>
           </Link>
         </div>
         <div className={navStyles.nav_hudson_valley}>

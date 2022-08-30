@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import styles from "../styles/index.module.css";
-import homeStyles from "../styles/homes.module.css";
+import styles from "../styles/home.module.css";
 import { Home, HomeType } from "../src/types";
 
 export default function HomeButton({
@@ -18,8 +17,8 @@ export default function HomeButton({
       pathname: `/homes/${home.name}`,
     });
   return (
-    <article className={styles.article} key={index}>
-      <div className={homeStyles.project_container}>
+    <div className={styles.article_style}>
+      <div>
         <Link
           href={`/homes/${encodeURIComponent(
             home.name ? home.name : `${HomeType.poolHouse}`
@@ -43,21 +42,21 @@ export default function HomeButton({
             <Image
               alt={home.thumbnailImage.altText}
               src={home.thumbnailImage.image}
-              width={500}
-              height={300}
+              width={1000}
+              height={800}
+              layout="responsive"
               objectFit="contain"
               key={index}
             />
           </a>
         </Link>
-        <section className={styles.section}>
+        <div className={styles.section_style}>
           {" "}
           <p className={styles.text_left}>
             {home.thumbnailCaption} <br />
           </p>
-          {/* <p className={styles.text_right}>100 square feet</p> */}
-        </section>
+        </div>
       </div>
-    </article>
+    </div>
   );
 }

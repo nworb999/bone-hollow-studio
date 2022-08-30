@@ -1,13 +1,16 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import Script from "next/script";
-import { handleSyntaxError } from "../../src/utils";
 
-import styles from "../../styles/index.module.css";
+import styles from "../../styles/home.module.css";
 import { HomeType } from "../../src/types";
 import { homesArray } from "../../src/constants";
 import fallBackPhoto from "../../public/assets/poolhouse/spring1.jpg";
+import {
+  CenterContent,
+  LeftContent,
+  RightContent,
+} from "../../components/containers";
 
 export const config = {
   unstable_includeFiles: [
@@ -24,19 +27,13 @@ const Home: NextPage = () => {
   console.log({ home });
   return (
     <>
-      <Script
-        src="transparent.js"
-        strategy="lazyOnload"
-        onError={handleSyntaxError}
-      />
-      <div id="empty-div-row"></div>
-
-      <article>
+      {/* <div id="empty-div-row"></div> */}
+      <CenterContent>
         <h1>{HomeType.poolHouse}</h1>{" "}
-      </article>
-      <main className={styles.main}>
-        <section>
-          <article>
+      </CenterContent>
+      <div className={styles.main_style}>
+        <div className={styles.section_style}>
+          <LeftContent>
             <Image
               alt="poolhouse shot"
               src={home?.coverImage.image ?? fallBackPhoto}
@@ -44,8 +41,8 @@ const Home: NextPage = () => {
               height={500}
               objectFit="cover"
             />
-          </article>
-          <article className={styles.text_right}>
+          </LeftContent>
+          <RightContent>
             <p className={styles.bold_text}>
               In collaboration with local craftsmen
             </p>
@@ -55,10 +52,10 @@ const Home: NextPage = () => {
               and gracious motifs that are thoughtfully sited in a quiet,
               introspective setting.
             </p>
-          </article>
-        </section>
-      </main>
-      <article>
+          </RightContent>
+        </div>
+      </div>
+      <div className={styles.article_style}>
         <div id="coverPhoto" className={styles.home_cover}>
           {" "}
           <Image
@@ -69,11 +66,10 @@ const Home: NextPage = () => {
             objectFit="cover"
           />
         </div>
-      </article>
-
-      <main className={styles.main}>
-        <section className={styles.section}>
-          <article className={styles.article}>
+      </div>
+      <div className={styles.main_style}>
+        <div className={styles.section_style}>
+          <div className={styles.article_style}>
             <Image
               alt="fall shot with dark brown pool house in the foreground, shot from the side"
               src={home?.imageArray[0].image ?? fallBackPhoto}
@@ -81,8 +77,8 @@ const Home: NextPage = () => {
               height={500}
               objectFit="cover"
             />
-          </article>
-          <article className={styles.article}>
+          </div>
+          <div className={styles.article_style}>
             <h2>
               with our curated interiors, every element can build a dialogue
             </h2>
@@ -90,14 +86,14 @@ const Home: NextPage = () => {
               we strive for homes characterized by restrained, neutral palettes
               and an elegant minimalism that allow details to shine
             </h2>
-          </article>
-          <article className={styles.article}>
+          </div>{" "}
+          <div className={styles.article_style}>
             <h2>
               the spaces we live in give us a protected and intimate feeling
             </h2>
             <h2>in an uncertain world, home is the calm in a turbulent sea</h2>
-          </article>
-          <article className={styles.article}>
+          </div>
+          <div className={styles.article_style}>
             <Image
               alt="headshot"
               src={home?.imageArray[1].image ?? fallBackPhoto}
@@ -105,9 +101,9 @@ const Home: NextPage = () => {
               height={500}
               objectFit="cover"
             />
-          </article>
-        </section>
-      </main>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
