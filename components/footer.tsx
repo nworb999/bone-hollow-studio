@@ -20,7 +20,7 @@ export default function Footer() {
               instagram <br></br>
             </a>
           </Link>
-          <Link href={"https://www.instagram.com/bonehollowstudio/"} passHref>
+          <Link href={"https://www.facebook.com/bonehollowstudio"} passHref>
             <a target="_blank" rel="noopener noreferrer">
               facebook
             </a>

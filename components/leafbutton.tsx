@@ -8,7 +8,7 @@ export default function LeafButton({
   href = "/homes",
 }: {
   text: string;
-  href: string;
+  href?: string;
 }) {
   return (
     <>

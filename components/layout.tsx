@@ -2,7 +2,7 @@ import NavBar from "./navbar";
 import BurgerMenu from "./burgermenu";
 import Footer from "./footer";
 import { LayoutProps } from "../src/types";
-import styles from "../styles/index.module.css";
+import styles from "../styles/home.module.css";
 import { useEffect, useState } from "react";
 
 interface SetWindowSizeProps {

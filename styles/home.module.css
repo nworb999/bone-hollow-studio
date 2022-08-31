@@ -2,8 +2,6 @@
   grid-column: 1/-1;
 }
 
-<<<<<<< Updated upstream:styles/index.module.css
-=======
 .main_style {
   max-width: 1000px;
   min-height: 100vh;
@@ -32,7 +30,6 @@
   gap: 6rem;
 }
 
->>>>>>> Stashed changes:styles/home.module.css
 .home_cover {
   z-index: -1;
   object-fit: cover;
@@ -40,7 +37,7 @@
 }
 
 .huge_bold_text {
-  font-size: xx-large;
+  font-size: 3rem;
   /* font-weight: bold; */
   justify-content: center;
   font-family: "Chivo", sans-serif;
@@ -81,8 +78,10 @@
   align-items: center;
   align-content: center;
   justify-content: center;
+  display: block;
   max-width: 80%;
-  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .text_left {
