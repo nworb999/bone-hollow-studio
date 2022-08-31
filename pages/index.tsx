@@ -18,18 +18,16 @@ import {
 } from "../src/images";
 
 import styles from "../styles/home.module.css";
-import Script from "next/script";
-import { handleSyntaxError } from "../src/utils";
+
+const textArray: string[] = [
+  `Bone Hollow Studio is a design studio creating bespoke structures in the context of rural tranquility`,
+  `Located in New York’s Hudson Valley, we specialize in curated and welcoming homes.`,
+];
 
 const Home: NextPage = () => {
   return (
     <>
       {" "}
-      {/* <Script
-        src="transparent.js"
-        strategy="lazyOnload"
-        onError={handleSyntaxError}
-      /> */}
       <Head>
         <title>bone hollow studio - homepage</title>
       </Head>
@@ -50,17 +48,13 @@ const Home: NextPage = () => {
       <div id="empty-div-row"></div>
       <div className={styles.main_style}>
         <CenterContent>
-          <p className={styles.huge_bold_text}>
-            Bone Hollow Studio is the meeting of rural tranquility and custom
-            design
-          </p>
+          {/** first text */}
+          <p className={styles.huge_bold_text}>{textArray[0]}</p>
         </CenterContent>
         <div className={styles.section_style}>
           <LeftContent>
-            <p className={styles.bold_text}>
-              Located in Accord, NY, we specialize in curated and welcoming
-              homes.
-            </p>
+            {/** second text */}
+            <p className={styles.bold_text}>{textArray[1]}</p>
           </LeftContent>
           <RightContent>
             <Image

@@ -1,9 +1,6 @@
 import Head from "next/head";
-import Script from "next/script";
 import { LayoutProps } from "../src/types";
-import Image from "next/image";
 import Link from "next/link";
-import { handleSyntaxError } from "../src/utils";
 import { slide as Menu, State } from "react-burger-menu";
 import navStyles from "../styles/navbar.module.css";
 import styles from "../styles/footer.module.css";
@@ -88,11 +85,6 @@ export default function BurgerMenu() {
           className="invert(68%) sepia(9%) saturate(467%) hue-rotate(64deg) brightness(93%) contrast(89%)"
         ></link>
       </Head>
-      {/* <Script
-        src="transparent.js"
-        strategy="lazyOnload"
-        onError={handleSyntaxError}
-      /> */}
       <MyProvider>
         <div>
           <Navigation>

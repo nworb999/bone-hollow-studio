@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import Image from "next/image";
-
 import styles from "../../styles/home.module.css";
 import { HomeType } from "../../src/types";
 import { homesArray } from "../../src/constants";
@@ -70,7 +69,7 @@ const Home: NextPage = () => {
       </div>
       <div className={styles.main_style}>
         <div className={styles.section_style}>
-          <div className={styles.article_style}>
+          <LeftContent>
             <Image
               alt="fall shot with dark brown pool house in the foreground, shot from the side"
               src={home?.imageArray[0].image ?? fallBackPhoto}
@@ -78,8 +77,8 @@ const Home: NextPage = () => {
               height={500}
               objectFit="cover"
             />
-          </div>
-          <div className={styles.article_style}>
+          </LeftContent>
+          <RightContent>
             <h2>
               with our curated interiors, every element can build a dialogue
             </h2>
@@ -87,14 +86,14 @@ const Home: NextPage = () => {
               we strive for homes characterized by restrained, neutral palettes
               and an elegant minimalism that allow details to shine
             </h2>
-          </div>{" "}
-          <div className={styles.article_style}>
+          </RightContent>
+          <LeftContent>
             <h2>
               the spaces we live in give us a protected and intimate feeling
             </h2>
             <h2>in an uncertain world, home is the calm in a turbulent sea</h2>
-          </div>
-          <div className={styles.article_style}>
+          </LeftContent>
+          <RightContent>
             <Image
               alt="headshot"
               src={home?.imageArray[1].image ?? fallBackPhoto}
@@ -102,7 +101,7 @@ const Home: NextPage = () => {
               height={500}
               objectFit="cover"
             />
-          </div>
+          </RightContent>
         </div>
       </div>
       <CenterContent>

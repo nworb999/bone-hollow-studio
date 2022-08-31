@@ -25,13 +25,12 @@ export default function LeafButton({
         </div>
       </CenterContent>
       <CenterContent>
-        <div>
-          <Link href={href}>
-            <p className={styles.bold_text}>{text}</p>
+        <div className={styles.leaf_button}>
+          <Link href={href} passHref>
+            <a className={styles.bold_text}>{text}</a>
           </Link>
         </div>
       </CenterContent>
-      ;
     </>
   );
 }

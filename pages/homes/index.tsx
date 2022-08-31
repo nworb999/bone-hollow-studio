@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import HomeButton from "../../components/homebutton";
-import { handleSyntaxError } from "../../src/utils";
-import Script from "next/script";
 import styles from "../../styles/home.module.css";
 
 import { homesArray } from "../../src/constants";

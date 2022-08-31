@@ -1,8 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Script from "next/script";
 import { useRouter } from "next/router";
-import { handleSyntaxError } from "../src/utils";
 import navStyles from "../styles/navbar.module.css";
 
 export default function NavBar() {
@@ -22,11 +20,6 @@ export default function NavBar() {
           className="invert(68%) sepia(9%) saturate(467%) hue-rotate(64deg) brightness(93%) contrast(89%)"
         ></link>
       </Head>
-      {/* <Script
-        src="transparent.js"
-        strategy="lazyOnload"
-        onError={handleSyntaxError}
-      /> */}
       <nav>
         <div className={navStyles.nav_about}>
           <Link href="/about">

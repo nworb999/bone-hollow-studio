@@ -118,3 +118,14 @@
     brightness(98%) contrast(91%);
   /* https://codepen.io/sosuke/pen/Pjoqqp */
 }
+
+.leaf_button a {
+  transition: 0.3s ease-in;
+  border-bottom: solid 0.1rem rgba(0, 0, 0, 0);
+  padding-bottom: 0.2rem;
+  line-height: 1.5em;
+}
+
+.leaf_button a:hover {
+  border-color: #303d25;
+}
