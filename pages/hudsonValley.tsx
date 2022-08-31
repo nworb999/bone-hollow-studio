@@ -9,9 +9,17 @@ const Home: NextPage = () => {
         <title>bone hollow studio - hudson valley</title>
       </Head>
       <div id="empty-div-row"></div>
+<<<<<<< Updated upstream
       <main className={styles.main}>
         <h1>Hudson Valley</h1>
       </main>
+=======
+      <div className={styles.main_style}>
+        <main>
+          <h1>Hudson Valley</h1>
+        </main>
+      </div>
+>>>>>>> Stashed changes
     </>
   );
 };

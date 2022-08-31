@@ -19,11 +19,11 @@ const Home: NextPage = () => {
   return (
     <>
       {" "}
-      <Script
+      {/* <Script
         src="transparent.js"
         strategy="lazyOnload"
         onError={handleSyntaxError}
-      />
+      /> */}
       <Head>
         <title>bone hollow studio - homepage</title>
       </Head>

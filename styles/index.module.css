@@ -2,6 +2,37 @@
   grid-column: 1/-1;
 }
 
+<<<<<<< Updated upstream:styles/index.module.css
+=======
+.main_style {
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: 0 auto;
+  flex: 1;
+  display: grid;
+  grid-row: span;
+  flex-direction: column;
+  font-size: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.article_style {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.section_style {
+  display: grid;
+  margin: 10%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: fit-content(100%);
+  gap: 6rem;
+}
+
+>>>>>>> Stashed changes:styles/home.module.css
 .home_cover {
   z-index: -1;
   object-fit: cover;
@@ -81,4 +112,10 @@
     display: flow-root;
     height: auto;
   }
+}
+
+.filter_dark {
+  filter: invert(16%) sepia(7%) saturate(1268%) hue-rotate(112deg)
+    brightness(98%) contrast(91%);
+  /* https://codepen.io/sosuke/pen/Pjoqqp */
 }

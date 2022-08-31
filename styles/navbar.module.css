@@ -33,9 +33,3 @@
   padding-inline-end: 40px;
   align-items: center;
 }
-
-.filter_dark {
-  filter: invert(16%) sepia(7%) saturate(1268%) hue-rotate(112deg)
-    brightness(98%) contrast(91%);
-  /* https://codepen.io/sosuke/pen/Pjoqqp */
-}

@@ -88,11 +88,11 @@ export default function BurgerMenu() {
           className="invert(68%) sepia(9%) saturate(467%) hue-rotate(64deg) brightness(93%) contrast(89%)"
         ></link>
       </Head>
-      <Script
+      {/* <Script
         src="transparent.js"
         strategy="lazyOnload"
         onError={handleSyntaxError}
-      />
+      /> */}
       <MyProvider>
         <div>
           <Navigation>

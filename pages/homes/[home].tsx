@@ -8,7 +8,12 @@ import styles from "../../styles/index.module.css";
 import { HomeType } from "../../src/types";
 import { homesArray } from "../../src/constants";
 import fallBackPhoto from "../../public/assets/poolhouse/spring1.jpg";
-
+import {
+  CenterContent,
+  LeftContent,
+  RightContent,
+} from "../../components/containers";
+import LeafButton from "../../components/leafbutton";
 export const config = {
   unstable_includeFiles: [
     "node_modules/next/dist/compiled/@edge-runtime/primitives/**/*.+(js|json)",
@@ -17,11 +22,11 @@ export const config = {
 
 const Home: NextPage = () => {
   const router = useRouter();
-  console.log(router.asPath);
+
   const [home] = homesArray.filter(
     ({ name }) => name === router.asPath.toString().replace("/homes/", "")
   );
-  console.log({ home });
+
   return (
     <>
       <Script
@@ -105,9 +110,18 @@ const Home: NextPage = () => {
               height={500}
               objectFit="cover"
             />
+<<<<<<< Updated upstream
           </article>
         </section>
       </main>
+=======
+          </div>
+        </div>
+      </div>
+      <CenterContent>
+        <LeafButton text="back to other projects"></LeafButton>
+      </CenterContent>
+>>>>>>> Stashed changes
     </>
   );
 };

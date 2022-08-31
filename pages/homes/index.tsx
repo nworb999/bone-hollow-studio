@@ -9,10 +9,11 @@ import { homesArray } from "../../src/constants";
 const Homes: NextPage = () => {
   return (
     <>
-      <Script
+      {/* <Script
         src="transparent.js"
         strategy="lazyOnload"
         onError={handleSyntaxError}
+<<<<<<< Updated upstream
       />
       <main>
         <Head>
@@ -28,6 +29,21 @@ const Homes: NextPage = () => {
           ))}
         </section>
       </main>
+=======
+      /> */}
+      <Head>
+        <title>bone hollow studio - homes</title>
+      </Head>
+      <div id="empty-div-row"></div>
+      <CenterContent>
+        <p className={styles.huge_bold_text}>projects</p>
+      </CenterContent>{" "}
+      <div className={styles.section_style}>
+        {homesArray.map((home, i) => (
+          <HomeButton home={home} index={i} key={i} />
+        ))}
+      </div>
+>>>>>>> Stashed changes
     </>
   );
 };
