@@ -11,6 +11,7 @@ import {
   RightContent,
 } from "../../components/containers";
 import LeafButton from "../../components/leafbutton";
+import Script from "next/script";
 
 export const config = {
   unstable_includeFiles: [
@@ -31,6 +32,8 @@ const Home: NextPage = () => {
       <CenterContent>
         <h1>{HomeType.poolHouse}</h1>{" "}
       </CenterContent>
+      <Script src="transparent.js" strategy="lazyOnload" />
+      <div id="empty-div-row"></div>
       <div className={styles.main_style}>
         <div className={styles.section_style}>
           <LeftContent>

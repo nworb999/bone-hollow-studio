@@ -8,6 +8,7 @@ import {
   LeftContent,
   RightContent,
 } from "../components/containers";
+import Script from "next/script";
 
 const textArray: string[] = [
   `At Bone Hollow Studio we specialize in curated and welcoming
@@ -43,6 +44,7 @@ const Home: NextPage = () => {
       <Head>
         <title>bone hollow studio - about</title>
       </Head>
+      <Script src="transparent.js" strategy="lazyOnload" />
       <div id="empty-div-row"></div>
       <main>
         <CenterContent>

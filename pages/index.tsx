@@ -18,6 +18,7 @@ import {
 } from "../src/images";
 
 import styles from "../styles/home.module.css";
+import Script from "next/script";
 
 const textArray: string[] = [
   `Bone Hollow Studio is a design studio creating bespoke structures in the context of rural tranquility`,
@@ -45,6 +46,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <Script src="transparent.js" strategy="lazyOnload" />
       <div id="empty-div-row"></div>
       <div className={styles.main_style}>
         <CenterContent>

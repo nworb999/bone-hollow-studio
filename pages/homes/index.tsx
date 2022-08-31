@@ -5,6 +5,7 @@ import styles from "../../styles/home.module.css";
 
 import { homesArray } from "../../src/constants";
 import { CenterContent } from "../../components/containers";
+import Script from "next/script";
 
 const Homes: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Homes: NextPage = () => {
       <Head>
         <title>bone hollow studio - homes</title>
       </Head>
+      <Script src="transparent.js" strategy="lazyOnload" />
       <div id="empty-div-row"></div>
       <CenterContent>
         <p className={styles.huge_bold_text}>projects</p>
