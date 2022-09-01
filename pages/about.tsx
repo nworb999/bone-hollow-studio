@@ -2,40 +2,13 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/home.module.css";
-import { aboutImageArray } from "../src/constants";
+import { aboutImageArray, aboutTextArray } from "../src/constants";
 import {
   CenterContent,
   LeftContent,
   RightContent,
 } from "../components/containers";
 import Script from "next/script";
-
-const textArray: string[] = [
-  `At Bone Hollow Studio we specialize in curated and welcoming
-    homes. Through our partnership with renowned local builder,
-    Hudson Valley Homes & Renovations, we offer clean and gracious
-    motifs that are thoughtfully sited in a quiet, introspective
-    setting.`,
-  `Erika grew up in Berlin, Germany and the American Midwest. A
-    graduate of Northwestern University, she has over 15 years of
-    experience in producing commercials and special effects for an
-    illustrious client base, amongst them Nike, Coca-Cola,
-    McDonald's, Chevrolet, and Anheuser Busch. Erika has also
-    worked in development and event planning for non-profits,
-    including Jersey Battered Women's Service.
-    
-
-    Erika's latest work with the New York-based interior
-    designer, Amanda Rehbein Studio, has segued into the creation of
-    her company, Bone Hollow Studio. With a background in
-    advertising production and styling, Erika combines her passion
-    for creative design with a natural aptitude for project
-    management. She believes one
-    s home should be unique,
-    reflecting a deeply personal connection with the land.
-    Erika's goal is to create spaces that are at once impactful
-    and livable, timeless and comfortable.`,
-];
 
 const Home: NextPage = () => {
   return (
@@ -45,8 +18,8 @@ const Home: NextPage = () => {
         <title>bone hollow studio - about</title>
       </Head>
       <Script src="transparent.js" strategy="lazyOnload" />
-      <div id="empty-div-row"></div>
       <main>
+        <div id="empty-div-row"></div>
         <CenterContent>
           <p className={styles.huge_bold_text}>who we are</p>
         </CenterContent>{" "}
@@ -61,12 +34,12 @@ const Home: NextPage = () => {
             />
           </LeftContent>
           <RightContent>
-            <p className={styles.small_bold_text}>{textArray[0]}</p>
+            <p className={styles.small_bold_text}>{aboutTextArray[0]}</p>
+            <p className={styles.small_bold_text}>{aboutTextArray[1]}</p>
           </RightContent>
           <LeftContent>
-            <p id="ownerPara1" className={styles.small_bold_text}>
-              {textArray[1]}
-            </p>
+            <p className={styles.small_bold_text}>{aboutTextArray[2]}</p>
+            <p className={styles.small_bold_text}>{aboutTextArray[3]}</p>
           </LeftContent>
           <RightContent>
             <Image

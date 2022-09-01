@@ -16,14 +16,9 @@ import {
   fireplace,
   couch,
 } from "../src/images";
-
+import { indexTextArray } from "../src/constants";
 import styles from "../styles/home.module.css";
 import Script from "next/script";
-
-const textArray: string[] = [
-  `Bone Hollow Studio is a design studio creating bespoke structures in the context of rural tranquility`,
-  `Located in New York’s Hudson Valley, we specialize in curated and welcoming homes.`,
-];
 
 const Home: NextPage = () => {
   return (
@@ -47,16 +42,16 @@ const Home: NextPage = () => {
         </div>
       </div>
       <Script src="transparent.js" strategy="lazyOnload" />
-      <div id="empty-div-row"></div>
       <div className={styles.main_style}>
+        <div id="empty-div-row"></div>
         <CenterContent>
           {/** first text */}
-          <p className={styles.huge_bold_text}>{textArray[0]}</p>
+          <p className={styles.huge_bold_text}>{indexTextArray[0]}</p>
         </CenterContent>
         <div className={styles.section_style}>
           <LeftContent>
             {/** second text */}
-            <p className={styles.bold_text}>{textArray[1]}</p>
+            <p className={styles.bold_text}>{indexTextArray[1]}</p>
           </LeftContent>
           <RightContent>
             <Image
@@ -92,25 +87,14 @@ const Home: NextPage = () => {
             />
           </LeftContent>
           <RightContent>
-            <p className={styles.bold_text}>A boutique development company</p>
-            <p className={styles.small_bold_text}>
-              Our work is founded on the belief that form and function are the
-              sine qua non of a well-designed home.
-            </p>
+            <p className={styles.bold_text}>{indexTextArray[2]}</p>
+            <p className={styles.small_bold_text}>{indexTextArray[3]}</p>
           </RightContent>
         </div>
         <div className={styles.section_style}>
           <LeftContent>
-            <p className={styles.small_bold_text}>
-              We apply that perspective to projects of every size, from
-              furnishings to new builds.
-            </p>
-            <p className={styles.small_bold_text}>
-              The spaces we create are characterized by luxurious textures,
-              quality materials, and a minimalistic style, because we believe
-              that the way your home feels is just as significant as how it
-              looks.
-            </p>
+            <p className={styles.small_bold_text}>{indexTextArray[4]}</p>
+            <p className={styles.small_bold_text}>{indexTextArray[5]}</p>
           </LeftContent>
           <RightContent>
             <Image
@@ -137,15 +121,8 @@ const Home: NextPage = () => {
       <div className={styles.main_style}>
         <div className={styles.section_style}>
           <LeftContent>
-            <p className={styles.bold_text}>
-              In collaboration with local craftsmen
-            </p>
-            <p className={styles.small_bold_text}>
-              Through our partnership with a renowned local builder, Jeromy
-              Wells, of <i>Hudson Valley Homes & Renovations,</i> we offer clean
-              and gracious motifs that are thoughtfully sited in a quiet,
-              introspective setting.
-            </p>
+            <p className={styles.bold_text}>{indexTextArray[6]}</p>
+            <p className={styles.small_bold_text}>{indexTextArray[7]}</p>
           </LeftContent>
           <RightContent>
             <Image
@@ -172,10 +149,10 @@ const Home: NextPage = () => {
       <div className={styles.main_style}>
         <CenterContent>
           <p className={styles.huge_bold_text}>
-            The spaces we live in give us a protected and intimate feeling.{" "}
+            {indexTextArray[8]}
             <br />
             <br />
-            In an uncertain world, home is the calm in a turbulent sea.
+            {indexTextArray[9]}
             <br />
           </p>
         </CenterContent>

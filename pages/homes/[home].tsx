@@ -19,6 +19,13 @@ export const config = {
   ],
 };
 
+const formatName = ({ name }: { name?: HomeType }) => {
+  if (name) {
+    const result = name.replace(/([A-Z])/g, " $1");
+    return result.charAt(0) + result.slice(1).toLowerCase();
+  }
+};
+
 const Home: NextPage = () => {
   const router = useRouter();
 
@@ -28,32 +35,31 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {/* <div id="empty-div-row"></div> */}
+      <div id="empty-div-row"></div>
       <CenterContent>
-        <h1>{HomeType.poolHouse}</h1>{" "}
+        <h1>{formatName({ name: home?.name })}</h1>{" "}
       </CenterContent>
       <Script src="transparent.js" strategy="lazyOnload" />
-      <div id="empty-div-row"></div>
       <div className={styles.main_style}>
         <div className={styles.section_style}>
           <LeftContent>
             <Image
-              alt="poolhouse shot"
-              src={home?.coverImage.image ?? fallBackPhoto}
+              alt={
+                home?.coverImageArray ? home.coverImageArray[0]?.altText : ""
+              }
+              src={
+                home?.coverImageArray
+                  ? home.coverImageArray[0]?.image
+                  : fallBackPhoto
+              }
               width={500}
               height={500}
               objectFit="cover"
             />
           </LeftContent>
           <RightContent>
-            <p className={styles.bold_text}>
-              In collaboration with local craftsmen
-            </p>
             <p className={styles.small_bold_text}>
-              Through our partnership with a renowned local builder, Jeromy
-              Wells, of <i>Hudson Valley Homes & Renovations,</i> we offer clean
-              and gracious motifs that are thoughtfully sited in a quiet,
-              introspective setting.
+              {home?.topText ? home.topText : ""}
             </p>
           </RightContent>
         </div>
@@ -62,8 +68,12 @@ const Home: NextPage = () => {
         <div id="coverPhoto" className={styles.home_cover}>
           {" "}
           <Image
-            alt="Catskills"
-            src={home?.coverImage.image ?? fallBackPhoto}
+            alt={home?.coverImageArray ? home.coverImageArray[0]?.altText : ""}
+            src={
+              home?.coverImageArray
+                ? home.coverImageArray[0]?.image
+                : fallBackPhoto
+            }
             layout="responsive"
             objectPosition="relative"
             objectFit="cover"
@@ -74,38 +84,65 @@ const Home: NextPage = () => {
         <div className={styles.section_style}>
           <LeftContent>
             <Image
-              alt="fall shot with dark brown pool house in the foreground, shot from the side"
-              src={home?.imageArray[0].image ?? fallBackPhoto}
+              alt={home?.imageArray ? home.imageArray[0]?.altText : ""}
+              src={home?.imageArray ? home.imageArray[0]?.image : fallBackPhoto}
               width={500}
               height={500}
               objectFit="cover"
             />
           </LeftContent>
           <RightContent>
-            <h2>
-              with our curated interiors, every element can build a dialogue
-            </h2>
-            <h2>
-              we strive for homes characterized by restrained, neutral palettes
-              and an elegant minimalism that allow details to shine
-            </h2>
+            <p className={styles.small_bold_text}>
+              {home?.textRight ? home.textRight : ""}
+            </p>
           </RightContent>
           <LeftContent>
-            <h2>
-              the spaces we live in give us a protected and intimate feeling
-            </h2>
-            <h2>in an uncertain world, home is the calm in a turbulent sea</h2>
+            <p className={styles.small_bold_text}>
+              {home?.textLeft ? home.textLeft : ""}
+            </p>
           </LeftContent>
           <RightContent>
             <Image
-              alt="headshot"
-              src={home?.imageArray[1].image ?? fallBackPhoto}
+              alt={home?.imageArray ? home.imageArray[1]?.altText : ""}
+              src={home?.imageArray ? home.imageArray[1]?.image : fallBackPhoto}
               width={500}
               height={500}
               objectFit="cover"
             />
           </RightContent>
         </div>
+      </div>
+      <div className={styles.article_style}>
+        <div id="coverPhoto" className={styles.home_cover}>
+          {" "}
+          <Image
+            alt={home?.coverImageArray ? home.coverImageArray[0]?.altText : ""}
+            src={
+              home?.coverImageArray
+                ? home.coverImageArray[0]?.image
+                : fallBackPhoto
+            }
+            layout="responsive"
+            objectPosition="relative"
+            objectFit="cover"
+          />
+        </div>
+      </div>
+      <div className={styles.main_style}>
+        {" "}
+        <CenterContent>
+          <Image
+            alt={home?.coverImageArray ? home.coverImageArray[1]?.altText : ""}
+            src={
+              home?.coverImageArray
+                ? home.coverImageArray[1]?.image
+                : fallBackPhoto
+            }
+            layout="responsive"
+            objectPosition="relative"
+            objectFit="cover"
+          />
+        </CenterContent>
       </div>
       <CenterContent>
         <LeafButton text="back to other projects"></LeafButton>

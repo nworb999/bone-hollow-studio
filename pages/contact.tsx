@@ -33,7 +33,7 @@ const Home: NextPage = () => {
           <p className={styles.bold_text}>Erika Brown</p>
 
           <p className={styles.small_bold_text}>erika@bonehollow.studio</p>
-          <p className={styles.small_bold_text}>(917) 922-1396</p>
+          <p className={styles.small_bold_text}>(845) 605-9550 </p>
         </CenterContent>
         <CenterContent>
           <p className={styles.huge_bold_text}>builder</p>

@@ -2,16 +2,21 @@ import { StaticImageData } from "next/image";
 
 export enum HomeType {
   poolHouse = "poolHouse",
-  oneEightOne = "oneEightOne",
+  meadowView = "meadowView",
+  farmHouse = "farmHouse",
+  four = "four",
 }
 
 export interface Home {
   name: HomeType;
   thumbnailImage: Image;
   thumbnailCaption: string;
-  coverImage: Image;
-  imageArray: Image[];
-  footerImage: Image;
+  coverImageArray?: Image[];
+  imageArray?: Image[];
+  footerImage?: Image;
+  topText?: string;
+  textRight?: string;
+  textLeft?: string;
 }
 
 export interface Image {
