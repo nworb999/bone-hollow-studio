@@ -26,7 +26,7 @@ export default function NavBar() {
         <div className={navStyles.nav_about}>
           <Link href="/about">
             <a
-              // onClick={handleClick}
+              onClick={handleClick}
               className={router.pathname == "/about" ? "active" : ""}
             >
               about

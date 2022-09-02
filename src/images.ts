@@ -1,39 +1,77 @@
-import door from "../public/assets/erika/IMG_6928.jpeg";
-import flowers from "../public/assets/poolhouse/flowers.jpg";
-import fireplace from "../public/assets/fireplace.jpg";
-import couch from "../public/assets/couch.jpg";
-import hoya from "../public/assets/hoya.jpg";
-import pool from "../public/assets/poolhouse/pool.jpg";
-import spring from "../public/assets/poolhouse/spring1.jpg";
-import coverPhoto from "../public/assets/livingroom.jpg";
-import screen from "../public/assets/screen.jpg";
-import fall from "../public/assets/poolhouse/fall1.jpg";
-import spring1 from "../public/assets/poolhouse/spring1.jpg";
-import spring2 from "../public/assets/poolhouse/spring2.jpg";
-import aerial from "../public/assets/poolhouse/aerial.jpg";
-import entrance from "../public/assets/181bonehollow/entrance.jpeg";
-import hall from "../public/assets/181bonehollow/hall.jpeg";
-import front from "../public/assets/181bonehollow/front.jpg";
-import mirror from "../public/assets/181bonehollow/mirror.jpg";
-import chairs from "../public/assets/poolhouse/EB242.jpg";
+/* index pics **/
+import livingroom from "../public/assets/index/livingroom.jpg";
+import springView from "../public/assets/index/spring.jpg";
+import flower from "../public/assets/index/flower.jpg";
+import hoya from "../public/assets/index/hoya.jpg";
+import pool from "../public/assets/index/pool.jpg";
+import fireplace from "../public/assets/index/fireplace.jpg";
+import airlock from "../public/assets/index/airlock.jpg";
+import screenPorch from "../public/assets/index/screenporch.jpg";
 
+/* about pics **/
+import erika from "../public/assets/about/erika.jpg";
+import umbrellas from "../public/assets/about/umbrellas.jpg";
+
+/* home pics **/
+import corner from "../public/assets/meadowView/corner.jpg";
+import above from "../public/assets/meadowView/above.jpg";
+import office from "../public/assets/meadowView/office.jpg";
+import aFrame from "../public/assets/meadowView/aframe.jpg";
+import officeWall from "../public/assets/meadowView/officewall.jpg";
+import windowCorner from "../public/assets/meadowView/windowcorner.jpg";
+import mantle from "../public/assets/meadowView/mantle.jpg";
+
+import book from "../public/assets/farmHouse/book.jpg";
+import meadowAngle from "../public/assets/farmHouse/meadowangle.jpg";
+import frontSideTable from "../public/assets/farmHouse/frontsidetable.jpg";
+import farmFirePlace from "../public/assets/farmHouse/fireplace.jpg";
+import lilysView from "../public/assets/farmHouse/lilysview.jpg";
+import kitchen from "../public/assets/farmHouse/kitchen.jpg";
+import diningRoom from "../public/assets/farmHouse/diningroom.jpg";
+
+import stove from "../public/assets/guestBarn/stove.jpg";
+import screen from "../public/assets/guestBarn/screen.jpg";
+import sideBarn from "../public/assets/guestBarn/side.jpg";
+import library from "../public/assets/guestBarn/library.jpg";
+import bedroom from "../public/assets/guestBarn/bedroom.jpg";
+import grandmasPiano from "../public/assets/guestBarn/piano.jpg";
+import butterflyBushes from "../public/assets/guestBarn/butterflybushes.jpg";
+
+import construction from "../public/assets/four/construction.jpg";
+
+const fallBackImage = livingroom;
 export {
-  door,
-  chairs,
-  flowers,
-  fireplace,
-  couch,
+  livingroom,
+  fallBackImage,
+  springView,
+  flower,
   hoya,
   pool,
-  spring,
-  coverPhoto,
+  fireplace,
+  book,
+  airlock,
+  screenPorch,
+  erika,
+  umbrellas,
+  corner,
+  above,
+  office,
+  aFrame,
+  officeWall,
+  windowCorner,
+  mantle,
+  meadowAngle,
+  frontSideTable,
+  farmFirePlace,
+  lilysView,
+  kitchen,
+  diningRoom,
+  stove,
   screen,
-  fall,
-  spring1,
-  spring2,
-  aerial,
-  entrance,
-  hall,
-  front,
-  mirror,
+  sideBarn,
+  bedroom,
+  library,
+  grandmasPiano,
+  butterflyBushes,
+  construction,
 };

@@ -21,10 +21,10 @@ export default function HomeButton({
       <div>
         <Link
           href={`/homes/${encodeURIComponent(
-            home.name ? home.name : `${HomeType.poolHouse}`
+            home.name && home.name !== HomeType.four ? home.name : ``
           )}`}
           as={`/homes/${encodeURIComponent(
-            home.name ? home.name : `${HomeType.poolHouse}`
+            home.name && home.name !== HomeType.four ? home.name : ``
           )}`}
           passHref
           key={index}
@@ -33,10 +33,10 @@ export default function HomeButton({
             onClick={() => handleClick({ home })}
             key={index}
             href={`/homes/${encodeURIComponent(
-              home.name ? home.name : `${HomeType.poolHouse}`
+              home.name && home.name !== HomeType.four ? home.name : ``
             )}`}
             ref={`/homes/${encodeURIComponent(
-              home.name ? home.name : `${HomeType.poolHouse}`
+              home.name && home.name !== HomeType.four ? home.name : ``
             )}`}
           >
             <Image

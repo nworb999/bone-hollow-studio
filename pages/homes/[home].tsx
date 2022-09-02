@@ -2,9 +2,9 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from "../../styles/home.module.css";
-import { HomeType } from "../../src/types";
+import { fallBackImage } from "../../src/images";
 import { homesArray } from "../../src/constants";
-import fallBackPhoto from "../../public/assets/poolhouse/spring1.jpg";
+
 import {
   CenterContent,
   LeftContent,
@@ -12,18 +12,12 @@ import {
 } from "../../components/containers";
 import LeafButton from "../../components/leafbutton";
 import Script from "next/script";
+import { formatName } from "../../src/utils";
 
 export const config = {
   unstable_includeFiles: [
     "node_modules/next/dist/compiled/@edge-runtime/primitives/**/*.+(js|json)",
   ],
-};
-
-const formatName = ({ name }: { name?: HomeType }) => {
-  if (name) {
-    const result = name.replace(/([A-Z])/g, " $1");
-    return result.charAt(0) + result.slice(1).toLowerCase();
-  }
 };
 
 const Home: NextPage = () => {
@@ -32,7 +26,7 @@ const Home: NextPage = () => {
   const [home] = homesArray.filter(
     ({ name }) => name === router.asPath.toString().replace("/homes/", "")
   );
-
+  console.log({ home });
   return (
     <>
       <div id="empty-div-row"></div>
@@ -44,14 +38,8 @@ const Home: NextPage = () => {
         <div className={styles.section_style}>
           <LeftContent>
             <Image
-              alt={
-                home?.coverImageArray ? home.coverImageArray[0]?.altText : ""
-              }
-              src={
-                home?.coverImageArray
-                  ? home.coverImageArray[0]?.image
-                  : fallBackPhoto
-              }
+              alt={home?.imageArray ? home.imageArray[0]?.altText : ""}
+              src={home?.imageArray ? home.imageArray[0]?.image : fallBackImage}
               width={500}
               height={500}
               objectFit="cover"
@@ -72,7 +60,7 @@ const Home: NextPage = () => {
             src={
               home?.coverImageArray
                 ? home.coverImageArray[0]?.image
-                : fallBackPhoto
+                : fallBackImage
             }
             layout="responsive"
             objectPosition="relative"
@@ -84,8 +72,8 @@ const Home: NextPage = () => {
         <div className={styles.section_style}>
           <LeftContent>
             <Image
-              alt={home?.imageArray ? home.imageArray[0]?.altText : ""}
-              src={home?.imageArray ? home.imageArray[0]?.image : fallBackPhoto}
+              alt={home?.imageArray ? home.imageArray[1]?.altText : ""}
+              src={home?.imageArray ? home.imageArray[1]?.image : fallBackImage}
               width={500}
               height={500}
               objectFit="cover"
@@ -103,8 +91,8 @@ const Home: NextPage = () => {
           </LeftContent>
           <RightContent>
             <Image
-              alt={home?.imageArray ? home.imageArray[1]?.altText : ""}
-              src={home?.imageArray ? home.imageArray[1]?.image : fallBackPhoto}
+              alt={home?.imageArray ? home.imageArray[2]?.altText : ""}
+              src={home?.imageArray ? home.imageArray[2]?.image : fallBackImage}
               width={500}
               height={500}
               objectFit="cover"
@@ -114,13 +102,12 @@ const Home: NextPage = () => {
       </div>
       <div className={styles.article_style}>
         <div id="coverPhoto" className={styles.home_cover}>
-          {" "}
           <Image
-            alt={home?.coverImageArray ? home.coverImageArray[0]?.altText : ""}
+            alt={home?.coverImageArray ? home.coverImageArray[1]?.altText : ""}
             src={
               home?.coverImageArray
-                ? home.coverImageArray[0]?.image
-                : fallBackPhoto
+                ? home.coverImageArray[1]?.image
+                : fallBackImage
             }
             layout="responsive"
             objectPosition="relative"
@@ -131,22 +118,20 @@ const Home: NextPage = () => {
       <div className={styles.main_style}>
         {" "}
         <CenterContent>
-          <Image
-            alt={home?.coverImageArray ? home.coverImageArray[1]?.altText : ""}
-            src={
-              home?.coverImageArray
-                ? home.coverImageArray[1]?.image
-                : fallBackPhoto
-            }
-            layout="responsive"
-            objectPosition="relative"
-            objectFit="cover"
-          />
+          {
+            <Image
+              alt={home?.footerImage ? home.footerImage?.altText : ""}
+              src={home?.footerImage ? home.footerImage?.image : fallBackImage}
+              width={500}
+              height={500}
+              objectFit="cover"
+            />
+          }
+        </CenterContent>
+        <CenterContent>
+          <LeafButton text="back to other projects"></LeafButton>
         </CenterContent>
       </div>
-      <CenterContent>
-        <LeafButton text="back to other projects"></LeafButton>
-      </CenterContent>
     </>
   );
 };

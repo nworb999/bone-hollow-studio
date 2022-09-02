@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 export enum HomeType {
-  poolHouse = "poolHouse",
+  guestBarn = "guestBarn",
   meadowView = "meadowView",
   farmHouse = "farmHouse",
   four = "four",

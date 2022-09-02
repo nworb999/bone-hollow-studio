@@ -6,17 +6,8 @@ import {
   LeftContent,
   RightContent,
 } from "../components/containers";
-import {
-  coverPhoto,
-  spring,
-  flowers,
-  screen,
-  hoya,
-  pool,
-  fireplace,
-  couch,
-} from "../src/images";
-import { indexTextArray } from "../src/constants";
+
+import { indexTextArray, indexImageArray } from "../src/constants";
 import styles from "../styles/home.module.css";
 import Script from "next/script";
 
@@ -33,8 +24,8 @@ const Home: NextPage = () => {
           <div id="coverPhoto" className={styles.home_cover}>
             {" "}
             <Image
-              alt="Catskills"
-              src={coverPhoto}
+              alt={indexImageArray[0].altText}
+              src={indexImageArray[0].image}
               layout="fill"
               objectFit="cover"
             />
@@ -55,8 +46,8 @@ const Home: NextPage = () => {
           </LeftContent>
           <RightContent>
             <Image
-              alt="poolhouse shot"
-              src={spring}
+              alt={indexImageArray[1].altText}
+              src={indexImageArray[1].image}
               width={500}
               height={500}
               objectFit="cover"
@@ -67,8 +58,8 @@ const Home: NextPage = () => {
       <div className={styles.article_style}>
         <div className={styles.home_cover}>
           <Image
-            alt="poolhouse shot"
-            src={flowers}
+            alt={indexImageArray[2].altText}
+            src={indexImageArray[2].image}
             layout="responsive"
             objectPosition="relative"
             objectFit="cover"
@@ -79,8 +70,8 @@ const Home: NextPage = () => {
         <div className={styles.section_style}>
           <LeftContent>
             <Image
-              alt="poolhouse shot"
-              src={fireplace}
+              alt={indexImageArray[3].altText}
+              src={indexImageArray[3].image}
               width={500}
               height={500}
               objectFit="cover"
@@ -98,8 +89,8 @@ const Home: NextPage = () => {
           </LeftContent>
           <RightContent>
             <Image
-              alt="poolhouse shot"
-              src={hoya}
+              alt={indexImageArray[4].altText}
+              src={indexImageArray[4].image}
               width={500}
               height={500}
               objectFit="cover"
@@ -110,8 +101,8 @@ const Home: NextPage = () => {
       <div className={styles.article_style}>
         <div className={styles.home_cover}>
           <Image
-            alt="poolhouse shot"
-            src={screen}
+            alt={indexImageArray[5].altText}
+            src={indexImageArray[5].image}
             layout="responsive"
             objectPosition="relative"
             objectFit="cover"
@@ -126,8 +117,8 @@ const Home: NextPage = () => {
           </LeftContent>
           <RightContent>
             <Image
-              alt="poolhouse shot"
-              src={couch}
+              alt={indexImageArray[6].altText}
+              src={indexImageArray[6].image}
               width={500}
               height={500}
               objectFit="cover"
@@ -138,8 +129,8 @@ const Home: NextPage = () => {
       <div className={styles.article_style}>
         <div className={styles.home_cover}>
           <Image
-            alt="poolhouse shot"
-            src={pool}
+            alt={indexImageArray[7].altText}
+            src={indexImageArray[7].image}
             layout="responsive"
             objectPosition="relative"
             objectFit="cover"

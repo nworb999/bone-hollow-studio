@@ -1,78 +1,105 @@
 import { Home, HomeType, Image } from "./types";
 import {
-  aerial,
-  spring1,
-  spring2,
-  fall,
-  chairs,
-  entrance,
-  front,
-  hall,
-  mirror,
-  door,
+  livingroom,
+  fallBackImage,
+  springView,
+  flower,
+  hoya,
+  pool,
+  fireplace,
+  airlock,
+  erika,
+  book,
+  umbrellas,
+  corner,
+  screenPorch,
+  above,
+  office,
+  aFrame,
+  officeWall,
+  windowCorner,
+  mantle,
+  meadowAngle,
+  frontSideTable,
+  farmFirePlace,
+  lilysView,
+  kitchen,
+  diningRoom,
+  stove,
+  screen,
+  sideBarn,
+  bedroom,
+  library,
+  grandmasPiano,
+  butterflyBushes,
+  construction,
 } from "./images";
+import { formatName } from "./utils";
 
 export const homesArray: Home[] = [
   {
-    name: HomeType.poolHouse,
-    thumbnailImage: { image: aerial, altText: "placeholder" },
-    thumbnailCaption: "meadow view",
+    name: HomeType.farmHouse,
     coverImageArray: [
-      { image: aerial, altText: "placeholder" },
-      { image: aerial, altText: "placeholder" },
+      { image: lilysView, altText: "placeholder" },
+      { image: diningRoom, altText: "placeholder" },
     ],
+    thumbnailImage: { image: farmFirePlace, altText: "placeholder" },
+    thumbnailCaption: formatName({ name: HomeType.farmHouse }),
     imageArray: [
-      { image: spring1, altText: "placeholder" },
-      { image: spring2, altText: "placeholder" },
+      { image: meadowAngle, altText: "placeholder" },
+      { image: kitchen, altText: "placeholder" },
+      { image: frontSideTable, altText: "placeholder" },
     ],
-    footerImage: { image: fall, altText: "placeholder" },
+    footerImage: { image: book, altText: "placeholder" },
+    topText: `A farm house originally built in 1800.  Erika’s love affair with the Hudson Valley began with this property. Perhaps it’s the connection to her grandfather’s wheat farm in Kansas. From the moment Erika saw the wildflower filled meadow out back she felt a visceral connection to the land.  Builder: Hudson Valley Homes & Renovations   Furnishings: Bone Hollow Studio`,
+    textRight: `Layered and curated furnishings take time and patience.  Our approach to creative sourcing is one of the highlights of our work.`,
+  },
+  {
+    name: HomeType.guestBarn,
+    coverImageArray: [
+      { image: screen, altText: "placeholder" },
+      { image: bedroom, altText: "placeholder" },
+    ],
+    thumbnailImage: { image: sideBarn, altText: "placeholder" },
+    thumbnailCaption: formatName({ name: HomeType.guestBarn }),
+    imageArray: [
+      { image: butterflyBushes, altText: "placeholder" },
+      { image: library, altText: "placeholder" },
+      { image: grandmasPiano, altText: "placeholder" },
+    ],
+    footerImage: { image: stove, altText: "placeholder" },
     topText: `Built in 2018 by Hudson Valley Homes & Renovations in collaboration with Bone Hollow Studio.  By design, the structure appears as an unassuming barn from the road. In reality it functions as the soul of the property - guest house, pool house, music room and great room. Architect: Kurt Sutherland  Builder: Hudson Valley Homes & Renovations   Designer: Bone Hollow Studio`,
     textRight: `Our spaces are created through the layering of design, objects and experience. The key is to be able to layer and still allow the space to feel calm.`,
     textLeft: `With WFH becoming the norm the guest barn is the perfect space for productivity.`,
   },
   {
     name: HomeType.meadowView,
+    thumbnailImage: { image: corner, altText: "placeholder" },
+    thumbnailCaption: formatName({ name: HomeType.meadowView }),
     coverImageArray: [
-      { image: aerial, altText: "placeholder" },
-      { image: aerial, altText: "placeholder" },
+      { image: above, altText: "placeholder" },
+      { image: windowCorner, altText: "placeholder" },
     ],
-    thumbnailImage: { image: entrance, altText: "placeholder" },
-    thumbnailCaption: "guest barn",
     imageArray: [
-      { image: front, altText: "placeholder" },
-      { image: hall, altText: "placeholder" },
+      { image: aFrame, altText: "placeholder" },
+      { image: office, altText: "placeholder" },
+      { image: officeWall, altText: "placeholder" },
     ],
-    footerImage: { image: mirror, altText: "placeholder" },
+    footerImage: { image: mantle, altText: "placeholder" },
     topText: `Built in 2022 this home represents our approach to connecting the build and natural environment.  Textures and organic elements are the stars.`,
     textRight: `We sourced Ash from the property to create custom details throughout the home.  `,
     textLeft: `Our goal was to create a calming environment that allows the natural surrounding to shine.`,
   },
   {
-    name: HomeType.farmHouse,
-    coverImageArray: [
-      { image: aerial, altText: "placeholder" },
-      { image: aerial, altText: "placeholder" },
-    ],
-    thumbnailImage: { image: entrance, altText: "placeholder" },
-    thumbnailCaption: "farm house",
-    imageArray: [
-      { image: entrance, altText: "placeholder" },
-      { image: entrance, altText: "placeholder" },
-    ],
-    footerImage: { image: entrance, altText: "placeholder" },
-    topText: `A farm house originally built in 1800.  Erika’s love affair with the Hudson Valley began with this property. Perhaps it’s the connection to her grandfather’s wheat farm in Kansas. From the moment Erika saw the wildflower filled meadow out back she felt a visceral connection to the land.  Builder: Hudson Valley Homes & Renovations   Furnishings: Bone Hollow Studio`,
-    textRight: `Layered and curated furnishings take time and patience.  Our approach to creative sourcing is one of the highlights of our work.`,
-  },
-  {
     name: HomeType.four,
-    thumbnailImage: { image: entrance, altText: "placeholder" },
+    thumbnailImage: { image: construction, altText: "placeholder" },
     thumbnailCaption: "coming soon",
   },
 ];
 
 export const aboutImageArray: Image[] = [
-  { image: chairs, altText: "chairs" },
-  { image: door, altText: "door" },
+  { image: umbrellas, altText: "chairs" },
+  { image: erika, altText: "door" },
 ];
 
 export const aboutTextArray: string[] = [
@@ -101,6 +128,24 @@ export const aboutTextArray: string[] = [
     reflecting a deeply personal connection with the land.
     Erika's goal is to create spaces that are at once impactful
     and livable, timeless and comfortable.`,
+];
+
+export const indexImageArray: Image[] = [
+  {
+    image: livingroom,
+    altText:
+      "softly designed living room with a blue couch to the left, patterned pillows on top...etc",
+  },
+  {
+    image: springView,
+    altText: "top corner of dark barn peaking above a meadow",
+  },
+  { image: flower, altText: "white farmhouse with wildflowers in foreground" },
+  { image: fireplace, altText: "" },
+  { image: hoya, altText: "" },
+  { image: screenPorch, altText: "" },
+  { image: airlock, altText: "" },
+  { image: pool, altText: "" },
 ];
 
 export const indexTextArray: string[] = [
