@@ -27,7 +27,9 @@ export default function LeafButton({
       <CenterContent>
         <div className={styles.leaf_button}>
           <Link href={href} passHref>
-            <a className={styles.bold_text}>{text}</a>
+            <a className={styles.bold_text}>
+              <p color="#515151">{text}</p>
+            </a>
           </Link>
         </div>
       </CenterContent>
