@@ -144,7 +144,6 @@ const Home: NextPage = () => {
             <br />
             <br />
             {indexTextArray[9]}
-            <br />
           </p>
         </CenterContent>
       </div>

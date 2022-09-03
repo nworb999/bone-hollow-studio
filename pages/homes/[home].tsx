@@ -116,21 +116,26 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className={styles.main_style}>
-        {" "}
-        <CenterContent>
-          {
-            <Image
-              alt={home?.footerImage ? home.footerImage?.altText : ""}
-              src={home?.footerImage ? home.footerImage?.image : fallBackImage}
-              width={500}
-              height={500}
-              objectFit="cover"
-            />
-          }
-        </CenterContent>
-        <CenterContent>
-          <LeafButton text="back to other projects"></LeafButton>
-        </CenterContent>
+        <div className={styles.article_style}>
+          <CenterContent>
+            {
+              <Image
+                alt={home?.footerImage ? home.footerImage?.altText : ""}
+                src={
+                  home?.footerImage ? home.footerImage?.image : fallBackImage
+                }
+                width={500}
+                height={500}
+                objectFit="cover"
+              />
+            }
+          </CenterContent>
+        </div>
+        <div className={styles.article_style}>
+          <CenterContent>
+            <LeafButton text="back to other projects"></LeafButton>
+          </CenterContent>
+        </div>
       </div>
     </>
   );

@@ -9,6 +9,7 @@ import {
   RightContent,
 } from "../components/containers";
 import Script from "next/script";
+import LeafButton from "../components/leafbutton";
 
 const Home: NextPage = () => {
   return (
@@ -18,10 +19,10 @@ const Home: NextPage = () => {
         <title>bone hollow studio - about</title>
       </Head>
       <Script src="transparent.js" strategy="lazyOnload" />
-      <main>
+      <div className={styles.main_style}>
         <div id="empty-div-row"></div>
         <CenterContent>
-          <p className={styles.huge_bold_text}>who we are</p>
+          <p className={styles.header_text}>who we are</p>
         </CenterContent>{" "}
         <div className={styles.section_style}>
           <LeftContent>
@@ -37,10 +38,19 @@ const Home: NextPage = () => {
             <p className={styles.small_bold_text}>{aboutTextArray[0]}</p>
             <p className={styles.small_bold_text}>{aboutTextArray[1]}</p>
           </RightContent>
-          <LeftContent>
-            <p className={styles.small_bold_text}>{aboutTextArray[2]}</p>
-            <p className={styles.small_bold_text}>{aboutTextArray[3]}</p>
-          </LeftContent>
+
+          <RightContent>
+            <div className={styles.article_style}>
+              <div>
+                <p className={styles.header_text}>Erika Brown</p>
+                <p className={styles.small_header_text}>owner</p>
+              </div>
+              <div>
+                <p className={styles.small_bold_text}>{aboutTextArray[2]}</p>
+                <p className={styles.small_bold_text}>{aboutTextArray[3]}</p>
+              </div>
+            </div>
+          </RightContent>
           <RightContent>
             <Image
               alt={aboutImageArray[1].altText}
@@ -51,7 +61,10 @@ const Home: NextPage = () => {
             />
           </RightContent>
         </div>
-      </main>
+        <CenterContent>
+          <LeafButton text="browse projects"></LeafButton>
+        </CenterContent>
+      </div>
     </>
   );
 };
