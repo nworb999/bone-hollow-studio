@@ -1,5 +1,6 @@
 import NavBar from "./navbar";
-import BurgerMenu from "./burgermenu";
+import Burger from "./Burger";
+import Menu from "./Menu";
 import Footer from "./footer";
 import { LayoutProps } from "../src/types";
 import styles from "../styles/home.module.css";
@@ -46,6 +47,7 @@ function useWindowSize() {
 
 export default function Layout({ children }: LayoutProps) {
   const size = useWindowSize();
+  const [open, setOpen] = useState(false);
   return (
     <>
       <link
@@ -53,7 +55,14 @@ export default function Layout({ children }: LayoutProps) {
         rel="stylesheet"
       ></link>
       <div className={styles.container}>
-        {size.width && size.width < 780 ? <BurgerMenu /> : <NavBar />}
+        {size.width && size.width < 780 ? (
+          <div>
+            <Burger open={open} setOpen={setOpen} />
+            <Menu open={open} setOpen={setOpen} />
+          </div>
+        ) : (
+          <NavBar />
+        )}
         <main>{children}</main>
         <Footer />
       </div>
