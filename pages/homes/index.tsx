@@ -16,7 +16,7 @@ const Homes: NextPage = () => {
       <Script src="transparent.js" strategy="lazyOnload" />
       <div id="empty-div-row"></div>
       <CenterContent>
-        <p className={styles.header_text}>projects</p>
+        <p className={styles.huge_bold_text}>projects</p>
       </CenterContent>{" "}
       <div className={styles.section_style}>
         {homesArray.map((home, i) => (
