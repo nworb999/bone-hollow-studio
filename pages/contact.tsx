@@ -29,25 +29,23 @@ const Home: NextPage = () => {
           </div>
         </CenterContent>
         <CenterContent>
-          <p className={styles.header_text}>owner</p>
-          <p className={styles.small_bold_text}>Erika Brown</p>
+          <p className={styles.huge_bold_text}>owner</p>
+          <p className={styles.bold_text}>Erika Brown</p>
 
           <p className={styles.small_bold_text}>erika@bonehollow.studio</p>
           <p className={styles.small_bold_text}>(845) 605-9550 </p>
         </CenterContent>
         <CenterContent>
-          <p className={styles.header_text}>builder</p>
-          <p className={styles.small_bold_text}>
-            Hudson Valley Homes & Renovations
-          </p>
+          <p className={styles.huge_bold_text}>builder</p>
+          <p className={styles.bold_text}>Hudson Valley Homes & Renovations</p>
           <p className={styles.small_bold_text}>Jeromy Wells</p>
           <p className={styles.small_bold_text}>(845) 532-5899</p>
         </CenterContent>
         <CenterContent>
-          <p className={styles.header_text}>real estate agent</p>
-          <p className={styles.small_bold_text}>Laurel Sweeney</p>
+          <p className={styles.huge_bold_text}>real estate agent</p>
+          <p className={styles.bold_text}>Laurel Sweeney</p>
           <p className={styles.small_bold_text}>
-            laurelsweeney.nutshellrealty.com
+            laurelsweeney.nutshellrealty.com/
           </p>
           <p className={styles.small_bold_text}>laurel@nutshellrealty.com</p>
           <p className={styles.small_bold_text}>(845) 325-4431 cell</p>
