@@ -23,48 +23,50 @@ export default function NavBar() {
       </Head>
       <Script src="transparent.js" strategy="lazyOnload" />
       <nav>
-        <div className={navStyles.nav_about}>
+        <div className={navStyles.about}>
           <Link href="/about">
             <a
               onClick={handleClick}
               className={router.pathname == "/about" ? "active" : ""}
             >
-              about
+              <div className={navStyles.small_text}>about</div>
             </a>
           </Link>
         </div>
-        <div className={navStyles.nav_homes}>
+        <div className={navStyles.homes}>
           <Link href="/homes">
             <a
               onClick={handleClick}
               className={router.pathname.includes("/homes") ? "active" : ""}
             >
-              homes
+              <div className={navStyles.small_text}>homes</div>
             </a>
           </Link>
         </div>
-        <div className={navStyles.nav_title}>
-          <Link href="/" className={navStyles.nav_title}>
-            <a onClick={handleClick}>bone hollow studio</a>
+        <div className={navStyles.title}>
+          <Link href="/" className={navStyles.title}>
+            <a onClick={handleClick}>
+              <div className={navStyles.big_text}>bone hollow studio</div>
+            </a>
           </Link>
         </div>
-        <div className={navStyles.nav_hudson_valley}>
+        <div className={navStyles.hudson_valley}>
           <Link href="/hudsonValley">
             <a
               onClick={handleClick}
               className={router.pathname == "/hudsonValley" ? "active" : ""}
             >
-              hudson valley
+              <div className={navStyles.small_text}>hudson valley</div>
             </a>
           </Link>
         </div>
-        <div className={navStyles.nav_contact}>
+        <div className={navStyles.contact}>
           <Link href="/contact">
             <a
               onClick={handleClick}
               className={router.pathname == "/contact" ? "active" : ""}
             >
-              contact
+              <div className={navStyles.small_text}>contact</div>
             </a>
           </Link>
         </div>

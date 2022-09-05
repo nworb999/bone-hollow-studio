@@ -5,6 +5,7 @@ import Footer from "./footer";
 import { LayoutProps } from "../src/types";
 import styles from "../styles/home.module.css";
 import { useEffect, useState } from "react";
+import BurgerMenu from "./burgermenu";
 
 interface SetWindowSizeProps {
   width: undefined | number;
@@ -47,7 +48,6 @@ function useWindowSize() {
 
 export default function Layout({ children }: LayoutProps) {
   const size = useWindowSize();
-  const [open, setOpen] = useState(false);
   return (
     <>
       <link
@@ -55,10 +55,9 @@ export default function Layout({ children }: LayoutProps) {
         rel="stylesheet"
       ></link>
       <div className={styles.container}>
-        {size.width && size.width < 780 ? (
+        {size.width && size.width < 900 ? (
           <div>
-            <Burger open={open} setOpen={setOpen} />
-            <Menu open={open} setOpen={setOpen} />
+            <BurgerMenu></BurgerMenu>
           </div>
         ) : (
           <NavBar />
