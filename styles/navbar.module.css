@@ -33,6 +33,63 @@
   font-weight: 500;
 }
 
+.burger_container {
+  display: grid;
+  margin: 10%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: fit-content(100%);
+  gap: 6rem;
+}
+
+.burger_title {
+  grid-row: 1;
+  font-size: 1.5rem;
+  grid-column: 2 / 6;
+}
+
+.hamburger_sidebar {
+  background-color: blueviolet;
+}
+
+.hamburger_lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger_lines .line {
+  color: blueviolet;
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+.hamburger_lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+  color: blueviolet;
+}
+
+.hamburger_lines .line2 {
+  transition: transform 0.2s ease-in-out;
+  color: blueviolet;
+}
+
+.hamburger_lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+  color: blueviolet;
+}
+
 @media (max-width: 1060px) {
   .small_text {
     font-size: 1rem;

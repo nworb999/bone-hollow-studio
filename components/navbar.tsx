@@ -44,7 +44,7 @@ export default function NavBar() {
           </Link>
         </div>
         <div className={navStyles.title}>
-          <Link href="/" className={navStyles.title}>
+          <Link href="/">
             <a onClick={handleClick}>
               <div className={navStyles.big_text}>bone hollow studio</div>
             </a>

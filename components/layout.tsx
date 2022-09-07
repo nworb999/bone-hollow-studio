@@ -1,6 +1,4 @@
 import NavBar from "./navbar";
-import Burger from "./Burger";
-import Menu from "./Menu";
 import Footer from "./footer";
 import { LayoutProps } from "../src/types";
 import styles from "../styles/home.module.css";
@@ -55,9 +53,9 @@ export default function Layout({ children }: LayoutProps) {
         rel="stylesheet"
       ></link>
       <div className={styles.container}>
-        {size.width && size.width < 900 ? (
+        {size.width && size.width < 910 ? (
           <div>
-            <BurgerMenu></BurgerMenu>
+            <BurgerMenu />
           </div>
         ) : (
           <NavBar />
