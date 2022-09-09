@@ -44,7 +44,7 @@ export const homesArray: Home[] = [
       { image: diningRoom, altText: "placeholder" },
     ],
     thumbnailImage: { image: farmFirePlace, altText: "placeholder" },
-    thumbnailCaption: formatName({ name: HomeType.farmHouse }),
+    thumbnailCaption: [formatName({ name: HomeType.farmHouse }), "2017"],
     imageArray: [
       { image: meadowAngle, altText: "placeholder" },
       { image: kitchen, altText: "placeholder" },
@@ -61,7 +61,7 @@ export const homesArray: Home[] = [
       { image: bedroom, altText: "placeholder" },
     ],
     thumbnailImage: { image: sideBarn, altText: "placeholder" },
-    thumbnailCaption: formatName({ name: HomeType.guestBarn }),
+    thumbnailCaption: [formatName({ name: HomeType.guestBarn }), "2018"],
     imageArray: [
       { image: butterflyBushes, altText: "placeholder" },
       { image: library, altText: "placeholder" },
@@ -75,7 +75,7 @@ export const homesArray: Home[] = [
   {
     name: HomeType.meadowView,
     thumbnailImage: { image: corner, altText: "placeholder" },
-    thumbnailCaption: formatName({ name: HomeType.meadowView }),
+    thumbnailCaption: [formatName({ name: HomeType.meadowView }), "2022"],
     coverImageArray: [
       { image: above, altText: "placeholder" },
       { image: windowCorner, altText: "placeholder" },
@@ -93,7 +93,7 @@ export const homesArray: Home[] = [
   {
     name: HomeType.four,
     thumbnailImage: { image: construction, altText: "placeholder" },
-    thumbnailCaption: "coming soon",
+    thumbnailCaption: ["coming soon", ""],
   },
 ];
 

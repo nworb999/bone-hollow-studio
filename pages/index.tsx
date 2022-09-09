@@ -36,12 +36,10 @@ const Home: NextPage = () => {
       <div className={styles.main_style}>
         <div id="empty-div-row"></div>
         <CenterContent>
-          {/** first text */}
           <p className={styles.huge_bold_text}>{indexTextArray[0]}</p>
         </CenterContent>
         <div className={styles.section_style}>
           <LeftContent>
-            {/** second text */}
             <p className={styles.bold_text}>{indexTextArray[1]}</p>
           </LeftContent>
           <RightContent>

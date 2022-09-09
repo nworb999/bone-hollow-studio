@@ -23,7 +23,7 @@ nav {
   background-color: #eee7d6;
   grid-template-columns: repeat(7, 1fr);
   gap: 10px;
-  color: #48533d;
+  color: #303d25;
   z-index: 5;
   position: sticky;
   top: 0;
@@ -54,11 +54,11 @@ nav a {
 }
 
 nav a:hover {
-  border-color: #48533d;
+  border-color: #303d25;
 }
 
 nav a.active {
-  border-color: #48533d;
+  border-color: #303d25;
 }
 
 h1 {
@@ -78,6 +78,7 @@ ul {
 
 a {
   color: #303d25;
+  /* color: rgb(38, 51, 48); */
   text-decoration: none;
 }
 

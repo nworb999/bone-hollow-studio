@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import { CenterContent } from "../components/containers";
+import LeafButton from "../components/leafbutton";
 
 import styles from "../styles/home.module.css";
 
@@ -16,18 +17,6 @@ const Home: NextPage = () => {
       <Script src="transparent.js" strategy="lazyOnload" />
       <div id="empty-div-row"></div>
       <div className={styles.main_style}>
-        <CenterContent>
-          <div>
-            <Image
-              className={styles.filter_dark}
-              src="/tree.svg"
-              objectFit="fill"
-              width={150}
-              alt="silver tree with leaves falling"
-              height={150}
-            />
-          </div>
-        </CenterContent>
         <CenterContent>
           <p className={styles.header_text}>owner</p>
           <p className={styles.small_bold_text}>Erika Brown</p>
@@ -53,6 +42,12 @@ const Home: NextPage = () => {
           <p className={styles.small_bold_text}>(845) 325-4431 cell</p>
           <p className={styles.small_bold_text}>(845) 687-2200 office</p>
         </CenterContent>
+        <CenterContent>
+          <p>
+            <br />
+          </p>
+        </CenterContent>
+        <LeafButton text="browse projects"></LeafButton>
       </div>
     </>
   );

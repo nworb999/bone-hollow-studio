@@ -37,7 +37,7 @@ import bedroom from "../public/assets/guestBarn/bedroom.jpg";
 import grandmasPiano from "../public/assets/guestBarn/piano.jpg";
 import butterflyBushes from "../public/assets/guestBarn/butterflybushes.jpg";
 
-import construction from "../public/assets/four/construction.jpg";
+import construction from "../public/assets/four/construction.png";
 
 const fallBackImage = livingroom;
 export {

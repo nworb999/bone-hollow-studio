@@ -18,7 +18,7 @@ interface MenuState extends State {
 const HamburgerIcon = () => (
   <div className="p-1/2">
     <svg
-      className="w-8 h-8 text-gray-500"
+      className="w-8 h-8"
       fill="none"
       color="#48533d"
       strokeLinecap="round"
@@ -54,7 +54,6 @@ const MyProvider = (props: LayoutProps) => {
   );
 };
 
-// create a button that calls a context function to set a new open state when clicked
 const HomeButton = () => {
   return (
     <div className={navStyles.burger_title}>
@@ -85,7 +84,7 @@ const Navigation = ({ children }: LayoutProps) => {
 
 export default function BurgerMenu() {
   const ctx = useContext(MyContext);
-  const handleClick = () => console.log(ctx)
+  const handleClick = () => console.log(ctx);
   const router = useRouter();
   return (
     <>

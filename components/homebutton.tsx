@@ -52,9 +52,12 @@ export default function HomeButton({
         </Link>
         <div className={styles.section_style}>
           {" "}
-          <p className={styles.text_left}>
-            {home.thumbnailCaption} <br />
-          </p>
+          <div className={styles.text_left}>
+            <p className={styles.small_bold_text} color="black">
+              {home.thumbnailCaption[0]} <br />
+              {home.thumbnailCaption[1]}{" "}
+            </p>
+          </div>
         </div>
       </div>
     </div>

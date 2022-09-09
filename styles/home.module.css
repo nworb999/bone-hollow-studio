@@ -81,6 +81,8 @@
   margin-bottom: 0rem;
   justify-content: center;
   font-family: "Chivo", sans-serif;
+  /* font-family: "Inconsolata", monospace; */
+
   align-items: center;
 }
 
@@ -91,6 +93,9 @@
   margin-bottom: 0rem;
   justify-content: left;
   font-family: "Chivo", sans-serif;
+  /* color: #303d25;
+  font-family: "Inconsolata", monospace;
+  font-weight: 600; */
   text-align: left;
 }
 
@@ -123,18 +128,18 @@
 .leaf_button a {
   transition: 0.3s ease-in;
   border-bottom: solid 0.1rem rgba(0, 0, 0, 0);
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.01rem;
   line-height: 1.5em;
   font-size: x-large;
   display: flex;
   justify-content: center;
   font-family: "Open Sans";
   flex-direction: column;
-  color: #515151;
+  color: #303d25;
 }
 
 .leaf_button a:hover {
-  border-color: #515151;
+  border-color: #303d25;
 }
 
 @media (max-width: 600px) {

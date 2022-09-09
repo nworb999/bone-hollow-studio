@@ -10,7 +10,7 @@ export enum HomeType {
 export interface Home {
   name: HomeType;
   thumbnailImage: Image;
-  thumbnailCaption: string;
+  thumbnailCaption: string[];
   coverImageArray?: Image[];
   imageArray?: Image[];
   footerImage?: Image;
