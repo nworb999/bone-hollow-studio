@@ -1,5 +1,7 @@
 import NavBar from "./navbar";
 import Footer from "./footer";
+import Head from "next/head";
+import Script from "next/script";
 import { LayoutProps } from "../src/types";
 import styles from "../styles/home.module.css";
 import { useEffect, useState } from "react";
@@ -48,19 +50,26 @@ export default function Layout({ children }: LayoutProps) {
   const size = useWindowSize();
   return (
     <>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Chivo&family=Inconsolata&family=Open+Sans&display=swap"
-        rel="stylesheet"
-      ></link>
+      <Head>
+        <link
+          rel="icon"
+          href="/leaf.svg"
+          className="invert(68%) sepia(9%) saturate(467%) hue-rotate(64deg) brightness(93%) contrast(89%)"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Chivo&family=Inconsolata&family=Open+Sans&display=swap"
+          rel="stylesheet"
+        ></link>
+      </Head>
       <div className={styles.container}>
         {size.width && size.width < 910 ? (
-          <div>
-            <BurgerMenu />
-          </div>
+          <BurgerMenu />
         ) : (
           <NavBar />
         )}
-        <main>{children}</main>
+        <main>
+          {children}
+        </main>
         <Footer />
       </div>
     </>
