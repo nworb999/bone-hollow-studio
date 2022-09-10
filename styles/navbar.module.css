@@ -33,8 +33,12 @@
   font-weight: 500;
 }
 
+.burger {
+  position: fixed;
+}
+
 .burger_container {
-  color: #303d25;
+  color: #263430;
   padding-top: 1rem;
   display: grid;
   grid-template-columns: 20% 60% 20%;
@@ -58,19 +62,6 @@
 
 .hamburger_sidebar a {
   color: #c0c0c0;
-}
-
-.hamburger_lines {
-  display: block;
-  height: 26px;
-  width: 32px;
-  position: absolute;
-  top: 17px;
-  left: 20px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 @media (max-width: 1060px) {

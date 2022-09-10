@@ -75,7 +75,7 @@
 }
 
 .header_text {
-  color: #515151;
+  color: #3b5049;
   font-size: 2.5rem;
   margin-top: 4rem;
   margin-bottom: 0rem;
@@ -87,7 +87,7 @@
 }
 
 .small_header_text {
-  color: #515151;
+  color: #3b5049;
   font-size: 1.5rem;
   margin-top: 4rem;
   margin-bottom: 0rem;
@@ -135,11 +135,11 @@
   justify-content: center;
   font-family: "Open Sans";
   flex-direction: column;
-  color: #303d25;
+  color: #263430;
 }
 
 .leaf_button a:hover {
-  border-color: #303d25;
+  border-color: #263430;
 }
 
 @media (max-width: 600px) {

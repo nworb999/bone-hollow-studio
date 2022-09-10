@@ -16,21 +16,19 @@ interface MenuState extends State {
 
 // hamburger menu
 const HamburgerIcon = () => (
-  <div className="p-1/2">
-    <svg
-      className="w-8 h-8"
-      fill="none"
-      color="#48533d"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      height="3rem"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path d="M4 6h16M4 12h16M4 18h16"></path>
-    </svg>
-  </div>
+  <svg
+    className="w-8 h-8"
+    fill="none"
+    color="#303d25"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    height="3rem"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path d="M4 6h16M4 12h16M4 18h16"></path>
+  </svg>
 );
 
 // make a new context
@@ -57,8 +55,8 @@ const MyProvider = (props: LayoutProps) => {
 const HomeButton = () => {
   return (
     <div className={navStyles.burger_title}>
-      <Link href="/">
-        <div className={navStyles.big_text}>bone hollow studio</div>
+      <Link href="/" passHref>
+        <a className={navStyles.big_text}>bone hollow studio</a>
       </Link>
     </div>
   );
@@ -71,10 +69,12 @@ const Navigation = ({ children }: LayoutProps) => {
     <div className={navStyles.burger_icon}>
       <Menu
         noOverlay
+        disableOverlayClick
         customBurgerIcon={<HamburgerIcon />}
-        isOpen={ctx.isOpen}
+        isOpen={ctx.isOpen} // maybe keep to true
         onStateChange={(state) => ctx.stateChangeHandler?.(state)}
         width={"100%"}
+        burgerButtonClassName={navStyles.burger}
       >
         {children}
       </Menu>
