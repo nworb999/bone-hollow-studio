@@ -12,52 +12,52 @@ export default function HomeButton({
   index: number;
 }) {
   const router = useRouter();
-  const handleClick = ({ home }: { home: Home }) =>
-    router.push({
-      pathname: `/homes/${home.name}`,
-    });
+  const handleClick = ({ home }: { home: Home }) => {
+    if (home.name !== HomeType.four) {
+      router.push({
+        pathname: `/homes/${encodeURIComponent(home.name)}`,
+      });
+    }
+  };
   return (
     <div className={styles.article_style}>
-      <div>
-        <Link
+      <Link
+        href={`/homes/${encodeURIComponent(
+          home.name && home.name !== HomeType.four ? home.name : ``
+        )}`}
+        as={`/homes/${encodeURIComponent(
+          home.name && home.name !== HomeType.four ? home.name : ``
+        )}`}
+        passHref
+        key={index}
+      >
+        <a
+          onClick={() => handleClick({ home })}
+          key={index}
           href={`/homes/${encodeURIComponent(
             home.name && home.name !== HomeType.four ? home.name : ``
           )}`}
-          as={`/homes/${encodeURIComponent(
+          ref={`/homes/${encodeURIComponent(
             home.name && home.name !== HomeType.four ? home.name : ``
           )}`}
-          passHref
-          key={index}
         >
-          <a
-            onClick={() => handleClick({ home })}
+          <Image
+            alt={home.thumbnailImage.altText}
+            src={home.thumbnailImage.image}
+            width={1000}
+            height={800}
+            layout="responsive"
+            objectFit="contain"
             key={index}
-            href={`/homes/${encodeURIComponent(
-              home.name && home.name !== HomeType.four ? home.name : ``
-            )}`}
-            ref={`/homes/${encodeURIComponent(
-              home.name && home.name !== HomeType.four ? home.name : ``
-            )}`}
-          >
-            <Image
-              alt={home.thumbnailImage.altText}
-              src={home.thumbnailImage.image}
-              width={1000}
-              height={800}
-              layout="responsive"
-              objectFit="contain"
-              key={index}
-            />
-          </a>
-        </Link>
-        <div className={styles.section_style}>
-          {" "}
-          <div className={styles.text_left}>
-            <p className={styles.small_bold_text} color="black">
-              {home.thumbnailCaption[0]} <br />
-              {home.thumbnailCaption[1]}{" "}
-            </p>
-          </div>
+          />
+        </a>
+      </Link>
+      <div className={styles.home_caption}>
+        <div className={styles.text_left}>
+          <p className={styles.small_bold_text} color="black">
+            <b>{home.thumbnailCaption[0]}</b>
+            {home.thumbnailCaption[1]}{" "}
+          </p>
         </div>
       </div>
     </div>

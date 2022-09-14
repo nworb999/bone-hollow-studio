@@ -70,7 +70,7 @@ export const homesArray: Home[] = [
     footerImage: { image: stove, altText: "placeholder" },
     topText: `Built in 2018 by Hudson Valley Homes & Renovations in collaboration with Bone Hollow Studio.  By design, the structure appears as an unassuming barn from the road. In reality it functions as the soul of the property - guest house, pool house, music room and great room. Architect: Kurt Sutherland  Builder: Hudson Valley Homes & Renovations   Designer: Bone Hollow Studio`,
     textRight: `Our spaces are created through the layering of design, objects and experience. The key is to be able to layer and still allow the space to feel calm.`,
-    textLeft: `With WFH becoming the norm the guest barn is the perfect space for productivity.`,
+    textLeft: `With work from home becoming the norm the guest barn is the perfect space for productivity.`,
   },
   {
     name: HomeType.meadowView,
@@ -93,7 +93,7 @@ export const homesArray: Home[] = [
   {
     name: HomeType.four,
     thumbnailImage: { image: construction, altText: "placeholder" },
-    thumbnailCaption: ["coming soon", ""],
+    thumbnailCaption: ["four", "coming fall 2022"],
   },
 ];
 
@@ -155,8 +155,7 @@ export const indexTextArray: string[] = [
   `Our work is founded on the belief that form and function are the sine qua non of a well-designed home.`,
   `We apply that perspective to projects of every size, from home furnishing to new construction.`,
   `The spaces we create are characterized by luxurious textures, quality materials, and a minimalistic style, because we believe that the way your home feels is just as significant as how it looks.`,
-  `In collaboration with local craftsmen`,
+  `In collaboration with local trades`,
   `Through our partnership with a renowned local builder, Jeromy Wells, of Hudson Valley Homes & Renovations, we offer clean and gracious motifs that are thoughtfully sited in a quiet, introspective setting.`,
   `The spaces we live in give us a protected and intimate feeling.`,
-  `In an uncertain world, home represents calm in a turbulent sea.`,
 ];
