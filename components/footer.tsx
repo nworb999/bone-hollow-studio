@@ -31,7 +31,7 @@ export default function Footer() {
           </a>
         </div>
         <div className={styles.footer_copyright}>
-          © copyright bone hollow studios llc
+          © copyright bone hollow studio llc
         </div>
         <div className={styles.footer_tree}>
           <Image

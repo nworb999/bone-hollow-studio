@@ -63,7 +63,7 @@
   /* https://codepen.io/sosuke/pen/Pjoqqp */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .footer {
     display: flow-root;
     height: auto;

@@ -80,27 +80,22 @@
 }
 
 .header_text {
-  color: #3b5049;
+  color: #375051;
   font-size: 2.5rem;
   margin-top: 4rem;
   margin-bottom: 0rem;
   justify-content: center;
   font-family: "Chivo", sans-serif;
-  /* font-family: "Inconsolata", monospace; */
-
   align-items: center;
 }
 
 .small_header_text {
-  color: #3b5049;
+  color: #375051;
   font-size: 1.5rem;
   margin-top: 4rem;
   margin-bottom: 0rem;
   justify-content: left;
   font-family: "Chivo", sans-serif;
-  /* color: #303d25;
-  font-family: "Inconsolata", monospace;
-  font-weight: 600; */
   text-align: left;
 }
 
@@ -145,6 +140,12 @@
 
 .leaf_button a:hover {
   border-color: #263430;
+}
+
+.footer_image {
+  display: grid;
+  margin: 10%;
+  gap: 6rem;
 }
 
 @media (max-width: 600px) {

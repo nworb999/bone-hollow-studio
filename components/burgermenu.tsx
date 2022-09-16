@@ -71,7 +71,7 @@ const Navigation = ({ children }: LayoutProps) => {
         noOverlay
         disableOverlayClick
         customBurgerIcon={<HamburgerIcon />}
-        isOpen={ctx.isOpen} // maybe keep to true
+        isOpen={ctx.isOpen}
         onStateChange={(state) => ctx.stateChangeHandler?.(state)}
         width={"100%"}
         burgerButtonClassName={navStyles.burger}

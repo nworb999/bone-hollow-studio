@@ -12,7 +12,7 @@ import {
 } from "../../components/containers";
 import LeafButton from "../../components/leafbutton";
 import Script from "next/script";
-import { formatName } from "../../src/utils";
+import { formatName, useWindowSize } from "../../src/utils";
 
 export const config = {
   unstable_includeFiles: [
@@ -27,6 +27,8 @@ const Home: NextPage = () => {
     ({ name }) => name === router.asPath.toString().replace("/homes/", "")
   );
   console.log({ home });
+  const size = useWindowSize();
+  const mobileOrderFlag = size.width && size.width < 600 ? true : false;
   return (
     <>
       <div id="empty-div-row"></div>
@@ -70,20 +72,49 @@ const Home: NextPage = () => {
       </div>
       <div className={styles.main_style}>
         <div className={styles.section_style}>
-          <LeftContent>
-            <Image
-              alt={home?.imageArray ? home.imageArray[1]?.altText : ""}
-              src={home?.imageArray ? home.imageArray[1]?.image : fallBackImage}
-              width={500}
-              height={500}
-              objectFit="cover"
-            />
-          </LeftContent>
-          <RightContent>
-            <p className={styles.small_bold_text}>
-              {home?.textRight ? home.textRight : ""}
-            </p>
-          </RightContent>
+          {/* <LeftContent> */}
+          {mobileOrderFlag ? (
+            <RightContent>
+              <p className={styles.small_bold_text}>
+                {home?.textRight ? home.textRight : ""}
+              </p>
+            </RightContent>
+          ) : (
+            <LeftContent>
+              <Image
+                alt={home?.imageArray ? home.imageArray[1]?.altText : ""}
+                src={
+                  home?.imageArray ? home.imageArray[1]?.image : fallBackImage
+                }
+                width={500}
+                height={500}
+                objectFit="cover"
+              />
+            </LeftContent>
+          )}
+          {/* </LeftContent> */}
+          {/* <RightContent> */}{" "}
+          {mobileOrderFlag ? (
+            <LeftContent>
+              {" "}
+              <Image
+                alt={home?.imageArray ? home.imageArray[1]?.altText : ""}
+                src={
+                  home?.imageArray ? home.imageArray[1]?.image : fallBackImage
+                }
+                width={500}
+                height={500}
+                objectFit="cover"
+              />{" "}
+            </LeftContent>
+          ) : (
+            <RightContent>
+              <p className={styles.small_bold_text}>
+                {home?.textRight ? home.textRight : ""}
+              </p>
+            </RightContent>
+          )}
+          {/* </RightContent> */}
           <LeftContent>
             <p className={styles.small_bold_text}>
               {home?.textLeft ? home.textLeft : ""}
@@ -117,19 +148,21 @@ const Home: NextPage = () => {
       </div>
       <div className={styles.main_style}>
         <div className={styles.article_style}>
-          <CenterContent>
-            {
-              <Image
-                alt={home?.footerImage ? home.footerImage?.altText : ""}
-                src={
-                  home?.footerImage ? home.footerImage?.image : fallBackImage
-                }
-                width={500}
-                height={500}
-                objectFit="cover"
-              />
-            }
-          </CenterContent>
+          <div className={styles.footer_image}>
+            <CenterContent>
+              {
+                <Image
+                  alt={home?.footerImage ? home.footerImage?.altText : ""}
+                  src={
+                    home?.footerImage ? home.footerImage?.image : fallBackImage
+                  }
+                  width={500}
+                  height={500}
+                  objectFit="cover"
+                />
+              }
+            </CenterContent>
+          </div>
         </div>
         <div className={styles.article_style}>
           <CenterContent>

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import Head from "next/head";
+import { useWindowSize } from "../src/utils";
 import {
   CenterContent,
   LeftContent,
@@ -12,6 +13,9 @@ import styles from "../styles/home.module.css";
 import Script from "next/script";
 
 const Home: NextPage = () => {
+  const size = useWindowSize();
+  const mobileOrderFlag = size.width && size.width < 910 ? true : false;
+
   return (
     <>
       {" "}
@@ -40,16 +44,30 @@ const Home: NextPage = () => {
         </CenterContent>
         <div className={styles.section_style}>
           <LeftContent>
-            <p className={styles.bold_text}>{indexTextArray[1]}</p>
+            {mobileOrderFlag ? (
+              <Image
+                alt={indexImageArray[1].altText}
+                src={indexImageArray[1].image}
+                width={500}
+                height={500}
+                objectFit="cover"
+              />
+            ) : (
+              <p className={styles.bold_text}>{indexTextArray[1]}</p>
+            )}
           </LeftContent>
           <RightContent>
-            <Image
-              alt={indexImageArray[1].altText}
-              src={indexImageArray[1].image}
-              width={500}
-              height={500}
-              objectFit="cover"
-            />
+            {mobileOrderFlag ? (
+              <p className={styles.bold_text}>{indexTextArray[1]} </p>
+            ) : (
+              <Image
+                alt={indexImageArray[1].altText}
+                src={indexImageArray[1].image}
+                width={500}
+                height={500}
+                objectFit="cover"
+              />
+            )}
           </RightContent>
         </div>
       </div>
@@ -67,17 +85,36 @@ const Home: NextPage = () => {
       <div className={styles.main_style}>
         <div className={styles.section_style}>
           <LeftContent>
-            <Image
-              alt={indexImageArray[3].altText}
-              src={indexImageArray[3].image}
-              width={500}
-              height={500}
-              objectFit="cover"
-            />
+            {mobileOrderFlag ? (
+              <div>
+                <p className={styles.bold_text}>{indexTextArray[2]}</p>
+                <p className={styles.small_bold_text}>{indexTextArray[3]}</p>
+              </div>
+            ) : (
+              <Image
+                alt={indexImageArray[3].altText}
+                src={indexImageArray[3].image}
+                width={500}
+                height={500}
+                objectFit="cover"
+              />
+            )}
           </LeftContent>
           <RightContent>
-            <p className={styles.bold_text}>{indexTextArray[2]}</p>
-            <p className={styles.small_bold_text}>{indexTextArray[3]}</p>
+            {mobileOrderFlag ? (
+              <Image
+                alt={indexImageArray[3].altText}
+                src={indexImageArray[3].image}
+                width={500}
+                height={500}
+                objectFit="cover"
+              />
+            ) : (
+              <div>
+                <p className={styles.bold_text}>{indexTextArray[2]}</p>
+                <p className={styles.small_bold_text}>{indexTextArray[3]}</p>
+              </div>
+            )}
           </RightContent>
         </div>
         <div className={styles.section_style}>
