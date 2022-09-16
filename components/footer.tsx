@@ -16,16 +16,16 @@ export default function Footer() {
         <div className={styles.footer_social}>
           <h3>social</h3>
           <a
-            href={"https://www.instagram.com/bonehollowstudio/"}
-            target={"_blank"}
-            rel={"noreferrer"}
+            href="https://www.instagram.com/bonehollowstudio/"
+            // target={"_blank"}
+            // rel={"noreferrer"}
           >
             instagram<br></br>
           </a>
           <a
-            href={"https://www.facebook.com/bonehollowstudio"}
-            target={"_blank"}
-            rel={"noreferrer"}
+            href="https://www.facebook.com/bonehollowstudio"
+            // target={"_blank"}
+            // rel={"noreferrer"}
           >
             facebook
           </a>
