@@ -3,7 +3,7 @@ import Head from "next/head";
 import HomeButton from "../../components/homebutton";
 import styles from "../../styles/home.module.css";
 
-import { homesArray } from "../../src/constants";
+import { projectsArray } from "../../src/constants";
 import { CenterContent } from "../../components/containers";
 import Script from "next/script";
 
@@ -19,7 +19,7 @@ const Homes: NextPage = () => {
         <p className={styles.header_text}>projects</p>
       </CenterContent>{" "}
       <div className={styles.section_style}>
-        {homesArray.map((home, i) => (
+        {projectsArray.map((home, i) => (
           <HomeButton home={home} index={i} key={i} />
         ))}
       </div>

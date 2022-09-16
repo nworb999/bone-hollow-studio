@@ -22,12 +22,12 @@ export default function NavBar() {
           </Link>
         </div>
         <div className={navStyles.homes}>
-          <Link href="/homes">
+          <Link href="/projects">
             <a
               onClick={handleClick}
-              className={router.pathname.includes("/homes") ? "active" : ""}
+              className={router.pathname.includes("/projects") ? "active" : ""}
             >
-              <div className={navStyles.small_text}>homes</div>
+              <div className={navStyles.small_text}>projects</div>
             </a>
           </Link>
         </div>

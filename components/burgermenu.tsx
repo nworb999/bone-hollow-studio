@@ -104,14 +104,14 @@ export default function BurgerMenu() {
                 </Link>
               </div>
               <div className={navStyles.nav_homes}>
-                <Link href="/homes">
+                <Link href="/projects">
                   <a
                     onClick={handleClick}
                     className={
-                      router.pathname.includes("/homes") ? "active" : ""
+                      router.pathname.includes("/projects") ? "active" : ""
                     }
                   >
-                    homes
+                    projects
                   </a>
                 </Link>
               </div>

@@ -4,7 +4,7 @@ export enum HomeType {
   guestBarn = "guestBarn",
   meadowView = "meadowView",
   farmHouse = "farmHouse",
-  four = "four",
+  owlsNest = "owl'sNest",
 }
 
 export interface Home {

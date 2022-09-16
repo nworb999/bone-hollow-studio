@@ -30,9 +30,7 @@ export default function Footer() {
             facebook
           </a>
         </div>
-        <div className={styles.footer_copyright}>
-          © copyright bone hollow studio llc
-        </div>
+        <div className={styles.footer_copyright}>© bone hollow studio llc</div>
         <div className={styles.footer_tree}>
           <Image
             className={styles.filter_silver}

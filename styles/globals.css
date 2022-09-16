@@ -95,14 +95,14 @@ div.empty-div-row {
   font-size: 0;
 }
 
-@media (max-width: 9010px) {
+/* @media (max-width: 9010px) {
   nav {
     background-color: transparent;
     -webkit-box-shadow: 0px 0px 0px rgb(48, 61, 37, 1);
     -moz-box-shadow: 0px 0px 0px rgb(48, 61, 37, 0.5);
     box-shadow: 0px 0px 0px rgb(48, 61, 37, 0.5);
   }
-}
+} */
 
 @media only screen and (max-width: 600px) {
   section {

@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from "../../styles/home.module.css";
 import { fallBackImage } from "../../src/images";
-import { homesArray } from "../../src/constants";
+import { projectsArray } from "../../src/constants";
 
 import {
   CenterContent,
@@ -23,8 +23,8 @@ export const config = {
 const Home: NextPage = () => {
   const router = useRouter();
 
-  const [home] = homesArray.filter(
-    ({ name }) => name === router.asPath.toString().replace("/homes/", "")
+  const [home] = projectsArray.filter(
+    ({ name }) => name === router.asPath.toString().replace("/projects/", "")
   );
   console.log({ home });
   const size = useWindowSize();

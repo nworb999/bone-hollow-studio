@@ -13,20 +13,20 @@ export default function HomeButton({
 }) {
   const router = useRouter();
   const handleClick = ({ home }: { home: Home }) => {
-    if (home.name !== HomeType.four) {
+    if (home.name !== HomeType.owlsNest) {
       router.push({
-        pathname: `/homes/${encodeURIComponent(home.name)}`,
+        pathname: `/projects/${encodeURIComponent(home.name)}`,
       });
     }
   };
   return (
     <div className={styles.article_style}>
       <Link
-        href={`/homes/${encodeURIComponent(
-          home.name && home.name !== HomeType.four ? home.name : ``
+        href={`/projects/${encodeURIComponent(
+          home.name && home.name !== HomeType.owlsNest ? home.name : ``
         )}`}
-        as={`/homes/${encodeURIComponent(
-          home.name && home.name !== HomeType.four ? home.name : ``
+        as={`/projects/${encodeURIComponent(
+          home.name && home.name !== HomeType.owlsNest ? home.name : ``
         )}`}
         passHref
         key={index}
@@ -34,11 +34,11 @@ export default function HomeButton({
         <a
           onClick={() => handleClick({ home })}
           key={index}
-          href={`/homes/${encodeURIComponent(
-            home.name && home.name !== HomeType.four ? home.name : ``
+          href={`/projects/${encodeURIComponent(
+            home.name && home.name !== HomeType.owlsNest ? home.name : ``
           )}`}
-          ref={`/homes/${encodeURIComponent(
-            home.name && home.name !== HomeType.four ? home.name : ``
+          ref={`/projects/${encodeURIComponent(
+            home.name && home.name !== HomeType.owlsNest ? home.name : ``
           )}`}
         >
           <Image
