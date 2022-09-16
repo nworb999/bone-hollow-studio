@@ -19,7 +19,7 @@ const HamburgerIcon = () => (
   <svg
     className="w-8 h-8"
     fill="none"
-    color="#303d25"
+    color="#263430"
     strokeLinecap="round"
     strokeLinejoin="round"
     height="3rem"

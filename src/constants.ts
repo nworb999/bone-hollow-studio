@@ -150,7 +150,7 @@ export const indexImageArray: Image[] = [
 ];
 
 export const indexTextArray: string[] = [
-  `Bone Hollow Studio is a design studio creating bespoke structures in rural tranquility`,
+  `Bone Hollow Studio is the meeting of rural tranquility and custom design`,
   `Located in New York’s Hudson Valley, we specialize in curated and welcoming homes.`,
   `A boutique development company`,
   `Our work is founded on the belief that form and function are the sine qua non of a well-designed home.`,
