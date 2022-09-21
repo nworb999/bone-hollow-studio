@@ -51,7 +51,7 @@ export const projectsArray: Home[] = [
       { image: frontSideTable, altText: "placeholder" },
     ],
     footerImage: { image: book, altText: "placeholder" },
-    topText: `A farm house originally built in 1800.  Erika’s love affair with the Hudson Valley began with this property. Perhaps it’s the connection to her grandfather’s wheat farm in Kansas. From the moment Erika saw the wildflower filled meadow out back she felt a visceral connection to the land. Built by Hudson Valley Homes & Renovations, furnished by Bone Hollow Studio.`,
+    topText: `A farm house originally built in 1800.  Erika’s love affair with the Hudson Valley began with this property. Perhaps it’s the connection to her grandfather’s wheat farm in Kansas. From the moment Erika saw the wildflower filled meadow out back she felt a visceral connection to the land. Built by Hudson Valley Homes & Renovations; Furnished by Bone Hollow Studio.`,
     textRight: `Layered and curated furnishings take time and patience.`,
     textLeft: `Our approach to creative sourcing is one of the highlights of our work.`,
   },
@@ -69,7 +69,7 @@ export const projectsArray: Home[] = [
       { image: grandmasPiano, altText: "placeholder" },
     ],
     footerImage: { image: stove, altText: "placeholder" },
-    topText: `Built in 2018 by Hudson Valley Homes & Renovations in collaboration with Bone Hollow Studio.  By design, the structure appears as an unassuming barn from the road. In reality it functions as the soul of the property - guest house, pool house, music room and great room. Architect: Kurt Sutherland; Builder: Hudson Valley Homes & Renovations; Designer: Bone Hollow Studios.`,
+    topText: `Built in 2018 by Hudson Valley Homes & Renovations in collaboration with Bone Hollow Studio.  By design, the structure appears as an unassuming barn from the road. In reality it functions as the soul of the property - guest house, pool house, music room and great room. Built by Hudson Valley Homes & Renovations; Designed by Bone Hollow Studio; Architect: Kurt Sutherland;`,
     textRight: `Our spaces are created through the layering of design, objects and experience. The key is to be able to layer and still allow the space to feel calm.`,
     textLeft: `With work from home becoming the norm, the guest barn is the perfect space for productivity.`,
   },
@@ -127,7 +127,7 @@ export const aboutTextArray: string[] = [
     her company, Bone Hollow Studio. With a background in
     advertising production and styling, Erika combines her passion
     for creative design with a natural aptitude for project
-    management. She believes ones home should be unique,
+    management. She believes one's home should be unique,
     reflecting a deeply personal connection with the land.
     Erika's goal is to create spaces that are at once impactful
     and livable, timeless and comfortable.`,
@@ -160,5 +160,5 @@ export const indexTextArray: string[] = [
   `The spaces we create are characterized by luxurious textures, quality materials, and a minimalistic style, because we believe that the way your home feels is just as significant as how it looks.`,
   `In collaboration with local trades`,
   `Through our partnership with a renowned local builder, Jeromy Wells, of Hudson Valley Homes & Renovations, we offer clean and gracious motifs that are thoughtfully sited in a quiet, introspective setting.`,
-  `The spaces we live in give us a protected and intimate feeling.`,
+  `The spaces we live in give us a protected and intimate feeling`,
 ];

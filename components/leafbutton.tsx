@@ -5,7 +5,7 @@ import styles from "../styles/home.module.css";
 
 export default function LeafButton({
   text,
-  href = "/homes",
+  href = "/projects",
 }: {
   text: string;
   href?: string;
@@ -13,21 +13,17 @@ export default function LeafButton({
   return (
     <>
       <CenterContent>
-        <div>
-          <Image
-            className={styles.filter_dark}
-            src="/tree.svg"
-            objectFit="fill"
-            width={150}
-            alt="silver tree with leaves falling"
-            height={150}
-          />
-        </div>
-      </CenterContent>
-      <CenterContent>
         <div className={styles.leaf_button}>
           <Link href={href} passHref>
             <a className={styles.bold_text}>
+              <Image
+                className={styles.filter_dark}
+                src="/tree.svg"
+                objectFit="fill"
+                width={150}
+                alt="silver tree with leaves falling"
+                height={150}
+              />
               <p>{text}</p>
             </a>
           </Link>
