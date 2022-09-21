@@ -22,6 +22,7 @@ const Home: NextPage = () => {
       <Head>
         <title>bone hollow studio - homepage</title>
       </Head>
+      <Script src="transparent.js" strategy="lazyOnload" />
       <div className={styles.main_style}>
         <div className={styles.article_style}>
           {" "}
@@ -36,7 +37,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <Script src="transparent.js" strategy="lazyOnload" />
       <div className={styles.main_style}>
         <div id="empty-div-row"></div>
         <CenterContent>
@@ -174,12 +174,7 @@ const Home: NextPage = () => {
       </div>
       <div className={styles.main_style}>
         <CenterContent>
-          <p className={styles.huge_bold_text}>
-            {indexTextArray[8]}
-            <br />
-            <br />
-            {indexTextArray[9]}
-          </p>
+          <p className={styles.huge_bold_text}>{indexTextArray[8]}</p>
         </CenterContent>
       </div>
     </>

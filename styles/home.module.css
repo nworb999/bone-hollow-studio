@@ -35,10 +35,12 @@
   z-index: -1;
   object-fit: cover;
   overflow: visible;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .huge_bold_text {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   justify-content: center;
   font-family: "Chivo", sans-serif;
   align-items: center;
@@ -152,6 +154,11 @@
   .footer {
     display: flow-root;
     height: auto;
+  }
+
+  .huge_bold_text {
+    gap: 2rem;
+    font-size: 2rem;
   }
 }
 
