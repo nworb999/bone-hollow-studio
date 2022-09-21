@@ -14,7 +14,7 @@ import Script from "next/script";
 
 const Home: NextPage = () => {
   const size = useWindowSize();
-  const mobileOrderFlag = size.width && size.width < 910 ? true : false;
+  const mobileOrderFlag = size.width && size.width < 600 ? true : false;
 
   return (
     <>
