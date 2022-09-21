@@ -39,6 +39,7 @@
 
 .burger_container {
   color: #263430;
+
   padding-top: 1rem;
   display: grid;
   grid-template-columns: 20% 60% 20%;
@@ -53,6 +54,7 @@
   grid-column-start: 3;
   grid-column-end: 3;
   margin-right: 0;
+  z-index: 1;
 }
 
 .hamburger_sidebar {
