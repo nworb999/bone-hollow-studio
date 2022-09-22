@@ -52,9 +52,7 @@ const Home: NextPage = () => {
           <RightContent>
             <p className={styles.small_bold_text}>
               <em>{home?.creditTextArray ? home.creditTextArray[0] : ""}</em>
-
               <em>{home?.creditTextArray ? home.creditTextArray[1] : ""}</em>
-
               <em>{home?.creditTextArray ? home.creditTextArray[2] : ""}</em>
             </p>
             <p className={styles.small_bold_text}>
