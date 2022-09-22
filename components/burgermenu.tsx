@@ -3,7 +3,8 @@ import Link from "next/link";
 import { slide as Menu, State } from "react-burger-menu";
 import navStyles from "../styles/navbar.module.css";
 import { useRouter } from "next/router";
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
+import { createGzip } from "zlib";
 
 interface MenuState extends State {
   toggleMenu?: () => void;
@@ -34,24 +35,6 @@ const HamburgerIcon = () => {
 // make a new context
 const MyContext = React.createContext<MenuState>({ isOpen: false });
 
-// create the provider
-const MyProvider = (props: LayoutProps) => {
-  const [menuOpenState, setMenuOpenState] = useState(false);
-
-  return (
-    <MyContext.Provider
-      value={{
-        isOpen: menuOpenState,
-        toggleMenu: () => setMenuOpenState(!menuOpenState),
-        stateChangeHandler: (newState: MenuState) =>
-          setMenuOpenState(newState.isOpen ? newState.isOpen : false),
-      }}
-    >
-      {props.children}
-    </MyContext.Provider>
-  );
-};
-
 const HomeButton = () => {
   return (
     <div className={navStyles.burger_title}>
@@ -69,10 +52,9 @@ const Navigation = ({ children }: LayoutProps) => {
     <div className={navStyles.burger_icon}>
       <Menu
         noOverlay
-        // disableOverlayClick
         customBurgerIcon={<HamburgerIcon />}
         isOpen={ctx.isOpen}
-        onStateChange={(state) => ctx.stateChangeHandler?.(state)}
+        onStateChange={ctx.toggleMenu}
         width={"100%"}
         burgerButtonClassName={navStyles.burger}
       >
@@ -90,56 +72,53 @@ export default function BurgerMenu() {
     <>
       <div className={navStyles.burger_container}>
         <HomeButton />
-        <MyProvider>
-          <Navigation>
-            <div className={navStyles.hamburger_sidebar} id="page-wrap">
-              <div className={navStyles.nav_about}>
-                <Link href="/about">
-                  <a
-                    onClick={handleClick}
-                    className={router.pathname == "/about" ? "active" : ""}
-                  >
-                    about
-                  </a>
-                </Link>
-              </div>
-              <div className={navStyles.nav_homes}>
-                <Link href="/projects">
-                  <a
-                    onClick={handleClick}
-                    className={
-                      router.pathname.includes("/projects") ? "active" : ""
-                    }
-                  >
-                    projects
-                  </a>
-                </Link>
-              </div>
-              <div className={navStyles.nav_hudson_valley}>
-                <Link href="/hudsonValley">
-                  <a
-                    onClick={handleClick}
-                    className={
-                      router.pathname == "/hudsonValley" ? "active" : ""
-                    }
-                  >
-                    hudson valley
-                  </a>
-                </Link>
-              </div>
-              <div className={navStyles.nav_contact}>
-                <Link href="/contact">
-                  <a
-                    onClick={handleClick}
-                    className={router.pathname == "/contact" ? "active" : ""}
-                  >
-                    contact
-                  </a>
-                </Link>
-              </div>
+
+        <Navigation>
+          <div className={navStyles.hamburger_sidebar} id="page-wrap">
+            <div className={navStyles.nav_about}>
+              <Link href="/about">
+                <a
+                  onClick={handleClick}
+                  className={router.pathname == "/about" ? "active" : ""}
+                >
+                  about
+                </a>
+              </Link>
             </div>
-          </Navigation>
-        </MyProvider>
+            <div className={navStyles.nav_homes}>
+              <Link href="/projects">
+                <a
+                  onClick={handleClick}
+                  className={
+                    router.pathname.includes("/projects") ? "active" : ""
+                  }
+                >
+                  projects
+                </a>
+              </Link>
+            </div>
+            <div className={navStyles.nav_hudson_valley}>
+              <Link href="/hudsonValley">
+                <a
+                  onClick={handleClick}
+                  className={router.pathname == "/hudsonValley" ? "active" : ""}
+                >
+                  hudson valley
+                </a>
+              </Link>
+            </div>
+            <div className={navStyles.nav_contact}>
+              <Link href="/contact">
+                <a
+                  onClick={handleClick}
+                  className={router.pathname == "/contact" ? "active" : ""}
+                >
+                  contact
+                </a>
+              </Link>
+            </div>
+          </div>
+        </Navigation>
       </div>
     </>
   );

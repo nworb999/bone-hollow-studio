@@ -32,11 +32,13 @@ const Home: NextPage = () => {
   return (
     <>
       <div id="empty-div-row"></div>
-      <CenterContent>
-        <h1>{formatName({ name: home?.name })}</h1>{" "}
-      </CenterContent>
       <Script src="transparent.js" strategy="lazyOnload" />
       <div className={styles.main_style}>
+        <CenterContent>
+          <p className={styles.header_text}>
+            {formatName({ name: home?.name })}
+          </p>
+        </CenterContent>
         <div className={styles.section_style}>
           <LeftContent>
             <Image
@@ -48,6 +50,13 @@ const Home: NextPage = () => {
             />
           </LeftContent>
           <RightContent>
+            <p className={styles.small_bold_text}>
+              <em>{home?.creditTextArray ? home.creditTextArray[0] : ""}</em>
+
+              <em>{home?.creditTextArray ? home.creditTextArray[1] : ""}</em>
+
+              <em>{home?.creditTextArray ? home.creditTextArray[2] : ""}</em>
+            </p>
             <p className={styles.small_bold_text}>
               {home?.topText ? home.topText : ""}
             </p>
@@ -72,10 +81,9 @@ const Home: NextPage = () => {
       </div>
       <div className={styles.main_style}>
         <div className={styles.section_style}>
-          {/* <LeftContent> */}
           {mobileOrderFlag ? (
             <RightContent>
-              <p className={styles.small_bold_text}>
+              <p className={styles.bold_text}>
                 {home?.textRight ? home.textRight : ""}
               </p>
             </RightContent>
@@ -92,8 +100,6 @@ const Home: NextPage = () => {
               />
             </LeftContent>
           )}
-          {/* </LeftContent> */}
-          {/* <RightContent> */}{" "}
           {mobileOrderFlag ? (
             <LeftContent>
               {" "}
@@ -109,14 +115,13 @@ const Home: NextPage = () => {
             </LeftContent>
           ) : (
             <RightContent>
-              <p className={styles.small_bold_text}>
+              <p className={styles.bold_text}>
                 {home?.textRight ? home.textRight : ""}
               </p>
             </RightContent>
           )}
-          {/* </RightContent> */}
           <LeftContent>
-            <p className={styles.small_bold_text}>
+            <p className={styles.bold_text}>
               {home?.textLeft ? home.textLeft : ""}
             </p>
           </LeftContent>

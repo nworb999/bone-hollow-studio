@@ -15,6 +15,7 @@ export interface Home {
   imageArray?: Image[];
   footerImage?: Image;
   topText?: string;
+  creditTextArray?: string[];
   textRight?: string;
   textLeft?: string;
 }
