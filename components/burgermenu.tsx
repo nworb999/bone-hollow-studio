@@ -6,14 +6,13 @@ import { useRouter } from "next/router";
 import React, { useContext } from "react";
 import { createGzip } from "zlib";
 
-interface MenuState extends State {
-  toggleMenu?: () => void;
-  stateChangeHandler?: (newState: MenuState) => void;
+interface MenuProps {}
+
+interface MenuState {
+  menuOpen: boolean;
 }
 
-// hamburger menu
 const HamburgerIcon = () => {
-  const ctx = useContext(MyContext);
   return (
     <svg
       className="w-8 h-8"
@@ -27,13 +26,9 @@ const HamburgerIcon = () => {
       stroke="currentColor"
     >
       <path d="M4 6h16M4 12h16M4 18h16"></path>
-      <rect d="M4 6h16M4 12h16M4 18h16" onClick={ctx.toggleMenu} />
     </svg>
   );
 };
-
-// make a new context
-const MyContext = React.createContext<MenuState>({ isOpen: false });
 
 const HomeButton = () => {
   return (
@@ -45,81 +40,62 @@ const HomeButton = () => {
   );
 };
 
-// create a navigation component that wraps the burger menu
-const Navigation = ({ children }: LayoutProps) => {
-  const ctx = useContext(MyContext);
-  return (
-    <div className={navStyles.burger_icon}>
-      <Menu
-        noOverlay
-        customBurgerIcon={<HamburgerIcon />}
-        isOpen={ctx.isOpen}
-        onStateChange={ctx.toggleMenu}
-        width={"100%"}
-        burgerButtonClassName={navStyles.burger}
-      >
-        {children}
-      </Menu>
-    </div>
-  );
-};
+export class BurgerMenu extends React.Component<MenuProps, MenuState> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      menuOpen: false,
+    };
+  }
 
-export default function BurgerMenu() {
-  const ctx = useContext(MyContext);
-  const handleClick = () => console.log(ctx);
-  const router = useRouter();
-  return (
-    <>
-      <div className={navStyles.burger_container}>
+  handleStateChange(state: any) {
+    this.setState({ menuOpen: state.isOpen });
+  }
+
+  closeMenu() {
+    this.setState({ menuOpen: false });
+  }
+
+  toggleMenu() {
+    this.setState((state) => ({ menuOpen: !state.menuOpen }));
+  }
+
+  render() {
+    return (
+      <div className={navStyles.burger_icon}>
         <HomeButton />
-
-        <Navigation>
+        <Menu
+          noOverlay
+          customBurgerIcon={<HamburgerIcon />}
+          width={"100%"}
+          burgerButtonClassName={navStyles.burger}
+          isOpen={this.state.menuOpen}
+          onStateChange={(state) => this.handleStateChange(state)}
+        >
           <div className={navStyles.hamburger_sidebar} id="page-wrap">
             <div className={navStyles.nav_about}>
-              <Link href="/about">
-                <a
-                  onClick={handleClick}
-                  className={router.pathname == "/about" ? "active" : ""}
-                >
-                  about
-                </a>
+              <Link href="/about" passHref>
+                <a>about</a>
               </Link>
             </div>
             <div className={navStyles.nav_homes}>
-              <Link href="/projects">
-                <a
-                  onClick={handleClick}
-                  className={
-                    router.pathname.includes("/projects") ? "active" : ""
-                  }
-                >
-                  projects
-                </a>
+              <Link href="/projects" passHref>
+                <a>projects</a>
               </Link>
             </div>
             <div className={navStyles.nav_hudson_valley}>
-              <Link href="/hudsonValley">
-                <a
-                  onClick={handleClick}
-                  className={router.pathname == "/hudsonValley" ? "active" : ""}
-                >
-                  hudson valley
-                </a>
+              <Link href="/hudsonValley" passHref>
+                <a>hudson valley</a>
               </Link>
             </div>
             <div className={navStyles.nav_contact}>
-              <Link href="/contact">
-                <a
-                  onClick={handleClick}
-                  className={router.pathname == "/contact" ? "active" : ""}
-                >
-                  contact
-                </a>
+              <Link href="/contact" passHref>
+                <a>contact</a>
               </Link>
             </div>
           </div>
-        </Navigation>
+        </Menu>
       </div>
-    </>
-  );
+    );
+  }
 }

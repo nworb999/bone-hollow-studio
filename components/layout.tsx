@@ -5,7 +5,7 @@ import { useWindowSize } from "../src/utils";
 import { LayoutProps } from "../src/types";
 import styles from "../styles/home.module.css";
 
-import BurgerMenu from "./burgermenu";
+import { BurgerMenu } from "./burgermenu";
 
 export default function Layout({ children }: LayoutProps) {
   const size = useWindowSize();
