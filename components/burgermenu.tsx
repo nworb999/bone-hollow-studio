@@ -56,6 +56,7 @@ const Navigation = ({ children }: LayoutProps) => {
         width={"100%"}
         pageWrapId={"page-wrap"}
         outerContainerId={"outer-container"}
+        burgerButtonClassName={navStyles.burger}
       >
         {children}
       </Menu>
@@ -64,7 +65,9 @@ const Navigation = ({ children }: LayoutProps) => {
 };
 
 export default function BurgerMenu() {
-  const ctx = useContext(MyContext);
+  const handleClick = () => {
+    document.body.classList.add("transparent-nav");
+  };
   return (
     <>
       <div className={navStyles.burger_container} id="outer-container">
@@ -74,22 +77,22 @@ export default function BurgerMenu() {
           <div className={navStyles.hamburger_sidebar} id="page-wrap">
             <div className={navStyles.nav_about}>
               <Link href="/about">
-                <a>about</a>
+                <a onClick={handleClick}>about</a>
               </Link>
             </div>
             <div className={navStyles.nav_homes}>
               <Link href="/projects">
-                <a>projects</a>
+                <a onClick={handleClick}>projects</a>
               </Link>
             </div>
             <div className={navStyles.nav_hudson_valley}>
               <Link href="/hudsonValley">
-                <a>hudson valley</a>
+                <a onClick={handleClick}>hudson valley</a>
               </Link>
             </div>
             <div className={navStyles.nav_contact}>
               <Link href="/contact">
-                <a>contact</a>
+                <a onClick={handleClick}>contact</a>
               </Link>
             </div>
           </div>
