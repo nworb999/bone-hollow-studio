@@ -13,7 +13,6 @@ interface MenuState extends State {
 
 // hamburger menu
 const HamburgerIcon = () => {
-  const ctx = useContext(MyContext);
   return (
     <svg
       className="w-8 h-8"
@@ -27,7 +26,6 @@ const HamburgerIcon = () => {
       stroke="currentColor"
     >
       <path d="M4 6h16M4 12h16M4 18h16"></path>
-      <rect d="M4 6h16M4 12h16M4 18h16" onClick={ctx.toggleMenu} />
     </svg>
   );
 };
@@ -67,8 +65,6 @@ const Navigation = ({ children }: LayoutProps) => {
 
 export default function BurgerMenu() {
   const ctx = useContext(MyContext);
-  const handleClick = () => console.log(ctx);
-  const router = useRouter();
   return (
     <>
       <div className={navStyles.burger_container} id="outer-container">
@@ -78,44 +74,22 @@ export default function BurgerMenu() {
           <div className={navStyles.hamburger_sidebar} id="page-wrap">
             <div className={navStyles.nav_about}>
               <Link href="/about">
-                <a
-                  onClick={handleClick}
-                  className={router.pathname == "/about" ? "active" : ""}
-                >
-                  about
-                </a>
+                <a>about</a>
               </Link>
             </div>
             <div className={navStyles.nav_homes}>
               <Link href="/projects">
-                <a
-                  onClick={handleClick}
-                  className={
-                    router.pathname.includes("/projects") ? "active" : ""
-                  }
-                >
-                  projects
-                </a>
+                <a>projects</a>
               </Link>
             </div>
             <div className={navStyles.nav_hudson_valley}>
               <Link href="/hudsonValley">
-                <a
-                  onClick={handleClick}
-                  className={router.pathname == "/hudsonValley" ? "active" : ""}
-                >
-                  hudson valley
-                </a>
+                <a>hudson valley</a>
               </Link>
             </div>
             <div className={navStyles.nav_contact}>
               <Link href="/contact">
-                <a
-                  onClick={handleClick}
-                  className={router.pathname == "/contact" ? "active" : ""}
-                >
-                  contact
-                </a>
+                <a>contact</a>
               </Link>
             </div>
           </div>
