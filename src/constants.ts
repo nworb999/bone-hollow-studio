@@ -97,7 +97,11 @@ export const projectsArray: Home[] = [
     ],
     footerImage: { image: mantle, altText: "placeholder" },
     topText: `Built in 2022 this home represents our approach to connecting the build and natural environment.  Textures and organic elements are the stars.`,
-    creditTextArray: [``],
+    creditTextArray: [
+      `Builder: Hudson Valley Homes & Renovations`,
+      `Designer: Bone Hollow Studio`,
+      `Architect: Kurt Sutherland`,
+    ],
     textRight: `We sourced Ash from the property to create custom details throughout the home.`,
     textLeft: `Our goal was to create a calming environment that allows the natural surrounding to shine.`,
   },

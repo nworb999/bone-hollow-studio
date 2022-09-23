@@ -56,7 +56,8 @@ const Navigation = ({ children }: LayoutProps) => {
         isOpen={ctx.isOpen}
         onStateChange={ctx.toggleMenu}
         width={"100%"}
-        burgerButtonClassName={navStyles.burger}
+        pageWrapId={"page-wrap"}
+        outerContainerId={"outer-container"}
       >
         {children}
       </Menu>
@@ -70,7 +71,7 @@ export default function BurgerMenu() {
   const router = useRouter();
   return (
     <>
-      <div className={navStyles.burger_container}>
+      <div className={navStyles.burger_container} id="outer-container">
         <HomeButton />
 
         <Navigation>
