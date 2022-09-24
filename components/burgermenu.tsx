@@ -20,7 +20,7 @@ const HamburgerIcon = () => {
       color="#263430"
       strokeLinecap="round"
       strokeLinejoin="round"
-      height="3rem"
+      height="2rem"
       strokeWidth="2"
       viewBox="0 0 24 24"
       stroke="currentColor"
