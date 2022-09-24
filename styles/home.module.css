@@ -161,8 +161,15 @@
   }
 
   .huge_bold_text {
-    gap: 2rem;
+    /* gap: 1rem; */
     font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .huge_bold_text {
+    padding: 3rem;
   }
 }
 
