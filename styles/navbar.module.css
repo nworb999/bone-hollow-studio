@@ -36,13 +36,14 @@
 .burger {
   position: sticky;
   margin-top: 0.2rem;
+  margin-left: 0.1rem;
 }
 
 .burger_container {
   color: #263430;
   padding-top: 1rem;
   display: grid;
-  grid-template-columns: 20% 70% 20%;
+  grid-template-columns: 15% 85%;
   grid-auto-flow: column;
 }
 
@@ -74,19 +75,10 @@
   }
 }
 
-@media (max-width: 600px) {
-  .burger_container {
-    color: #263430;
-    padding-top: 1rem;
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-auto-flow: column;
-  }
-}
-
 @media (max-width: 400px) {
   .burger_title {
     grid-row: 1;
+    padding-right: 1rem;
   }
   .big_text {
     font-size: 2rem;
