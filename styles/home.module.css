@@ -48,7 +48,7 @@
   justify-content: center;
   font-family: "Chivo", sans-serif;
   align-items: center;
-  padding: 5rem;
+  padding: 8rem;
   color: #000000;
 }
 
@@ -154,6 +154,10 @@
   gap: 6rem;
 }
 
+.footer_text {
+  margin-bottom: 4rem;
+}
+
 @media (max-width: 600px) {
   .footer {
     display: flow-root;
@@ -161,7 +165,7 @@
   }
 
   .huge_bold_text {
-    /* gap: 1rem; */
+    gap: 1rem;
     font-size: 2rem;
     padding: 1rem;
   }

@@ -174,7 +174,9 @@ const Home: NextPage = () => {
       </div>
       <div className={styles.article_style}>
         <CenterContent>
-          <p className={styles.huge_bold_text}>{indexTextArray[8]}</p>
+          <div className={styles.footer_text}>
+            <p className={styles.huge_bold_text}>{indexTextArray[8]}</p>
+          </div>
         </CenterContent>
       </div>
     </>
