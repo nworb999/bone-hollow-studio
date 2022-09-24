@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       <div className={styles.main_style}>
         <div className={styles.article_style}>
           {" "}
-          <div id="coverPhoto" className={styles.home_cover}>
+          <div id="coverPhoto" className={styles.top_image_container}>
             {" "}
             <Image
               alt={indexImageArray[0].altText}

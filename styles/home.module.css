@@ -39,6 +39,10 @@
   margin-top: 2rem;
 }
 
+.top_image_container {
+  z-index: -1;
+}
+
 .huge_bold_text {
   font-size: 2.2rem;
   justify-content: center;
@@ -87,7 +91,7 @@
   margin-top: 4rem;
   margin-bottom: 0rem;
   justify-content: center;
-  font-family: "Chivo", sans-serif;
+  font-family: "Inconsolata", monospace;
   align-items: center;
 }
 
