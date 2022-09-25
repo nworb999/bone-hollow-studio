@@ -14,7 +14,7 @@ import Script from "next/script";
 
 const Home: NextPage = () => {
   const size = useWindowSize();
-  const mobileOrderFlag = size.width && size.width < 600 ? true : false;
+  const mobileOrderFlag = size.width && size.width < 611 ? true : false;
 
   return (
     <>
@@ -43,23 +43,28 @@ const Home: NextPage = () => {
           <p className={styles.huge_bold_text}>{indexTextArray[0]}</p>
         </CenterContent>
         <div className={styles.section_style}>
-          <LeftContent>
-            {mobileOrderFlag ? (
+          {mobileOrderFlag ? (
+            <RightContent>
               <Image
                 alt={indexImageArray[1].altText}
                 src={indexImageArray[1].image}
                 width={500}
                 height={500}
                 objectFit="cover"
-              />
-            ) : (
+              />{" "}
+            </RightContent>
+          ) : (
+            <LeftContent>
               <p className={styles.bold_text}>{indexTextArray[1]}</p>
-            )}
-          </LeftContent>
-          <RightContent>
-            {mobileOrderFlag ? (
+            </LeftContent>
+          )}
+
+          {mobileOrderFlag ? (
+            <RightContent>
               <p className={styles.bold_text}>{indexTextArray[1]} </p>
-            ) : (
+            </RightContent>
+          ) : (
+            <RightContent>
               <Image
                 alt={indexImageArray[1].altText}
                 src={indexImageArray[1].image}
@@ -67,8 +72,8 @@ const Home: NextPage = () => {
                 height={500}
                 objectFit="cover"
               />
-            )}
-          </RightContent>
+            </RightContent>
+          )}
         </div>
       </div>
       <div className={styles.article_style}>
@@ -84,13 +89,13 @@ const Home: NextPage = () => {
       </div>
       <div className={styles.main_style}>
         <div className={styles.section_style}>
-          <LeftContent>
-            {mobileOrderFlag ? (
-              <div>
-                <p className={styles.bold_text}>{indexTextArray[2]}</p>
-                <p className={styles.small_bold_text}>{indexTextArray[3]}</p>
-              </div>
-            ) : (
+          {mobileOrderFlag ? (
+            <RightContent>
+              <p className={styles.bold_text}>{indexTextArray[2]}</p>
+              <p className={styles.small_bold_text}>{indexTextArray[3]}</p>
+            </RightContent>
+          ) : (
+            <LeftContent>
               <Image
                 alt={indexImageArray[3].altText}
                 src={indexImageArray[3].image}
@@ -98,10 +103,11 @@ const Home: NextPage = () => {
                 height={500}
                 objectFit="cover"
               />
-            )}
-          </LeftContent>
-          <RightContent>
-            {mobileOrderFlag ? (
+            </LeftContent>
+          )}
+
+          {mobileOrderFlag ? (
+            <RightContent>
               <Image
                 alt={indexImageArray[3].altText}
                 src={indexImageArray[3].image}
@@ -109,19 +115,27 @@ const Home: NextPage = () => {
                 height={500}
                 objectFit="cover"
               />
-            ) : (
-              <div>
-                <p className={styles.bold_text}>{indexTextArray[2]}</p>
-                <p className={styles.small_bold_text}>{indexTextArray[3]}</p>
-              </div>
-            )}
-          </RightContent>
+            </RightContent>
+          ) : (
+            <RightContent>
+              <p className={styles.bold_text}>{indexTextArray[2]}</p>
+              <p className={styles.small_bold_text}>{indexTextArray[3]}</p>
+            </RightContent>
+          )}
         </div>
         <div className={styles.section_style}>
-          <LeftContent>
-            <p className={styles.small_bold_text}>{indexTextArray[4]}</p>
-            <p className={styles.small_bold_text}>{indexTextArray[5]}</p>
-          </LeftContent>
+          {mobileOrderFlag ? (
+            <RightContent>
+              <p className={styles.small_bold_text}>{indexTextArray[4]}</p>
+              <p className={styles.small_bold_text}>{indexTextArray[5]}</p>
+            </RightContent>
+          ) : (
+            <LeftContent>
+              <p className={styles.small_bold_text}>{indexTextArray[4]}</p>
+              <p className={styles.small_bold_text}>{indexTextArray[5]}</p>
+            </LeftContent>
+          )}
+
           <RightContent>
             <Image
               alt={indexImageArray[4].altText}
@@ -146,10 +160,17 @@ const Home: NextPage = () => {
       </div>
       <div className={styles.main_style}>
         <div className={styles.section_style}>
-          <LeftContent>
-            <p className={styles.bold_text}>{indexTextArray[6]}</p>
-            <p className={styles.small_bold_text}>{indexTextArray[7]}</p>
-          </LeftContent>
+          {mobileOrderFlag ? (
+            <RightContent>
+              <p className={styles.bold_text}>{indexTextArray[6]}</p>
+              <p className={styles.small_bold_text}>{indexTextArray[7]}</p>
+            </RightContent>
+          ) : (
+            <LeftContent>
+              <p className={styles.bold_text}>{indexTextArray[6]}</p>
+              <p className={styles.small_bold_text}>{indexTextArray[7]}</p>
+            </LeftContent>
+          )}
           <RightContent>
             <Image
               alt={indexImageArray[6].altText}

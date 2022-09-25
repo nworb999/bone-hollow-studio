@@ -120,11 +120,19 @@ const Home: NextPage = () => {
               </p>
             </RightContent>
           )}
-          <LeftContent>
-            <p className={styles.bold_text}>
-              {home?.textLeft ? home.textLeft : ""}
-            </p>
-          </LeftContent>
+          {mobileOrderFlag ? (
+            <RightContent>
+              <p className={styles.bold_text}>
+                {home?.textLeft ? home.textLeft : ""}
+              </p>
+            </RightContent>
+          ) : (
+            <LeftContent>
+              <p className={styles.bold_text}>
+                {home?.textLeft ? home.textLeft : ""}
+              </p>
+            </LeftContent>
+          )}
           <RightContent>
             <Image
               alt={home?.imageArray ? home.imageArray[2]?.altText : ""}

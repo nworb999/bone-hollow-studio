@@ -40,6 +40,8 @@
 .burger_container {
   color: #263430;
   padding-top: 1rem;
+  position: sticky;
+  z-index: 100;
   display: grid;
   grid-template-columns: 20% 60% 20%;
   margin: 0;
