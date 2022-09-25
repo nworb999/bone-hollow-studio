@@ -166,13 +166,13 @@ export const indexImageArray: Image[] = [
 ];
 
 export const indexTextArray: string[] = [
-  `Bone Hollow Studio is the meeting of rural tranquility and custom design`,
+  `Bone Hollow Studio is the meeting of rural tranquility and custom design.`,
   `Located in New York’s Hudson Valley, we specialize in curated and welcoming homes.`,
-  `A boutique development company`,
+  `A boutique development company.`,
   `Our work is founded on the belief that form and function are the sine qua non of a well-designed home.`,
   `We apply that perspective to projects of every size, from home furnishing to new construction.`,
   `The spaces we create are characterized by luxurious textures, quality materials, and a minimalistic style, because we believe that the way your home feels is just as significant as how it looks.`,
-  `In collaboration with local trades`,
+  `In collaboration with local trades.`,
   `Through our partnership with a renowned local builder, Jeromy Wells, of Hudson Valley Homes & Renovations, we offer clean and gracious motifs that are thoughtfully sited in a quiet, introspective setting.`,
-  `The spaces we live in give us a protected and intimate feeling`,
+  `The spaces we live in give us a protected and intimate feeling.`,
 ];

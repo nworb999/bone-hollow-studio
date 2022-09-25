@@ -24,26 +24,24 @@ const Home: NextPage = () => {
       </Head>
       <Script src="transparent.js" strategy="lazyOnload" />
       <div className={styles.main_style}>
-        <div className={styles.article_style}>
-          {" "}
-          <div id="coverPhoto" className={styles.top_image_container}>
-            {" "}
-            <Image
-              alt={indexImageArray[0].altText}
-              src={indexImageArray[0].image}
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-        </div>
+        <Image
+          alt={indexImageArray[0].altText}
+          src={indexImageArray[0].image}
+          layout="fill"
+          objectFit="cover"
+        />
       </div>
-      <div className={styles.main_style}>
+      <div>
         <div id="empty-div-row"></div>
         <CenterContent>
           <p className={styles.huge_bold_text}>{indexTextArray[0]}</p>
         </CenterContent>
         <div className={styles.section_style}>
           {mobileOrderFlag ? (
+            <RightContent>
+              <p className={styles.bold_text}>{indexTextArray[1]}</p>
+            </RightContent>
+          ) : (
             <RightContent>
               <Image
                 alt={indexImageArray[1].altText}
@@ -53,17 +51,9 @@ const Home: NextPage = () => {
                 objectFit="cover"
               />{" "}
             </RightContent>
-          ) : (
-            <LeftContent>
-              <p className={styles.bold_text}>{indexTextArray[1]}</p>
-            </LeftContent>
           )}
 
           {mobileOrderFlag ? (
-            <RightContent>
-              <p className={styles.bold_text}>{indexTextArray[1]} </p>
-            </RightContent>
-          ) : (
             <RightContent>
               <Image
                 alt={indexImageArray[1].altText}
@@ -73,11 +63,15 @@ const Home: NextPage = () => {
                 objectFit="cover"
               />
             </RightContent>
+          ) : (
+            <RightContent>
+              <p className={styles.bold_text}>{indexTextArray[1]} </p>
+            </RightContent>
           )}
         </div>
       </div>
-      <div className={styles.article_style}>
-        <div className={styles.home_cover}>
+      <div className={styles.home_cover}>
+        <div>
           <Image
             alt={indexImageArray[2].altText}
             src={indexImageArray[2].image}
@@ -87,7 +81,7 @@ const Home: NextPage = () => {
           />
         </div>
       </div>
-      <div className={styles.main_style}>
+      <div>
         <div className={styles.section_style}>
           {mobileOrderFlag ? (
             <RightContent>
@@ -126,12 +120,12 @@ const Home: NextPage = () => {
         <div className={styles.section_style}>
           {mobileOrderFlag ? (
             <RightContent>
-              <p className={styles.small_bold_text}>{indexTextArray[4]}</p>
+              <p className={styles.bold_text}>{indexTextArray[4]}</p>
               <p className={styles.small_bold_text}>{indexTextArray[5]}</p>
             </RightContent>
           ) : (
             <LeftContent>
-              <p className={styles.small_bold_text}>{indexTextArray[4]}</p>
+              <p className={styles.bold_text}>{indexTextArray[4]}</p>
               <p className={styles.small_bold_text}>{indexTextArray[5]}</p>
             </LeftContent>
           )}
@@ -147,18 +141,16 @@ const Home: NextPage = () => {
           </RightContent>
         </div>
       </div>
-      <div className={styles.article_style}>
-        <div className={styles.home_cover}>
-          <Image
-            alt={indexImageArray[5].altText}
-            src={indexImageArray[5].image}
-            layout="responsive"
-            objectPosition="relative"
-            objectFit="cover"
-          />
-        </div>
+      <div className={styles.home_cover}>
+        <Image
+          alt={indexImageArray[5].altText}
+          src={indexImageArray[5].image}
+          layout="responsive"
+          objectPosition="center"
+          objectFit="fill"
+        />
       </div>
-      <div className={styles.main_style}>
+      <div>
         <div className={styles.section_style}>
           {mobileOrderFlag ? (
             <RightContent>
@@ -182,22 +174,18 @@ const Home: NextPage = () => {
           </RightContent>
         </div>
       </div>
-      <div className={styles.article_style}>
-        <div className={styles.home_cover}>
-          <Image
-            alt={indexImageArray[7].altText}
-            src={indexImageArray[7].image}
-            layout="responsive"
-            objectPosition="relative"
-            objectFit="cover"
-          />
-        </div>
+      <div className={styles.last_home_cover}>
+        <Image
+          alt={indexImageArray[7].altText}
+          src={indexImageArray[7].image}
+          layout="responsive"
+          objectPosition="relative"
+          objectFit="cover"
+        />
       </div>
       <div className={styles.article_style}>
         <CenterContent>
-          <div className={styles.footer_text}>
-            <p className={styles.huge_bold_text}>{indexTextArray[8]}</p>
-          </div>
+          <p className={styles.huge_bold_text}>{indexTextArray[8]}</p>
         </CenterContent>
       </div>
     </>
