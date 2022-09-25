@@ -47,18 +47,20 @@ const HomeButton = () => {
 const Navigation = ({ children }: LayoutProps) => {
   const ctx = useContext(MyContext);
   return (
-    <Menu
-      noOverlay
-      customBurgerIcon={<HamburgerIcon />}
-      isOpen={ctx.isOpen}
-      onStateChange={ctx.toggleMenu}
-      width={"100%"}
-      pageWrapId={"page-wrap"}
-      outerContainerId={"outer-container"}
-      burgerButtonClassName={navStyles.burger}
-    >
-      {children}
-    </Menu>
+    <div className={navStyles.burger_icon}>
+      <Menu
+        noOverlay
+        customBurgerIcon={<HamburgerIcon />}
+        isOpen={ctx.isOpen}
+        onStateChange={ctx.toggleMenu}
+        width={"100%"}
+        pageWrapId={"page-wrap"}
+        outerContainerId={"outer-container"}
+        burgerButtonClassName={navStyles.burger}
+      >
+        {children}
+      </Menu>
+    </div>
   );
 };
 

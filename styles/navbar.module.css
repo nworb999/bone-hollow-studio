@@ -35,15 +35,13 @@
 
 .burger {
   position: sticky;
-  margin-top: 0.2rem;
-  margin-left: 0.1rem;
 }
 
 .burger_container {
   color: #263430;
   padding-top: 1rem;
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 20% 60% 20%;
   grid-auto-flow: column;
 }
 
@@ -55,6 +53,7 @@
 .hamburger_sidebar {
   padding: 1rem;
   line-height: 2rem;
+  position: relative;
   margin-right: 2rem;
   background-color: #263430;
 }
@@ -72,6 +71,12 @@
   .big_text {
     font-size: 2.2rem;
     font-weight: 500;
+  }
+}
+
+@media (max-width: 530px) {
+  .burger_container {
+    grid-template-columns: 15% 85%;
   }
 }
 
