@@ -25,14 +25,14 @@ import {
   lilysView,
   kitchen,
   diningRoom,
-  stove,
   screen,
   sideBarn,
   bedroom,
   library,
   grandmasPiano,
-  butterflyBushes,
   construction,
+  sideDrone,
+  campfire,
 } from "./images";
 import { formatName } from "./utils";
 
@@ -68,11 +68,11 @@ export const projectsArray: Home[] = [
     thumbnailImage: { image: sideBarn, altText: "placeholder" },
     thumbnailCaption: [formatName({ name: HomeType.guestBarn }), "2018"],
     imageArray: [
-      { image: butterflyBushes, altText: "placeholder" },
+      { image: sideDrone, altText: "placeholder" },
       { image: library, altText: "placeholder" },
       { image: grandmasPiano, altText: "placeholder" },
     ],
-    footerImage: { image: stove, altText: "placeholder" },
+    footerImage: { image: campfire, altText: "placeholder" },
     topText: `Built in 2018 by Hudson Valley Homes & Renovations in collaboration with Bone Hollow Studio.  By design, the structure appears as an unassuming barn from the road. In reality it functions as the soul of the property - guest house, pool house, music room and great room.`,
     creditTextArray: [
       `Builder: Hudson Valley Homes & Renovations`,

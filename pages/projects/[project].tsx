@@ -34,11 +34,13 @@ const Home: NextPage = () => {
       <div id="empty-div-row"></div>
       <Script src="transparent.js" strategy="lazyOnload" />
       <div className={styles.main_style}>
-        <CenterContent>
-          <p className={styles.header_text}>
-            {formatName({ name: home?.name })}
-          </p>
-        </CenterContent>
+        <div className={styles.article_style}>
+          <CenterContent>
+            <p className={styles.header_text}>
+              {formatName({ name: home?.name })}
+            </p>
+          </CenterContent>
+        </div>
         <div className={styles.section_style}>
           <LeftContent>
             <Image
@@ -63,21 +65,19 @@ const Home: NextPage = () => {
           </RightContent>
         </div>
       </div>
-      <div className={styles.article_style}>
-        <div id="coverPhoto" className={styles.home_cover}>
-          {" "}
-          <Image
-            alt={home?.coverImageArray ? home.coverImageArray[0]?.altText : ""}
-            src={
-              home?.coverImageArray
-                ? home.coverImageArray[0]?.image
-                : fallBackImage
-            }
-            layout="responsive"
-            objectPosition="relative"
-            objectFit="cover"
-          />
-        </div>
+      <div id="coverPhoto" className={styles.home_cover}>
+        {" "}
+        <Image
+          alt={home?.coverImageArray ? home.coverImageArray[0]?.altText : ""}
+          src={
+            home?.coverImageArray
+              ? home.coverImageArray[0]?.image
+              : fallBackImage
+          }
+          layout="responsive"
+          objectPosition="relative"
+          objectFit="cover"
+        />
       </div>
       <div className={styles.main_style}>
         <div className={styles.section_style}>
@@ -144,21 +144,21 @@ const Home: NextPage = () => {
           </RightContent>
         </div>
       </div>
-      <div className={styles.article_style}>
-        <div id="coverPhoto" className={styles.home_cover}>
-          <Image
-            alt={home?.coverImageArray ? home.coverImageArray[1]?.altText : ""}
-            src={
-              home?.coverImageArray
-                ? home.coverImageArray[1]?.image
-                : fallBackImage
-            }
-            layout="responsive"
-            objectPosition="relative"
-            objectFit="cover"
-          />
-        </div>
+
+      <div id="coverPhoto" className={styles.home_cover}>
+        <Image
+          alt={home?.coverImageArray ? home.coverImageArray[1]?.altText : ""}
+          src={
+            home?.coverImageArray
+              ? home.coverImageArray[1]?.image
+              : fallBackImage
+          }
+          layout="responsive"
+          objectPosition="relative"
+          objectFit="cover"
+        />
       </div>
+
       <div className={styles.main_style}>
         <div className={styles.article_style}>
           <div className={styles.footer_image}>

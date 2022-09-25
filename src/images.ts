@@ -3,7 +3,7 @@ import livingroom from "../public/assets/index/livingroom.jpg";
 import springView from "../public/assets/index/spring.jpg";
 import flower from "../public/assets/index/flower.jpg";
 import hoya from "../public/assets/index/hoya.jpg";
-import pool from "../public/assets/index/pool.jpg";
+import pool from "../public/assets/index/pool-drone.jpg";
 import fireplace from "../public/assets/index/fireplace.jpg";
 import airlock from "../public/assets/index/airlock.jpg";
 import screenPorch from "../public/assets/index/screenporch.jpg";
@@ -29,9 +29,10 @@ import lilysView from "../public/assets/farmHouse/lilysview.jpg";
 import kitchen from "../public/assets/farmHouse/kitchen.jpg";
 import diningRoom from "../public/assets/farmHouse/diningroom.jpg";
 
-import stove from "../public/assets/guestBarn/stove.jpg";
-import screen from "../public/assets/guestBarn/screen.jpg";
+import sideDrone from "../public/assets/guestBarn/side-drone.jpg";
 import sideBarn from "../public/assets/guestBarn/side.jpg";
+import campfire from "../public/assets/guestBarn/campfire.jpg";
+import screen from "../public/assets/guestBarn/screen.jpg";
 import library from "../public/assets/guestBarn/library.jpg";
 import bedroom from "../public/assets/guestBarn/bedroom.jpg";
 import grandmasPiano from "../public/assets/guestBarn/piano.jpg";
@@ -66,8 +67,9 @@ export {
   lilysView,
   kitchen,
   diningRoom,
-  stove,
+  sideDrone,
   screen,
+  campfire,
   sideBarn,
   bedroom,
   library,
