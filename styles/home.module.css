@@ -75,7 +75,7 @@
 }
 
 .small_bold_text {
-  margin: 0;
+  /* margin: 0; */
   font-size: 1rem;
   display: flex;
   justify-content: center;
@@ -93,6 +93,7 @@
   color: #375051;
   font-size: 2.5rem;
   font-family: "Inconsolata", monospace;
+  padding-bottom: 1rem;
 }
 
 .small_header_text {
@@ -118,12 +119,6 @@
 .text_right {
   text-align: right;
   align-content: center;
-}
-
-.filter_dark {
-  filter: invert(16%) sepia(7%) saturate(1268%) hue-rotate(112deg)
-    brightness(98%) contrast(91%);
-  /* https://codepen.io/sosuke/pen/Pjoqqp */
 }
 
 .leaf_button a {
@@ -167,6 +162,9 @@
   }
   .article_style {
     padding-bottom: 2rem;
+  }
+  .header_text {
+    padding-bottom: 0;
   }
   .home_cover {
     padding-top: 30vh;

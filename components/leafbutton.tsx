@@ -16,14 +16,6 @@ export default function LeafButton({
         <div className={styles.leaf_button}>
           <Link href={href} passHref>
             <a className={styles.bold_text}>
-              <Image
-                className={styles.filter_dark}
-                src="/tree.svg"
-                objectFit="fill"
-                width={150}
-                alt="silver tree with leaves falling"
-                height={150}
-              />
               <p>{text}</p>
             </a>
           </Link>
