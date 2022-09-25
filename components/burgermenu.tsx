@@ -20,7 +20,7 @@ const HamburgerIcon = () => {
       color="#263430"
       strokeLinecap="round"
       strokeLinejoin="round"
-      height="2rem"
+      height="1.8rem"
       strokeWidth="2"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -75,22 +75,27 @@ export default function BurgerMenu() {
 
         <Navigation>
           <div className={navStyles.hamburger_sidebar} id="page-wrap">
-            <div className={navStyles.nav_about}>
+            <div>
+              <Link href="/">
+                <a onClick={handleClick}>home</a>
+              </Link>
+            </div>
+            <div>
               <Link href="/about">
                 <a onClick={handleClick}>about</a>
               </Link>
             </div>
-            <div className={navStyles.nav_homes}>
+            <div>
               <Link href="/projects">
                 <a onClick={handleClick}>projects</a>
               </Link>
             </div>
-            <div className={navStyles.nav_hudson_valley}>
+            <div>
               <Link href="/hudsonValley">
                 <a onClick={handleClick}>hudson valley</a>
               </Link>
             </div>
-            <div className={navStyles.nav_contact}>
+            <div>
               <Link href="/contact">
                 <a onClick={handleClick}>contact</a>
               </Link>
