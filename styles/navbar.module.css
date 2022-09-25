@@ -42,7 +42,7 @@
   padding-top: 1rem;
   display: grid;
   grid-template-columns: 20% 60% 20%;
-  grid-auto-flow: column;
+  margin: 0;
 }
 
 .burger_title {
@@ -53,8 +53,6 @@
 .hamburger_sidebar {
   padding: 1rem;
   line-height: 2rem;
-  position: relative;
-  margin-right: 2rem;
   background-color: #263430;
 }
 

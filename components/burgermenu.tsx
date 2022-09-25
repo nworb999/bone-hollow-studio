@@ -53,7 +53,7 @@ const Navigation = ({ children }: LayoutProps) => {
         customBurgerIcon={<HamburgerIcon />}
         isOpen={ctx.isOpen}
         onStateChange={ctx.toggleMenu}
-        width={"100%"}
+        width={"min-content"}
         pageWrapId={"page-wrap"}
         outerContainerId={"outer-container"}
         burgerButtonClassName={navStyles.burger}
