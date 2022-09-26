@@ -27,7 +27,6 @@
 
 .home_cover {
   z-index: -1;
-  object-fit: cover;
   overflow: visible;
   padding-bottom: 6rem;
 }
@@ -176,7 +175,7 @@
   }
   .article_style {
     padding: 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0;
   }
   .header_text {
     padding-bottom: 0;
@@ -188,10 +187,6 @@
   .last_home_cover {
     padding-top: 10vh;
     padding-bottom: 0;
-  }
-  .footer_image {
-    margin: 4rem;
-    margin-bottom: 6rem;
   }
 
   .huge_bold_text {

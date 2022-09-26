@@ -78,6 +78,8 @@ const Home: NextPage = () => {
             layout="responsive"
             objectPosition="relative"
             objectFit="cover"
+            height="100vh"
+            width="100vw"
           />
         </div>
       </div>
@@ -147,7 +149,9 @@ const Home: NextPage = () => {
           src={indexImageArray[5].image}
           layout="responsive"
           objectPosition="center"
-          objectFit="fill"
+          objectFit="cover"
+          height="100vh"
+          width="100vw"
         />
       </div>
       <div>
@@ -181,6 +185,8 @@ const Home: NextPage = () => {
           layout="responsive"
           objectPosition="relative"
           objectFit="cover"
+          height="100vh"
+          width="100vw"
         />
       </div>
       <CenterContent>
