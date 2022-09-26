@@ -25,7 +25,7 @@ export default function Footer() {
           <p>
             {" "}
             <a href="https://www.instagram.com/cy_kim___/">
-              designed by cy kim
+              designed by <u>cy kim</u>
             </a>
           </p>
         </div>
