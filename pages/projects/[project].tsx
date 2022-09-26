@@ -149,22 +149,19 @@ const Home: NextPage = () => {
           objectFit="cover"
         />
       </div>
-      <div className={styles.article_style}>
-        <div className={styles.footer_image}>
-          <CenterContent>
-            {
-              <Image
-                alt={home?.footerImage ? home.footerImage?.altText : ""}
-                src={
-                  home?.footerImage ? home.footerImage?.image : fallBackImage
-                }
-                width={500}
-                height={500}
-                objectFit="cover"
-              />
-            }
-          </CenterContent>
-        </div>
+
+      <div className={styles.footer_image}>
+        <CenterContent>
+          {
+            <Image
+              alt={home?.footerImage ? home.footerImage?.altText : ""}
+              src={home?.footerImage ? home.footerImage?.image : fallBackImage}
+              width={500}
+              height={500}
+              objectFit="cover"
+            />
+          }
+        </CenterContent>
       </div>
     </>
   );

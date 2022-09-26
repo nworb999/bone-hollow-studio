@@ -175,6 +175,7 @@
     padding-bottom: 2rem;
   }
   .article_style {
+    padding: 1rem;
     padding-bottom: 2rem;
   }
   .header_text {
@@ -188,6 +189,11 @@
     padding-top: 10vh;
     padding-bottom: 0;
   }
+  .footer_image {
+    margin: 4rem;
+    margin-bottom: 6rem;
+  }
+
   .huge_bold_text {
     height: 100vh;
     display: -webkit-box;
