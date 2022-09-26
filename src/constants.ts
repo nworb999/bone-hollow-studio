@@ -100,7 +100,7 @@ export const projectsArray: Home[] = [
     creditTextArray: [
       `Builder: Hudson Valley Homes & Renovations`,
       `Designer: Bone Hollow Studio`,
-      `Architect: Pietro Rosato and Edwin Landaverde of Piro Studio`,
+      `Architects: Pietro Rosato and Edwin Landaverde of Piro Studio`,
     ],
     textRight: `We sourced Ash from the property to create custom details throughout the home.`,
     textLeft: `Our goal was to create a calming environment that allows the natural surrounding to shine.`,
