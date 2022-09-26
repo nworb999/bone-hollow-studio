@@ -15,22 +15,15 @@ export default function Footer() {
         </div>
         <div className={styles.footer_social}>
           <h3>social</h3>
-          <a
-            href="https://www.instagram.com/bonehollowstudio/"
-            // target={"_blank"}
-            // rel={"noreferrer"}
-          >
+          <a href="https://www.instagram.com/bonehollowstudio/">
             instagram<br></br>
           </a>
-          <a
-            href="https://www.facebook.com/bonehollowstudio"
-            // target={"_blank"}
-            // rel={"noreferrer"}
-          >
-            facebook
-          </a>
+          <a href="https://www.facebook.com/bonehollowstudio">facebook</a>
         </div>
         <div className={styles.footer_copyright}>© bone hollow studio llc</div>
+        <div className={styles.footer_creds}>
+          <a href="https://www.instagram.com/cy_kim___/">designed by cy kim</a>
+        </div>
         <div className={styles.footer_tree}>
           <Image
             className={styles.filter_silver}

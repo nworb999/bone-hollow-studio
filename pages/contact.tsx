@@ -4,7 +4,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import { CenterContent } from "../components/containers";
-import LeafButton from "../components/leafbutton";
 
 import styles from "../styles/home.module.css";
 
@@ -17,27 +16,23 @@ const Home: NextPage = () => {
       <Script src="transparent.js" strategy="lazyOnload" />
       <div id="empty-div-row"></div>
       <div className={styles.main_style}>
+        <p className={styles.header_text}>contact</p>
+        <div className={styles.contact_container}>
+          <CenterContent>
+            <p className={styles.small_header_text}>owner</p>
+            <p className={styles.contact_text}>Erika Brown</p>
+            <p className={styles.contact_text}>erika@bonehollow.studio</p>
+            <p className={styles.contact_text}>(845) 605-9550 </p>
+          </CenterContent>
+        </div>
         <CenterContent>
-          <p className={styles.header_text}>owner</p>
-          <p className={styles.small_bold_text}>Erika Brown</p>
-
-          <p className={styles.small_bold_text}>erika@bonehollow.studio</p>
-          <p className={styles.small_bold_text}>(845) 605-9550 </p>
-        </CenterContent>
-        <CenterContent>
-          <p className={styles.header_text}>builder</p>
-          <p className={styles.small_bold_text}>
+          <p className={styles.small_header_text}>builder</p>
+          <p className={styles.contact_text}>Jeromy Wells</p>
+          <p className={styles.contact_text}>
             Hudson Valley Homes & Renovations
           </p>
-          <p className={styles.small_bold_text}>Jeromy Wells</p>
-          <p className={styles.small_bold_text}>(845) 532-5899</p>
+          <p className={styles.contact_text}>(845) 532-5899</p>
         </CenterContent>
-        <CenterContent>
-          <p>
-            <br />
-          </p>
-        </CenterContent>
-        <LeafButton text="browse projects"></LeafButton>
       </div>
     </>
   );

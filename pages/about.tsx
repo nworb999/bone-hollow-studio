@@ -3,7 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/home.module.css";
 import { aboutImageArray, aboutTextArray } from "../src/constants";
-import LeafButton from "../components/leafbutton";
 import {
   CenterContent,
   LeftContent,
@@ -38,12 +37,12 @@ const Home: NextPage = () => {
             <p className={styles.small_bold_text}>{aboutTextArray[0]}</p>
             <p className={styles.small_bold_text}>{aboutTextArray[1]}</p>
           </RightContent>
+        </div>
+        <p className={styles.header_text}>Erika Brown</p>
+        <p className={styles.small_header_text}>owner</p>
+        <div className={styles.section_style}>
           <RightContent>
             <div className={styles.article_style}>
-              <div>
-                <p className={styles.header_text}>Erika Brown</p>
-                <p className={styles.small_header_text}>owner</p>
-              </div>
               <div>
                 <p className={styles.small_bold_text}>{aboutTextArray[2]}</p>
                 <p className={styles.small_bold_text}>{aboutTextArray[3]}</p>
@@ -60,9 +59,6 @@ const Home: NextPage = () => {
             />
           </RightContent>
         </div>
-        <CenterContent>
-          <LeafButton text="browse projects"></LeafButton>
-        </CenterContent>
       </div>
     </>
   );
