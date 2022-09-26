@@ -29,9 +29,10 @@ const Home: NextPage = () => {
           <p className={styles.small_header_text}>builder</p>
           <p className={styles.contact_text}>Jeromy Wells</p>
           <p className={styles.contact_text}>
-            Hudson Valley Homes & Renovations
+            <em>
+              Hudson Valley Homes <br />& Renovations
+            </em>
           </p>
-          <p className={styles.contact_text}>(845) 532-5899</p>
         </CenterContent>
       </div>
     </>
