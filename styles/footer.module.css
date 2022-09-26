@@ -29,21 +29,21 @@
   grid-column: 4 / 4;
   grid-row: 2;
   font-size: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .footer_social {
   grid-column: 3 / 3;
   grid-row: 2;
   font-size: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .footer_copyright {
   grid-column: 1 / 3;
   grid-row: 2;
   font-size: 1rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .footer_tree {
@@ -51,15 +51,6 @@
   text-align: right;
   padding-left: 3rem;
   grid-row: 1;
-}
-
-.footer_creds {
-  grid-row: 2;
-  position: relative;
-  display: inline-block;
-  align-self: flex-end;
-  margin-top: 4rem;
-  margin-bottom: 0;
 }
 
 .filter_silver {

@@ -20,10 +20,16 @@ export default function Footer() {
           </a>
           <a href="https://www.facebook.com/bonehollowstudio">facebook</a>
         </div>
-        <div className={styles.footer_copyright}>© bone hollow studio llc</div>
-        <div className={styles.footer_creds}>
-          <a href="https://www.instagram.com/cy_kim___/">designed by cy kim</a>
+        <div className={styles.footer_copyright}>
+          <p>© bone hollow studio llc</p>
+          <p>
+            {" "}
+            <a href="https://www.instagram.com/cy_kim___/">
+              designed by cy kim
+            </a>
+          </p>
         </div>
+
         <div className={styles.footer_tree}>
           <Image
             className={styles.filter_silver}
