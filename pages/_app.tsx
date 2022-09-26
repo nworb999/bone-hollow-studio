@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <link
           rel="icon"
+          type="image/x-icon"
           href="/leaf.svg"
           className="invert(68%) sepia(9%) saturate(467%) hue-rotate(64deg) brightness(93%) contrast(89%)"
         ></link>
