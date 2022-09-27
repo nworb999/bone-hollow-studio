@@ -54,7 +54,7 @@ export const projectsArray: Home[] = [
     topText: `A farm house originally built in 1800.  Erika’s love affair with the Hudson Valley began with this property. Perhaps it’s the connection to her grandfather’s wheat farm in Kansas. From the moment Erika saw the wildflower filled meadow out back she felt a visceral connection to the land.`,
     creditTextArray: [
       `Builder: Hudson Valley Homes & Renovations`,
-      `Interior Designer: Bone Hollow Studio`,
+      `Furnishings: Bone Hollow Studio`,
     ],
     textRight: `Layered and curated furnishings take time and patience.`,
     textLeft: `Our approach to creative sourcing is one of the highlights of our work.`,

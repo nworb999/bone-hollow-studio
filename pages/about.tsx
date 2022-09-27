@@ -38,15 +38,20 @@ const Home: NextPage = () => {
             <p className={styles.small_bold_text}>{aboutTextArray[1]}</p>
           </RightContent>
         </div>
-        <p className={styles.header_text}>Erika Brown</p>
-        <p className={styles.small_header_text}>owner</p>
+        <p className={styles.header_text} style={{ marginBottom: "2rem" }}>
+          Erika Brown
+        </p>
+        <p
+          className={styles.small_header_text}
+          style={{ marginBottom: "2rem" }}
+        >
+          owner
+        </p>
         <div className={styles.section_style}>
           <RightContent>
-            <div className={styles.article_style}>
-              <div>
-                <p className={styles.small_bold_text}>{aboutTextArray[2]}</p>
-                <p className={styles.small_bold_text}>{aboutTextArray[3]}</p>
-              </div>
+            <div>
+              <p className={styles.small_bold_text}>{aboutTextArray[2]}</p>
+              <p className={styles.small_bold_text}>{aboutTextArray[3]}</p>
             </div>
           </RightContent>
           <RightContent>
@@ -58,6 +63,10 @@ const Home: NextPage = () => {
               objectFit="cover"
             />
           </RightContent>
+          <br />
+          <br />
+          <br />
+          <br />
         </div>
       </div>
     </>
