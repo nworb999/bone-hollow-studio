@@ -1,5 +1,5 @@
 import styles from "../styles/home.module.css";
-import { LayoutProps } from "../src/types";
+import { LayoutProps } from "../types";
 
 export function LeftContent({ children }: LayoutProps) {
   return (

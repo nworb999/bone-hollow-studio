@@ -6,18 +6,18 @@ import styles from "../styles/home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div>
       <Head>
-        <title>bone hollow studio - hudson valley</title>
+        <title>hudson valley</title>
       </Head>
       <Script src="transparent.js" strategy="lazyOnload" />
       <div id="empty-div-row"></div>
       <div className={styles.main_style}>
         <CenterContent>
-          <p className={styles.header_text}>coming soon!</p>
+          <p className={styles.header_text}>hudson valley recommendations</p>
         </CenterContent>
       </div>
-    </>
+    </div>
   );
 };
 

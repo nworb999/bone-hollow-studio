@@ -1,8 +1,8 @@
 import NavBar from "./navbar";
 import Footer from "./footer";
 import Head from "next/head";
-import { useWindowSize } from "../src/utils";
-import { LayoutProps } from "../src/types";
+import { useWindowSize } from "../utils";
+import { LayoutProps } from "../types";
 import styles from "../styles/home.module.css";
 
 import BurgerMenu from "./burgermenu";

@@ -2,8 +2,9 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from "../../styles/home.module.css";
-import { fallBackImage } from "../../src/images";
-import { projectsArray } from "../../src/constants";
+import footerStyles from "../../styles/footer.module.css";
+import { fallBackImage } from "../../images";
+import { projectsArray } from "../../constants";
 
 import {
   CenterContent,
@@ -11,7 +12,8 @@ import {
   RightContent,
 } from "../../components/containers";
 import Script from "next/script";
-import { formatName, useWindowSize } from "../../src/utils";
+import { formatName, useWindowSize } from "../../utils";
+import Head from "next/head";
 
 export const config = {
   unstable_includeFiles: [
@@ -25,11 +27,13 @@ const Home: NextPage = () => {
   const [home] = projectsArray.filter(
     ({ name }) => name === router.asPath.toString().replace("/projects/", "")
   );
-  console.log({ home });
   const size = useWindowSize();
   const mobileOrderFlag = size.width && size.width < 600 ? true : false;
   return (
     <>
+      <Head>
+        <title>{formatName({ name: home?.name }) ?? "homes"}</title>
+      </Head>
       <div id="empty-div-row"></div>
       <Script src="transparent.js" strategy="lazyOnload" />
       <div className={styles.article_style}>
@@ -150,7 +154,7 @@ const Home: NextPage = () => {
         />
       </div>
 
-      <div className={styles.footer_image}>
+      <div className={footerStyles.footer_image}>
         <CenterContent>
           {
             <Image

@@ -3,7 +3,7 @@ import Head from "next/head";
 import HomeButton from "../../components/homebutton";
 import styles from "../../styles/home.module.css";
 
-import { projectsArray } from "../../src/constants";
+import { projectsArray } from "../../constants";
 import { CenterContent } from "../../components/containers";
 import Script from "next/script";
 
@@ -11,7 +11,7 @@ const Homes: NextPage = () => {
   return (
     <>
       <Head>
-        <title>bone hollow studio - homes</title>
+        <title>homes</title>
       </Head>
       <Script src="transparent.js" strategy="lazyOnload" />
       <div id="empty-div-row"></div>

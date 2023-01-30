@@ -53,15 +53,24 @@
   grid-row: 1;
 }
 
-.filter_silver {
-  filter: invert(83%) sepia(31%) saturate(0%) hue-rotate(159deg) brightness(93%)
-    contrast(78%);
-  /* https://codepen.io/sosuke/pen/Pjoqqp */
+.footer_image {
+  margin: 1rem;
+  margin-bottom: 6rem;
 }
 
-@media (max-width: 720px) {
+.footer_text {
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 600px) {
   .footer {
     display: flow-root;
     height: auto;
   }
+}
+
+.filter_silver {
+  filter: invert(83%) sepia(31%) saturate(0%) hue-rotate(159deg) brightness(93%)
+    contrast(78%);
+  /* https://codepen.io/sosuke/pen/Pjoqqp */
 }
