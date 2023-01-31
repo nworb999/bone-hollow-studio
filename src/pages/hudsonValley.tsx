@@ -6,9 +6,9 @@ import styles from "../styles/home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div>
       <Head>
-        <title>bone hollow studio - hudson valley</title>
+        <title>hudson valley</title>
       </Head>
       <Script src="transparent.js" strategy="lazyOnload" />
       <div id="empty-div-row"></div>
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
           <p className={styles.header_text}>coming soon!</p>
         </CenterContent>
       </div>
-    </>
+    </div>
   );
 };
 

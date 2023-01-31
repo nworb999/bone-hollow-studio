@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/home.module.css";
-import { aboutImageArray, aboutTextArray } from "../src/constants";
+import { aboutImageArray, aboutTextArray } from "../constants";
 import {
   CenterContent,
   LeftContent,
@@ -12,10 +12,10 @@ import Script from "next/script";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div>
       {" "}
       <Head>
-        <title>bone hollow studio - about</title>
+        <title>about</title>
       </Head>
       <Script src="transparent.js" strategy="lazyOnload" />
       <div className={styles.main_style}>
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
           <br />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,10 +1,8 @@
-import { LayoutProps } from "../src/types";
+import { LayoutProps } from "../types";
 import Link from "next/link";
 import { slide as Menu, State } from "react-burger-menu";
 import navStyles from "../styles/navbar.module.css";
-import { useRouter } from "next/router";
 import React, { useContext } from "react";
-import { createGzip } from "zlib";
 
 interface MenuState extends State {
   toggleMenu?: () => void;
@@ -69,7 +67,7 @@ export default function BurgerMenu() {
     document.body.classList.add("transparent-nav");
   };
   return (
-    <>
+    <div>
       <div className={navStyles.burger_container} id="outer-container">
         <HomeButton />
 
@@ -103,6 +101,6 @@ export default function BurgerMenu() {
           </div>
         </Navigation>
       </div>
-    </>
+    </div>
   );
 }

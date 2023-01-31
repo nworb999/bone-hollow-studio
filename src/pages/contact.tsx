@@ -9,9 +9,9 @@ import styles from "../styles/home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div>
       <Head>
-        <title>bone hollow studio - contact</title>
+        <title>contact</title>
       </Head>
       <Script src="transparent.js" strategy="lazyOnload" />
       <div id="empty-div-row"></div>
@@ -20,14 +20,18 @@ const Home: NextPage = () => {
         <div className={styles.contact_container}>
           <CenterContent>
             <p className={styles.small_header_text}>owner</p>
-            <p className={styles.contact_text}>Erika Brown</p>
+            <p className={styles.contact_text}>
+              <strong>Erika Brown</strong>
+            </p>
             <p className={styles.contact_text}>erika@bonehollow.studio</p>
             <p className={styles.contact_text}>(845) 605-9550 </p>
           </CenterContent>
         </div>
         <CenterContent>
           <p className={styles.small_header_text}>builder</p>
-          <p className={styles.contact_text}>Jeromy Wells</p>
+          <p className={styles.contact_text}>
+            <strong>Jeromy Wells</strong>
+          </p>
           <p className={styles.contact_text}>
             <em>
               Hudson Valley Homes <br />& Renovations
@@ -35,7 +39,7 @@ const Home: NextPage = () => {
           </p>
         </CenterContent>
       </div>
-    </>
+    </div>
   );
 };
 
