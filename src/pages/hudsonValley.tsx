@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <div id="empty-div-row"></div>
       <div className={styles.main_style}>
         <CenterContent>
-          <p className={styles.header_text}>hudson valley recommendations</p>
+          <p className={styles.header_text}>coming soon!</p>
         </CenterContent>
       </div>
     </div>
