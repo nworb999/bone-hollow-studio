@@ -1,7 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-
-import Image from "next/image";
 import Script from "next/script";
 import { CenterContent } from "../components/containers";
 
@@ -9,7 +7,7 @@ import styles from "../styles/home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>contact</title>
       </Head>
@@ -39,7 +37,7 @@ const Home: NextPage = () => {
           </p>
         </CenterContent>
       </div>
-    </div>
+    </>
   );
 };
 

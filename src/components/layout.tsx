@@ -14,8 +14,8 @@ export default function Layout({ children }: LayoutProps) {
       <div className={styles.container}>
         {size.width && size.width < 910 ? <BurgerMenu /> : <NavBar />}
         <main>{children}</main>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }
