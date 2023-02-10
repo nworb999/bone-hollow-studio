@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+html {
+  background-color: #eee7d6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+  text-align: center;
+  font-family: "Inconsolata", monospace;
+  font-weight: 500;
+}
+
+nav {
+  display: grid;
+  background-color: #eee7d6;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  color: #263430;
+  z-index: 5;
+  position: sticky;
+  top: 0;
+  -webkit-box-shadow: 0px 0rem 0.1rem rgb(48, 61, 37, 0.3);
+  -moz-box-shadow: 0px 0rem 0.1rem rgb(48, 61, 37, 0.3);
+  box-shadow: 0px 0rem 0.1rem rgb(48, 61, 37, 0.3);
+  gap: 1rem;
+  overflow: hidden;
+  font-family: "Inconsolata", monospace;
+  font-weight: 500;
+  padding: 1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+body.transparent-nav nav {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px rgb(48, 61, 37, 1);
+  -moz-box-shadow: 0px 0px 0px rgb(48, 61, 37, 0.5);
+  box-shadow: 0px 0px 0px rgb(48, 61, 37, 0.5);
+}
+
+nav a {
+  transition: 0.3s ease-in;
+  border-bottom: solid 0.1rem rgba(0, 0, 0, 0);
+  padding-bottom: 0.2rem;
+}
+
+nav a:hover {
+  border-color: #263430;
+}
+
+nav a.active {
+  border-color: #263430;
+}
+
+h1 {
+  margin-top: 15%;
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  color: #263430;
+  gap: 4vh;
+}
+
+ul {
+  padding-inline-start: 40px;
+  padding-inline-end: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  color: #263430;
+  /* color: rgb(38, 51, 48); */
+  text-decoration: none;
+}
+
+h2 {
+  color: #0e1f08;
+  font-family: "Open Sans", sans-serif;
+}
+
+img {
+  max-width: 50%;
+}
+
+div.empty-div-row {
+  font-size: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    grid-template-columns: none;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  * {
+    overflow-wrap: normal;
+  }
+}
+
+@media only screen and (max-width: 260px) {
+  * {
+    overflow-wrap: break-word;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 910px) {
+  nav {
+    background-color: transparent;
+    -webkit-box-shadow: 0px 0px 0px rgb(48, 61, 37, 1);
+    -moz-box-shadow: 0px 0px 0px rgb(48, 61, 37, 0.5);
+    box-shadow: 0px 0px 0px rgb(48, 61, 37, 0.5);
+    grid-template-columns: 1;
+    display: block;
+  }
+}
+
+@supports (display: grid) {
+  main {
+    max-width: 10000px;
+    margin: 0;
+  }
+  article {
+    margin: 0;
+  }
+}

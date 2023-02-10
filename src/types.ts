@@ -4,17 +4,18 @@ export enum HomeType {
   guestBarn = "guestBarn",
   meadowView = "meadowView",
   farmHouse = "farmHouse",
-  four = "four",
+  owlsNest = "owl'sNest",
 }
 
 export interface Home {
   name: HomeType;
   thumbnailImage: Image;
-  thumbnailCaption: string;
+  thumbnailCaption: string[];
   coverImageArray?: Image[];
   imageArray?: Image[];
   footerImage?: Image;
   topText?: string;
+  creditTextArray?: string[];
   textRight?: string;
   textLeft?: string;
 }
