@@ -11,7 +11,7 @@ const Homes: NextPage = () => {
   return (
     <>
       <Head>
-        <title>homes</title>
+        <title>projects</title>
       </Head>
       <Script src="transparent.js" strategy="lazyOnload" />
       <div id="empty-div-row"></div>

@@ -2,6 +2,7 @@ import { Home, HomeType, Image } from "./types";
 import {
   livingroom,
   fallBackImage,
+  droneOwl,
   springView,
   flower,
   hoya,
@@ -118,6 +119,14 @@ export const projectsArray: Home[] = [
 export const aboutImageArray: Image[] = [
   { image: umbrellas, altText: "chairs" },
   { image: erika, altText: "door" },
+];
+
+export const hudsonValleyImageArray: Image[] = [
+  {
+    image: droneOwl,
+    altText:
+      "beautiful drone shot of a large darkly painted house nestled in woods with the Catskills in the background",
+  },
 ];
 
 export const aboutTextArray: string[] = [

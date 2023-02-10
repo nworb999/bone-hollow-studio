@@ -12,6 +12,9 @@ import screenPorch from "../public/assets/index/screenporch.jpg";
 import erika from "../public/assets/about/erika.jpg";
 import umbrellas from "../public/assets/about/umbrellas.jpg";
 
+/* hudson valley pics */
+import droneOwl from "../public/assets/hudsonValley/droneOwl.jpg";
+
 /* home pics **/
 import corner from "../public/assets/meadowView/corner.jpg";
 import above from "../public/assets/meadowView/above.jpg";
@@ -69,6 +72,7 @@ export {
   diningRoom,
   sideDrone,
   screen,
+  droneOwl,
   campfire,
   sideBarn,
   bedroom,
