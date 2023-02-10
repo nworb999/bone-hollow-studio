@@ -68,17 +68,15 @@ const Home: NextPage = () => {
         )}
       </div>
       <div className={styles.home_cover}>
-        <div>
-          <Image
-            alt={indexImageArray[2].altText}
-            src={indexImageArray[2].image}
-            layout="responsive"
-            objectPosition="relative"
-            objectFit="cover"
-            height="100vh"
-            width="100vw"
-          />
-        </div>
+        <Image
+          alt={indexImageArray[2].altText}
+          src={indexImageArray[2].image}
+          layout="responsive"
+          objectPosition="relative"
+          objectFit="cover"
+          height="100vh"
+          width="100vw"
+        />
       </div>
       <div className={styles.section_style}>
         {mobileOrderFlag ? (
