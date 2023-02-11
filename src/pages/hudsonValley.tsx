@@ -31,7 +31,11 @@ const Home: NextPage = () => {
           <CenterContent>
             <p className={styles.small_header_text}>recreation</p>
             <p className={styles.contact_text}>
-              <strong>Bellayre</strong>
+              <strong>
+                <u>
+                  <a href="https://www.belleayre.com/">Bellayre</a>
+                </u>
+              </strong>
             </p>
             <p className={styles.contact_text}>
               Convenience and local charm. Not just for skiing -- during the
@@ -39,7 +43,13 @@ const Home: NextPage = () => {
             </p>
 
             <p className={styles.contact_text}>
-              <strong>Minnewaska State Park</strong>
+              <strong>
+                <u>
+                  <a href="https://parks.ny.gov/parks/minnewaska">
+                    Minnewaska State Park
+                  </a>
+                </u>
+              </strong>
             </p>
             <p className={styles.contact_text}>
               Minnewaska State Park is full of wonderful trails, lakes and
@@ -48,7 +58,11 @@ const Home: NextPage = () => {
             </p>
 
             <p className={styles.contact_text}>
-              <strong>Ulster County</strong>
+              <strong>
+                <u>
+                  <a href="https://ulstercountyny.gov/">Ulster County</a>
+                </u>
+              </strong>
             </p>
             <p className={styles.contact_text}>
               Ulster County has done an amazing job creating rail trails that
@@ -60,7 +74,13 @@ const Home: NextPage = () => {
           <CenterContent>
             <p className={styles.small_header_text}>food and lodging</p>
             <p className={styles.contact_text}>
-              <strong>Hasbrouck House</strong>
+              <strong>
+                <u>
+                  <a href="https://www.hasbrouckhouseny.com/">
+                    Hasbrouck House
+                  </a>
+                </u>
+              </strong>
             </p>
             <p className={styles.contact_text}>
               Named by the World Boutique Hotel Awards as The Americas’ Most
@@ -69,7 +89,11 @@ const Home: NextPage = () => {
               Stone Ridge, NY.
             </p>
             <p className={styles.contact_text}>
-              <strong>Inness</strong>
+              <strong>
+                <u>
+                  <a href="https://inness.co/">Inness</a>
+                </u>
+              </strong>
             </p>
             <p className={styles.contact_text}>
               Situated between the Catskill and Shawangunk mountain ranges,
@@ -77,14 +101,24 @@ const Home: NextPage = () => {
               tennis, swimming pool and abundant leisure activities.
             </p>
             <p className={styles.contact_text}>
-              <strong>Arrowood</strong>
+              <strong>
+                <u>
+                  <a href="https://arrowoodfarms.com/">Arrowood</a>
+                </u>
+              </strong>
             </p>
             <p className={styles.contact_text}>
               A sustainably-minded farm brewery, distillery, and event
               destination in the beautiful and bountiful Hudson Valley.
             </p>
             <p className={styles.contact_text}>
-              <strong>Goodnight Woodstock</strong>
+              <strong>
+                <u>
+                  <a href="https://www.goodnightwoodstock.com/">
+                    Goodnight Woodstock
+                  </a>
+                </u>
+              </strong>
             </p>
             <p className={styles.contact_text}>
               One of our favorite go-to date night or just because restaurants.{" "}
