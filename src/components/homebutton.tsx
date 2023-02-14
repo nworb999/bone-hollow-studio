@@ -13,33 +13,23 @@ export default function HomeButton({
 }) {
   const router = useRouter();
   const handleClick = ({ home }: { home: Home }) => {
-    if (home.name !== HomeType.owlsNest) {
-      router.push({
-        pathname: `/projects/${encodeURIComponent(home.name)}`,
-      });
-    }
+    router.push({
+      pathname: `/projects/${encodeURIComponent(home.name)}`,
+    });
   };
   return (
     <div className={styles.article_style}>
       <Link
-        href={`/projects/${encodeURIComponent(
-          home.name && home.name !== HomeType.owlsNest ? home.name : ``
-        )}`}
-        as={`/projects/${encodeURIComponent(
-          home.name && home.name !== HomeType.owlsNest ? home.name : ``
-        )}`}
+        href={`/projects/${encodeURIComponent(home.name)}`}
+        as={`/projects/${encodeURIComponent(home.name)}`}
         passHref
         key={index}
       >
         <a
           onClick={() => handleClick({ home })}
           key={index}
-          href={`/projects/${encodeURIComponent(
-            home.name && home.name !== HomeType.owlsNest ? home.name : ``
-          )}`}
-          ref={`/projects/${encodeURIComponent(
-            home.name && home.name !== HomeType.owlsNest ? home.name : ``
-          )}`}
+          href={`/projects/${encodeURIComponent(home.name)}`}
+          ref={`/projects/${encodeURIComponent(home.name)}`}
         >
           <Image
             alt={home.thumbnailImage.altText}

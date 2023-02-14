@@ -14,10 +14,10 @@ export interface Home {
   coverImageArray?: Image[];
   imageArray?: Image[];
   footerImage?: Image;
-  topText?: string;
+  topText?: string | string[];
   creditTextArray?: string[];
-  textRight?: string;
-  textLeft?: string;
+  textRight?: string | string[];
+  textLeft?: string | string[];
 }
 
 export interface Image {

@@ -24,9 +24,16 @@ export const config = {
 const Home: NextPage = () => {
   const router = useRouter();
 
+  const handleTextString = (text?: string | string[]) => {
+    if (Array.isArray(text)) {
+      return text.map((paragraph, i) => <p key={i}>{paragraph}</p>);
+    } else return text || "";
+  };
+
   const [home] = projectsArray.filter(
     ({ name }) => name === router.asPath.toString().replace("/projects/", "")
   );
+
   const size = useWindowSize();
   const mobileOrderFlag = size.width && size.width < 600 ? true : false;
   return (
@@ -84,7 +91,7 @@ const Home: NextPage = () => {
         {mobileOrderFlag ? (
           <RightContent>
             <p className={styles.bold_text}>
-              {home?.textRight ? home.textRight : ""}
+              {handleTextString(home?.textRight)}
             </p>
           </RightContent>
         ) : (
@@ -112,20 +119,20 @@ const Home: NextPage = () => {
         ) : (
           <RightContent>
             <p className={styles.bold_text}>
-              {home?.textRight ? home.textRight : ""}
+              {handleTextString(home?.textRight)}
             </p>
           </RightContent>
         )}
         {mobileOrderFlag ? (
           <RightContent>
             <p className={styles.bold_text}>
-              {home?.textLeft ? home.textLeft : ""}
+              {handleTextString(home?.textLeft)}
             </p>
           </RightContent>
         ) : (
           <LeftContent>
             <p className={styles.bold_text}>
-              {home?.textLeft ? home.textLeft : ""}
+              {handleTextString(home?.textLeft)}
             </p>
           </LeftContent>
         )}
