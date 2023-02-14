@@ -35,6 +35,7 @@ nav {
   font-family: "Inconsolata", monospace;
   font-weight: 500;
   padding: 1rem;
+  padding-bottom: 0.8rem;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -80,6 +81,14 @@ a {
   color: #263430;
   /* color: rgb(38, 51, 48); */
   text-decoration: none;
+}
+
+p a:active {
+  font-weight: bold;
+}
+
+p a:hover {
+  font-style: italic;
 }
 
 h2 {

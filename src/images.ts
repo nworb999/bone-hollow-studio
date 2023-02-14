@@ -6,7 +6,7 @@ import pool from "../public/assets/index/pool-drone.jpg";
 import owlPond from "../public/assets/index/owlPond.jpg";
 import fireplace from "../public/assets/index/fireplace.jpg";
 import airlock from "../public/assets/index/airlock.jpg";
-import screenPorch from "../public/assets/index/screenporch.jpg";
+import first from "../public/assets/index/first.jpg";
 
 /* about pics **/
 import erika from "../public/assets/about/erika.jpg";
@@ -66,7 +66,7 @@ export {
   book,
   airlock,
   owlHall,
-  screenPorch,
+  first,
   erika,
   owlPond,
   umbrellas,
