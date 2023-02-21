@@ -8,12 +8,14 @@ export default function NavBar() {
   const [scrollTop, setScrollTop] = useState(0);
   const [headerClr, setHeaderClr] = useState(false);
 
+  const num: Number = 10;
+
   useEffect(() => {
     function onScroll() {
       let currentPosition = window.pageYOffset;
       setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
     }
-    scrollTop >= '10' ? setHeaderClr(true) : setHeaderClr(false);
+    scrollTop >= num ? setHeaderClr(true) : setHeaderClr(false);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
 
