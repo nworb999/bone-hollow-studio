@@ -3,7 +3,7 @@ import {
   livingroom,
   fallBackImage,
   droneOwl,
-  springView,
+  owlHall,
   flower,
   hoya,
   pool,
@@ -11,9 +11,10 @@ import {
   airlock,
   erika,
   book,
+  owlPond,
   umbrellas,
   corner,
-  screenPorch,
+  first,
   above,
   office,
   aFrame,
@@ -31,9 +32,14 @@ import {
   bedroom,
   library,
   grandmasPiano,
-  construction,
   sideDrone,
   campfire,
+  frontOwl,
+  greatRoom,
+  funky,
+  owlFoot,
+  kitchenOwl,
+  owlBed,
 } from "./images";
 import { formatName } from "./utils";
 
@@ -108,11 +114,28 @@ export const projectsArray: Home[] = [
   },
   {
     name: HomeType.owlsNest,
-    thumbnailImage: { image: construction, altText: "placeholder" },
-    thumbnailCaption: [
-      formatName({ name: HomeType.owlsNest }),
-      "coming fall 2022",
+    thumbnailImage: { image: frontOwl, altText: "placeholder" },
+    coverImageArray: [
+      { image: funky, altText: "placeholder" },
+      { image: kitchenOwl, altText: "placeholder" },
     ],
+    imageArray: [
+      { image: greatRoom, altText: "placeholder" },
+      { image: owlBed, altText: "placeholder" },
+      { image: owlHall, altText: "placeholder" },
+    ],
+    footerImage: { image: owlFoot, altText: "placeholder" },
+    thumbnailCaption: [formatName({ name: HomeType.owlsNest }), "2022"],
+    topText: `Built in 2022, this home is named for the great horned owl sightings on the property. The upstairs is intimate while the great room is modern and elegant, perfect for showcasing artwork.`,
+    creditTextArray: [
+      `Builder: Hudson Valley Homes & Renovations`,
+      `Designer: Bone Hollow Studio`,
+    ],
+    textRight: [
+      `We set out to introduce a design completely unique to this area.`,
+      `Curating original art into the design helped us create a personal connection.`,
+    ],
+    textLeft: `We worked with the view, particularly out the back of the house where the gentle upward slope of the woods and stone wall provide great depth. We knew we wanted tall windows and glass doors to capture it.`,
   },
 ];
 
@@ -163,13 +186,13 @@ export const indexImageArray: Image[] = [
       "softly designed living room with a blue couch to the left, patterned pillows on top...etc",
   },
   {
-    image: springView,
+    image: owlPond,
     altText: "top corner of dark barn peaking above a meadow",
   },
   { image: flower, altText: "white farmhouse with wildflowers in foreground" },
   { image: fireplace, altText: "" },
   { image: hoya, altText: "" },
-  { image: screenPorch, altText: "" },
+  { image: first, altText: "" },
   { image: airlock, altText: "" },
   { image: pool, altText: "" },
 ];

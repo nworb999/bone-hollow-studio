@@ -36,6 +36,17 @@ const Home: NextPage = () => {
           <RightContent>
             <p className={styles.small_bold_text}>{aboutTextArray[0]}</p>
             <p className={styles.small_bold_text}>{aboutTextArray[1]}</p>
+            <p>
+              <ul>
+                <li>
+                  <u>
+                    <a href="https://www.timesunion.com/hudsonvalley/realestate/article/bone-hollow-studio-female-developer-17751308.php">
+                      The female developer behind a $2M home that sold in a day
+                    </a>
+                  </u>
+                </li>
+              </ul>
+            </p>
           </RightContent>
         </div>
         <p className={styles.header_text} style={{ marginBottom: "2rem" }}>

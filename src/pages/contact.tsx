@@ -31,9 +31,7 @@ const Home: NextPage = () => {
             <strong>Jeromy Wells</strong>
           </p>
           <p className={styles.contact_text}>
-            <em>
-              Hudson Valley Homes <br />& Renovations
-            </em>
+            Hudson Valley Homes <br />& Renovations
           </p>
         </CenterContent>
       </div>

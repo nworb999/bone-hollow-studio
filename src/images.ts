@@ -1,12 +1,12 @@
 /* index pics **/
 import livingroom from "../public/assets/index/livingroom.jpg";
-import springView from "../public/assets/index/spring.jpg";
 import flower from "../public/assets/index/flower.jpg";
 import hoya from "../public/assets/index/hoya.jpg";
 import pool from "../public/assets/index/pool-drone.jpg";
+import owlPond from "../public/assets/index/owlPond.jpg";
 import fireplace from "../public/assets/index/fireplace.jpg";
 import airlock from "../public/assets/index/airlock.jpg";
-import screenPorch from "../public/assets/index/screenporch.jpg";
+import first from "../public/assets/index/first.jpg";
 
 /* about pics **/
 import erika from "../public/assets/about/erika.jpg";
@@ -41,21 +41,34 @@ import bedroom from "../public/assets/guestBarn/bedroom.jpg";
 import grandmasPiano from "../public/assets/guestBarn/piano.jpg";
 import butterflyBushes from "../public/assets/guestBarn/butterflybushes.jpg";
 
-import construction from "../public/assets/four/construction.png";
+import frontOwl from "../public/assets/owlsNest/frontOwl.jpg";
+import greatRoom from "../public/assets/owlsNest/greatRoom.jpg";
+import funky from "../public/assets/owlsNest/funky.jpg";
+import owlFoot from "../public/assets/owlsNest/owlFoot.jpg";
+import fireplaceOwl from "../public/assets/owlsNest/fireplaceOwl.jpg";
+import kitchenOwl from "../public/assets/owlsNest/kitchenOwl.jpg";
+import owlBed from "../public/assets/owlsNest/owlBed.jpg";
+import owlHall from "../public/assets/owlsNest/owlHall.jpg";
 
 const fallBackImage = livingroom;
 export {
   livingroom,
+  kitchenOwl,
+  owlBed,
   fallBackImage,
-  springView,
+  fireplaceOwl,
+  owlFoot,
   flower,
   hoya,
   pool,
+  funky,
   fireplace,
   book,
   airlock,
-  screenPorch,
+  owlHall,
+  first,
   erika,
+  owlPond,
   umbrellas,
   corner,
   above,
@@ -79,5 +92,6 @@ export {
   library,
   grandmasPiano,
   butterflyBushes,
-  construction,
+  frontOwl,
+  greatRoom,
 };
