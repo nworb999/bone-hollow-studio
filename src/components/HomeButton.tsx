@@ -39,6 +39,7 @@ export default function HomeButton({
             layout="responsive"
             objectFit="contain"
             key={index}
+            priority
           />
         </a>
       </Link>
