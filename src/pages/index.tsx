@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       <Head>
         <title>bone hollow studio - homepage</title>
       </Head>
-      <Script src="transparent.js" strategy="lazyOnload" />
+      {/* <Script src="transparent.js" strategy="lazyOnload" /> */}
       <div className={styles.main_style}>
         <Image
           alt={indexImageArray[0].altText}

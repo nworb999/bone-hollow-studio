@@ -44,9 +44,7 @@ export default function HomeButton({
         </a>
       </Link>
       <div className={styles.home_caption}>
-        <div className={styles.bold_text} color="black">
-          <b>{home.thumbnailCaption[0]}</b>
-        </div>
+        <b>{home.thumbnailCaption[0]}</b>
       </div>
     </div>
   );

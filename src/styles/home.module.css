@@ -48,8 +48,14 @@
 
 .home_caption {
   text-align: left;
-  margin-top: 0px;
   padding-top: 0px;
+  margin: 0;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans";
+  flex-direction: column;
+  color: #263430;
 }
 
 .leaf_button a {
