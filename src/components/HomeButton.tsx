@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "../styles/home.module.css";
-import { Home, HomeType } from "../types";
+import { Home } from "../types";
 
 export default function HomeButton({
   home,
@@ -19,32 +19,35 @@ export default function HomeButton({
   };
   return (
     <div className={styles.article_style}>
-      <Link
-        href={`/projects/${encodeURIComponent(home.name)}`}
-        as={`/projects/${encodeURIComponent(home.name)}`}
-        passHref
-        key={index}
-      >
-        <a
-          onClick={() => handleClick({ home })}
-          key={index}
+      <div className={styles.image_wrapper}>
+        <Link
           href={`/projects/${encodeURIComponent(home.name)}`}
-          ref={`/projects/${encodeURIComponent(home.name)}`}
+          as={`/projects/${encodeURIComponent(home.name)}`}
+          passHref
+          key={index}
         >
-          <Image
-            alt={home.thumbnailImage.altText}
-            src={home.thumbnailImage.image}
-            width={1000}
-            height={800}
-            layout="responsive"
-            objectFit="contain"
+          <a
+            onClick={() => handleClick({ home })}
             key={index}
-            priority
-          />
-        </a>
-      </Link>
-      <div className={styles.home_caption}>
-        <b>{home.thumbnailCaption[0]}</b>
+            href={`/projects/${encodeURIComponent(home.name)}`}
+            ref={`/projects/${encodeURIComponent(home.name)}`}
+          >
+            <Image
+              className={styles.image}
+              alt={home.thumbnailImage.altText}
+              src={home.thumbnailImage.image}
+              width={1000}
+              height={800}
+              layout="responsive"
+              objectFit="contain"
+              key={index}
+              priority
+            />
+          </a>
+        </Link>
+        <div className={styles.home_caption}>
+          <b>{home.thumbnailCaption[0]}</b>
+        </div>
       </div>
     </div>
   );

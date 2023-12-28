@@ -3,7 +3,7 @@ import Head from "next/head";
 import HomeButton from "../../components/HomeButton";
 import styles from "../../styles/home.module.css";
 import { projectsArray } from "../../constants";
-import { CenterContent } from "../../components/Containers";
+import Content from "../../components/Content";
 import Script from "next/script";
 
 const Homes: NextPage = () => {
@@ -14,9 +14,9 @@ const Homes: NextPage = () => {
       </Head>
       <Script src="transparent.js" strategy="lazyOnload" />
       <div id="empty-div-row"></div>
-      <CenterContent>
+      <Content alignment="center">
         <p className={styles.header_text}>projects</p>
-      </CenterContent>{" "}
+      </Content>{" "}
       <div className={styles.section_style}>
         {projectsArray.map((home, i) => (
           <HomeButton home={home} index={i} key={i} />

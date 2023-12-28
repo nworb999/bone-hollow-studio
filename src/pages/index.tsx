@@ -1,20 +1,13 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import Head from "next/head";
-import { useWindowSize } from "../utils";
-import {
-  CenterContent,
-  LeftContent,
-  RightContent,
-} from "../components/Containers";
-
+import Content from "../components/Content"
+import DynamicContent from '../components/DynamicContent';
 import { indexTextArray, indexImageArray } from "../constants";
 import styles from "../styles/home.module.css";
 import Script from "next/script";
 
 const Home: NextPage = () => {
-  const size = useWindowSize();
-  const mobileOrderFlag = size.width && size.width < 611 ? true : false;
 
   return (
     <>
@@ -33,28 +26,31 @@ const Home: NextPage = () => {
         />
       </div>
       <div id="empty-div-row"></div>
-      <CenterContent>
+      <Content alignment="center">
         <p className={styles.huge_bold_text}>{indexTextArray[0]}</p>
-      </CenterContent>
+      </Content>
       <div className={styles.section_style}>
-        {mobileOrderFlag ? (
-          <RightContent>
-            <p className={styles.bold_text}>{indexTextArray[1]}</p>
-          </RightContent>
-        ) : (
-          <RightContent>
-            <Image
-              alt={indexImageArray[1].altText}
-              src={indexImageArray[1].image}
-              width={500}
-              height={500}
-              objectFit="cover"
-              priority
-            />{" "}
-          </RightContent>
-        )}
-        {mobileOrderFlag ? (
-          <RightContent>
+        <DynamicContent render={mobileOrderFlag => (
+          mobileOrderFlag ? (
+            <Content alignment="right">
+              <p className={styles.bold_text}>{indexTextArray[1]}</p>
+            </Content>
+          ) : (
+            <Content alignment="right">
+              <Image
+                alt={indexImageArray[1].altText}
+                src={indexImageArray[1].image}
+                width={500}
+                height={500}
+                objectFit="cover"
+                priority
+              />
+            </Content>
+          )
+        )} />
+
+        <DynamicContent render={mobileOrderFlag => (mobileOrderFlag ? (
+          <Content alignment="right">
             <Image
               alt={indexImageArray[1].altText}
               src={indexImageArray[1].image}
@@ -63,12 +59,12 @@ const Home: NextPage = () => {
               objectFit="cover"
               priority
             />
-          </RightContent>
+          </Content>
         ) : (
-          <RightContent>
+          <Content alignment="right">
             <p className={styles.bold_text}>{indexTextArray[1]} </p>
-          </RightContent>
-        )}
+          </Content>
+        ))} />
       </div>
       <div className={styles.home_cover}>
         <Image
@@ -83,13 +79,13 @@ const Home: NextPage = () => {
         />
       </div>
       <div className={styles.section_style}>
-        {mobileOrderFlag ? (
-          <RightContent>
+        <DynamicContent render={mobileOrderFlag => (mobileOrderFlag ? (
+          <Content alignment="right">
             <p className={styles.bold_text}>{indexTextArray[2]}</p>
             <p className={styles.small_bold_text}>{indexTextArray[3]}</p>
-          </RightContent>
+          </Content>
         ) : (
-          <LeftContent>
+          <Content alignment="left">
             <Image
               alt={indexImageArray[3].altText}
               src={indexImageArray[3].image}
@@ -98,10 +94,10 @@ const Home: NextPage = () => {
               objectFit="cover"
               priority
             />
-          </LeftContent>
-        )}
-        {mobileOrderFlag ? (
-          <RightContent>
+          </Content>
+        ))} />
+        <DynamicContent render={mobileOrderFlag => (mobileOrderFlag ? (
+          <Content alignment="right">
             <Image
               alt={indexImageArray[3].altText}
               src={indexImageArray[3].image}
@@ -110,27 +106,27 @@ const Home: NextPage = () => {
               objectFit="cover"
               priority
             />
-          </RightContent>
+          </Content>
         ) : (
-          <RightContent>
+          <Content alignment="right">
             <p className={styles.bold_text}>{indexTextArray[2]}</p>
             <p className={styles.small_bold_text}>{indexTextArray[3]}</p>
-          </RightContent>
-        )}
+          </Content>
+        ))} />
       </div>
       <div className={styles.section_style}>
-        {mobileOrderFlag ? (
-          <RightContent>
+        <DynamicContent render={mobileOrderFlag => (mobileOrderFlag ? (
+          <Content alignment="right">
             <p className={styles.bold_text}>{indexTextArray[4]}</p>
             <p className={styles.small_bold_text}>{indexTextArray[5]}</p>
-          </RightContent>
+          </Content>
         ) : (
-          <LeftContent>
+          <Content alignment="left">
             <p className={styles.bold_text}>{indexTextArray[4]}</p>
             <p className={styles.small_bold_text}>{indexTextArray[5]}</p>
-          </LeftContent>
-        )}
-        <RightContent>
+          </Content>
+        ))} />
+        <Content alignment="right">
           <Image
             alt={indexImageArray[4].altText}
             src={indexImageArray[4].image}
@@ -139,7 +135,7 @@ const Home: NextPage = () => {
             objectFit="cover"
             priority
           />
-        </RightContent>
+        </Content>
       </div>
       <div className={styles.home_cover}>
         <Image
@@ -153,18 +149,18 @@ const Home: NextPage = () => {
         />
       </div>
       <div className={styles.section_style}>
-        {mobileOrderFlag ? (
-          <RightContent>
+        <DynamicContent render={mobileOrderFlag => (mobileOrderFlag ? (
+          <Content alignment="right">
             <p className={styles.bold_text}>{indexTextArray[6]}</p>
             <p className={styles.small_bold_text}>{indexTextArray[7]}</p>
-          </RightContent>
+          </Content>
         ) : (
-          <LeftContent>
+          <Content alignment="left">
             <p className={styles.bold_text}>{indexTextArray[6]}</p>
             <p className={styles.small_bold_text}>{indexTextArray[7]}</p>
-          </LeftContent>
-        )}
-        <RightContent>
+          </Content>
+        ))} />
+        <Content alignment="right">
           <Image
             alt={indexImageArray[6].altText}
             src={indexImageArray[6].image}
@@ -172,7 +168,7 @@ const Home: NextPage = () => {
             height={500}
             objectFit="cover"
           />
-        </RightContent>
+        </Content>
       </div>
       <div className={styles.last_home_cover}>
         <Image
@@ -185,9 +181,9 @@ const Home: NextPage = () => {
           width="100vw"
         />
       </div>
-      <CenterContent>
+      <Content alignment="center">
         <p className={styles.huge_bold_text}>{indexTextArray[8]}</p>
-      </CenterContent>
+      </Content>
     </>
   );
 };
