@@ -155,7 +155,7 @@ export const projectsArray: Home[] = [
     topText: `This contemporary custom build is lofty and bright. Wideboard white oak flooring runs throughout and a large, two-story vaulted Great Room anchors the space.  A woodburning fireplace is at its center, clad in handmade encaustic tile in a perfect neutral shade. Outdoor rooms have been created for entertaining with a dining area, sitting area, an incredible outdoor kitchen and a fire pit.`,
     creditTextArray: [`Builder: Hudson Valley Homes & Renovations`,
       `Designer: Bone Hollow Studio`,],
-    textRight: `“This floor to ceiling fireplace designed by Bone Hollow Studio embraces every ounce of variation in tone and thickness that our hand hewn cement tiles are known for.  It’s a surface that looks as warm and comfortable as your favorite down duvet.”`,
+    textRight: `“This floor to ceiling fireplace designed by Bone Hollow Studio embraces every ounce of variation in tone and thickness that our hand hewn cement tiles are known for.  It’s a surface that looks as warm and comfortable as your favorite down duvet.” -- Zia Tile`,
     textLeft: `“Love seeing a developer with this taste level in my neck of the woods and another woman to boot!”`
   }
 ];
