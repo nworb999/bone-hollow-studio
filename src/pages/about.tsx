@@ -17,9 +17,9 @@ const Home: NextPage = () => {
       <Head>
         <title>about</title>
       </Head>
-      <Script src="transparent.js" strategy="lazyOnload" />
+      {/* <Script src="transparent.js" strategy="lazyOnload" /> */}
       <div className={styles.main_style}>
-        <div id="empty-div-row"></div>
+        {/* <div id="empty-div-row"></div> */}
         <CenterContent>
           <p className={styles.header_text}>who we are</p>
         </CenterContent>{" "}

@@ -41,8 +41,8 @@ const Home: NextPage = () => {
       <Head>
         <title>{formatName({ name: home?.name }) ?? "homes"}</title>
       </Head>
-      <div id="empty-div-row"></div>
-      <Script src="transparent.js" strategy="lazyOnload" />
+      {/* <div id="empty-div-row"></div>
+      <Script src="transparent.js" strategy="lazyOnload" /> */}
       <div className={styles.article_style}>
         <CenterContent>
           <p className={styles.header_text}>
