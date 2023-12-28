@@ -149,13 +149,13 @@ export const projectsArray: Home[] = [
     name: HomeType.splitRock,
     thumbnailImage: { image: splitRock, altText: "placeholder" },
     coverImageArray: [{ image: splitKitchen, altText: "placeholder" }, { image: woodBathroom, altText: "placeholder" }],
-    imageArray: [{ image: splitBathroom, altText: "placeholder" }, { image: splitLivingRoom, altText: "placeholder" }],
+    imageArray: [{ image: splitLivingRoom, altText: "placeholder" }, { image: splitBathroom, altText: "placeholder" }, { image: splitOutside, altText: "placeholder" }],
     footerImage: { image: splitTile, altText: "placeholder" },
     thumbnailCaption: [formatName({ name: HomeType.splitRock })],
     topText: `This contemporary custom build is lofty and bright. Wideboard white oak flooring runs throughout and a large, two-story vaulted Great Room anchors the space.  A woodburning fireplace is at its center, clad in handmade encaustic tile in a perfect neutral shade.`,
     creditTextArray: [`Builder: Hudson Valley Homes & Renovations`,
       `Designer: Bone Hollow Studio`,],
-    textRight: [`Outdoor rooms have been created for entertaining with a dining area, sitting area, an incredible outdoor kitchen and a fire pit.`, `“This floor to ceiling fireplace designed by @bonehollowstudio embraces every ounce of variation in tone and thickness that our hand hewn cement tiles are known for,  It’s a surface that looks as warm and comfortable as your favorite down duvet.”`],
+    textRight: [`Outdoor rooms have been created for entertaining with a dining area, sitting area, an incredible outdoor kitchen and a fire pit.`, `“This floor to ceiling fireplace designed by Bone Hollow Studio embraces every ounce of variation in tone and thickness that our hand hewn cement tiles are known for,  It’s a surface that looks as warm and comfortable as your favorite down duvet.”`],
     textLeft: `“Love seeing a developer with this taste level in my neck of the woods and another woman to boot!”`
   }
 ];

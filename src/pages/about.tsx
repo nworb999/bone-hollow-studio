@@ -7,7 +7,7 @@ import {
   CenterContent,
   LeftContent,
   RightContent,
-} from "../components/containers";
+} from "../components/Containers";
 import Script from "next/script";
 
 const Home: NextPage = () => {

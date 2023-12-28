@@ -10,7 +10,7 @@ import {
   CenterContent,
   LeftContent,
   RightContent,
-} from "../../components/containers";
+} from "../../components/Containers";
 import Script from "next/script";
 import { formatName, useWindowSize } from "../../utils";
 import Head from "next/head";
@@ -90,9 +90,9 @@ const Home: NextPage = () => {
       <div className={styles.section_style}>
         {mobileOrderFlag ? (
           <RightContent>
-            <p className={styles.bold_text}>
+            <div className={styles.bold_text}>
               {handleTextString(home?.textRight)}
-            </p>
+            </div>
           </RightContent>
         ) : (
           <LeftContent>
@@ -118,22 +118,22 @@ const Home: NextPage = () => {
           </LeftContent>
         ) : (
           <RightContent>
-            <p className={styles.bold_text}>
+            <div className={styles.bold_text}>
               {handleTextString(home?.textRight)}
-            </p>
+            </div>
           </RightContent>
         )}
         {mobileOrderFlag ? (
           <RightContent>
-            <p className={styles.bold_text}>
+            <div className={styles.bold_text}>
               {handleTextString(home?.textLeft)}
-            </p>
+            </div>
           </RightContent>
         ) : (
           <LeftContent>
-            <p className={styles.bold_text}>
+            <div className={styles.bold_text}>
               {handleTextString(home?.textLeft)}
-            </p>
+            </div>
           </LeftContent>
         )}
         <RightContent>

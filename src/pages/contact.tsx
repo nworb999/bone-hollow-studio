@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Script from "next/script";
-import { CenterContent } from "../components/containers";
+import { CenterContent } from "../components/Containers";
 
 import styles from "../styles/home.module.css";
 
