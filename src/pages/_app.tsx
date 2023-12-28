@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import type { AppProps } from "next/app";
 import React from "react";
 import Head from "next/head";

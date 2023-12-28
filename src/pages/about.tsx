@@ -3,11 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/home.module.css";
 import { aboutImageArray, aboutTextArray } from "../constants";
-import {
-  CenterContent,
-  LeftContent,
-  RightContent,
-} from "../components/containers";
+import Content from "../components/Content"
 import Script from "next/script";
 
 const Home: NextPage = () => {
@@ -20,20 +16,21 @@ const Home: NextPage = () => {
       <Script src="transparent.js" strategy="lazyOnload" />
       <div className={styles.main_style}>
         <div id="empty-div-row"></div>
-        <CenterContent>
+        <Content alignment="center">
           <p className={styles.header_text}>who we are</p>
-        </CenterContent>{" "}
+        </Content>{" "}
         <div className={styles.section_style}>
-          <LeftContent>
+          <Content alignment="left">
             <Image
               alt={aboutImageArray[0].altText}
               src={aboutImageArray[0].image}
               width={500}
               height={500}
               objectFit="cover"
+              priority
             />
-          </LeftContent>
-          <RightContent>
+          </Content>
+          <Content alignment="right">
             <p className={styles.small_bold_text}>{aboutTextArray[0]}</p>
             <p className={styles.small_bold_text}>{aboutTextArray[1]}</p>
             <p>
@@ -47,7 +44,7 @@ const Home: NextPage = () => {
                 </li>
               </ul>
             </p>
-          </RightContent>
+          </Content>
         </div>
         <p className={styles.header_text} style={{ marginBottom: "2rem" }}>
           Erika Brown
@@ -59,13 +56,13 @@ const Home: NextPage = () => {
           owner
         </p>
         <div className={styles.section_style}>
-          <RightContent>
+          <Content alignment="right">
             <div>
               <p className={styles.small_bold_text}>{aboutTextArray[2]}</p>
               <p className={styles.small_bold_text}>{aboutTextArray[3]}</p>
             </div>
-          </RightContent>
-          <RightContent>
+          </Content>
+          <Content alignment="right">
             <Image
               alt={aboutImageArray[1].altText}
               src={aboutImageArray[1].image}
@@ -73,7 +70,7 @@ const Home: NextPage = () => {
               height={500}
               objectFit="cover"
             />
-          </RightContent>
+          </Content>
           <br />
           <br />
           <br />
