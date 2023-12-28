@@ -4,24 +4,6 @@ import { useEffect, useState } from "react";
 import navStyles from "../styles/navbar.module.css";
 
 export default function NavBar() {
-
-  const [scrollTop, setScrollTop] = useState(0);
-  const [headerClr, setHeaderClr] = useState(false);
-
-  const num: number = 10;
-
-  useEffect(() => {
-    function onScroll() {
-      let currentPosition = window.pageYOffset;
-      setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
-    }
-    scrollTop >= num ? setHeaderClr(true) : setHeaderClr(false);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-
-  }, [scrollTop]);
-
-
   const handleClick = () => {
     document.body.classList.add("transparent-nav");
   };
@@ -29,7 +11,7 @@ export default function NavBar() {
   const router = useRouter();
   return (
     <>
-      <nav className={headerClr ? 'navbg' : ''}>
+      <nav className={navStyles.navbg}>
         <div className={navStyles.about}>
           <Link href="/about">
             <a
