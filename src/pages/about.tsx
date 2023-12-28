@@ -7,7 +7,7 @@ import {
   CenterContent,
   LeftContent,
   RightContent,
-} from "../components/containers";
+} from "../components/Containers";
 import Script from "next/script";
 
 const Home: NextPage = () => {
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           <RightContent>
             <p className={styles.small_bold_text}>{aboutTextArray[0]}</p>
             <p className={styles.small_bold_text}>{aboutTextArray[1]}</p>
-            <p>
+            <div>
               <ul>
                 <li>
                   <u>
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
                   </u>
                 </li>
               </ul>
-            </p>
+            </div>
           </RightContent>
         </div>
         <p className={styles.header_text} style={{ marginBottom: "2rem" }}>

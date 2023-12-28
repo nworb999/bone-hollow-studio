@@ -47,8 +47,15 @@
 }
 
 .home_caption {
-  margin-top: 0px;
+  text-align: left;
   padding-top: 0px;
+  margin: 0;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans";
+  flex-direction: column;
+  color: #263430;
 }
 
 .leaf_button a {
@@ -68,6 +75,24 @@
   border-color: #263430;
 }
 
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 810px;
+}
+
+.image-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 37vw;
+  height: 50vh;
+  text-align: center;
+  margin: 1vw;
+  transition: opacity 0.2s;
+}
+
 /* text styles */
 
 .huge_bold_text {
@@ -75,7 +100,7 @@
   justify-content: center;
   font-family: "Chivo", sans-serif;
   align-items: center;
-  color: #000000;
+  color: #263430;
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -84,22 +109,23 @@
 }
 
 .bold_text {
+  margin: 0;
   font-size: 1.25rem;
   display: flex;
   justify-content: center;
   font-family: "Open Sans";
   flex-direction: column;
-  color: #000000;
+  color: #263430;
 }
 
 .small_bold_text {
-  /* margin: 0; */
+  margin: 0;
   font-size: 1rem;
   display: flex;
   justify-content: center;
   font-family: "Open Sans";
   flex-direction: column;
-  color: #000000;
+  color: #263430;
 }
 
 .contact_text {
@@ -110,11 +136,11 @@
   overflow: hidden;
   justify-content: center;
   font-family: "Open Sans";
-  color: #000000;
+  color: #263430;
 }
 
 .header_text {
-  color: #375051;
+  color: #263430;
   font-size: 2.5rem;
   margin: 0;
   align-content: center;
@@ -124,7 +150,7 @@
 }
 
 .small_header_text {
-  color: #375051;
+  color: #263430;
   font-size: 1.5rem;
   margin: 0;
   margin-bottom: 1.5rem;

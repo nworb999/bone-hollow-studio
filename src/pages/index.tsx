@@ -6,7 +6,7 @@ import {
   CenterContent,
   LeftContent,
   RightContent,
-} from "../components/containers";
+} from "../components/Containers";
 
 import { indexTextArray, indexImageArray } from "../constants";
 import styles from "../styles/home.module.css";
@@ -22,13 +22,14 @@ const Home: NextPage = () => {
       <Head>
         <title>bone hollow studio - homepage</title>
       </Head>
-      <Script src="transparent.js" strategy="lazyOnload" />
+      {/* <Script src="transparent.js" strategy="lazyOnload" /> */}
       <div className={styles.main_style}>
         <Image
           alt={indexImageArray[0].altText}
           src={indexImageArray[0].image}
           layout="fill"
           objectFit="cover"
+          priority
         />
       </div>
       <div id="empty-div-row"></div>
@@ -48,6 +49,7 @@ const Home: NextPage = () => {
               width={500}
               height={500}
               objectFit="cover"
+              priority
             />{" "}
           </RightContent>
         )}
@@ -59,6 +61,7 @@ const Home: NextPage = () => {
               width={500}
               height={500}
               objectFit="cover"
+              priority
             />
           </RightContent>
         ) : (
@@ -76,6 +79,7 @@ const Home: NextPage = () => {
           objectFit="cover"
           height="100vh"
           width="100vw"
+          priority
         />
       </div>
       <div className={styles.section_style}>
@@ -92,6 +96,7 @@ const Home: NextPage = () => {
               width={500}
               height={500}
               objectFit="cover"
+              priority
             />
           </LeftContent>
         )}
@@ -103,6 +108,7 @@ const Home: NextPage = () => {
               width={500}
               height={500}
               objectFit="cover"
+              priority
             />
           </RightContent>
         ) : (
@@ -131,6 +137,7 @@ const Home: NextPage = () => {
             width={500}
             height={500}
             objectFit="cover"
+            priority
           />
         </RightContent>
       </div>

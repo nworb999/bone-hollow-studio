@@ -10,7 +10,7 @@ import {
   CenterContent,
   LeftContent,
   RightContent,
-} from "../../components/containers";
+} from "../../components/Containers";
 import Script from "next/script";
 import { formatName, useWindowSize } from "../../utils";
 import Head from "next/head";
@@ -68,6 +68,7 @@ const Home: NextPage = () => {
 
             <em>{home?.creditTextArray ? home.creditTextArray[2] : ""}</em>
           </p>
+          <br />
           <p className={styles.small_bold_text}>
             {home?.topText ? home.topText : ""}
           </p>
@@ -90,9 +91,9 @@ const Home: NextPage = () => {
       <div className={styles.section_style}>
         {mobileOrderFlag ? (
           <RightContent>
-            <p className={styles.bold_text}>
+            <div className={styles.bold_text}>
               {handleTextString(home?.textRight)}
-            </p>
+            </div>
           </RightContent>
         ) : (
           <LeftContent>
@@ -118,22 +119,22 @@ const Home: NextPage = () => {
           </LeftContent>
         ) : (
           <RightContent>
-            <p className={styles.bold_text}>
+            <div className={styles.bold_text}>
               {handleTextString(home?.textRight)}
-            </p>
+            </div>
           </RightContent>
         )}
         {mobileOrderFlag ? (
           <RightContent>
-            <p className={styles.bold_text}>
+            <div className={styles.bold_text}>
               {handleTextString(home?.textLeft)}
-            </p>
+            </div>
           </RightContent>
         ) : (
           <LeftContent>
-            <p className={styles.bold_text}>
+            <div className={styles.bold_text}>
               {handleTextString(home?.textLeft)}
-            </p>
+            </div>
           </LeftContent>
         )}
         <RightContent>

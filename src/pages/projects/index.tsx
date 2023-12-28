@@ -1,10 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import HomeButton from "../../components/homebutton";
+import HomeButton from "../../components/HomeButton";
 import styles from "../../styles/home.module.css";
-
 import { projectsArray } from "../../constants";
-import { CenterContent } from "../../components/containers";
+import { CenterContent } from "../../components/Containers";
 import Script from "next/script";
 
 const Homes: NextPage = () => {

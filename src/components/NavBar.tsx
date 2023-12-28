@@ -8,7 +8,7 @@ export default function NavBar() {
   const [scrollTop, setScrollTop] = useState(0);
   const [headerClr, setHeaderClr] = useState(false);
 
-  const num: Number = 10;
+  const num: number = 10;
 
   useEffect(() => {
     function onScroll() {
@@ -30,7 +30,7 @@ export default function NavBar() {
   return (
     <>
       <nav className={headerClr ? 'navbg' : ''}>
-        <div className={navStyles.about}>  {/* className={navStyles.about  } */}
+        <div className={navStyles.about}>
           <Link href="/about">
             <a
               onClick={handleClick}
@@ -81,3 +81,4 @@ export default function NavBar() {
     </>
   );
 }
+

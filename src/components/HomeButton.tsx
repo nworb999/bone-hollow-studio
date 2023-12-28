@@ -39,16 +39,12 @@ export default function HomeButton({
             layout="responsive"
             objectFit="contain"
             key={index}
+            priority
           />
         </a>
       </Link>
       <div className={styles.home_caption}>
-        <div className={styles.text_left}>
-          <p className={styles.small_bold_text} color="black">
-            <b>{home.thumbnailCaption[0]}</b>
-            {home.thumbnailCaption[1]}{" "}
-          </p>
-        </div>
+        <b>{home.thumbnailCaption[0]}</b>
       </div>
     </div>
   );
