@@ -10,7 +10,6 @@ import {
 
 import { indexTextArray, indexImageArray } from "../constants";
 import styles from "../styles/home.module.css";
-import Script from "next/script";
 
 const Home: NextPage = () => {
   const size = useWindowSize();
@@ -32,7 +31,7 @@ const Home: NextPage = () => {
           priority
         />
       </div>
-      <div id="empty-div-row"></div>
+      {/* <div id="empty-div-row"></div> */}
       <CenterContent>
         <p className={styles.huge_bold_text}>{indexTextArray[0]}</p>
       </CenterContent>
