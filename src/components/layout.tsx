@@ -1,4 +1,4 @@
-import NavBar from "./NavBar";
+import NavBar from "./navbar";
 import Footer from "./Footer";
 import { useWindowSize } from "../utils";
 import { LayoutProps } from "../types";

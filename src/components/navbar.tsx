@@ -30,7 +30,7 @@ export default function NavBar() {
   return (
     <>
       <nav className={headerClr ? 'navbg' : ''}>
-        <div className={navStyles.about}>  {/* className={navStyles.about  } */}
+        <div className={navStyles.about}>
           <Link href="/about">
             <a
               onClick={handleClick}
