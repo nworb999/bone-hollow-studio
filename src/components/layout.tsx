@@ -1,6 +1,5 @@
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import Head from "next/head";
 import { useWindowSize } from "../utils";
 import { LayoutProps } from "../types";
 import styles from "../styles/home.module.css";

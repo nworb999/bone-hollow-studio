@@ -68,6 +68,7 @@ const Home: NextPage = () => {
 
             <em>{home?.creditTextArray ? home.creditTextArray[2] : ""}</em>
           </p>
+          <br />
           <p className={styles.small_bold_text}>
             {home?.topText ? home.topText : ""}
           </p>
