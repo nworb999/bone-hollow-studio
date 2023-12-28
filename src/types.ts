@@ -5,6 +5,7 @@ export enum HomeType {
   meadowView = "meadowView",
   farmHouse = "farmHouse",
   owlsNest = "owl'sNest",
+  splitRock = "splitRock"
 }
 
 export interface Home {
