@@ -1,6 +1,12 @@
 import { Home, HomeType, Image } from "./types";
 import {
   livingroom,
+  splitRock,
+  splitBathroom,
+  splitKitchen,
+  splitLivingRoom,
+  splitOutside,
+  splitTile,
   fallBackImage,
   droneOwl,
   owlHall,
@@ -40,8 +46,10 @@ import {
   owlFoot,
   kitchenOwl,
   owlBed,
+  woodBathroom,
 } from "./images";
 import { formatName } from "./utils";
+
 
 export const projectsArray: Home[] = [
   {
@@ -51,7 +59,7 @@ export const projectsArray: Home[] = [
       { image: diningRoom, altText: "placeholder" },
     ],
     thumbnailImage: { image: farmFirePlace, altText: "placeholder" },
-    thumbnailCaption: [formatName({ name: HomeType.farmHouse }), "2017"],
+    thumbnailCaption: [formatName({ name: HomeType.farmHouse })],
     imageArray: [
       { image: meadowAngle, altText: "placeholder" },
       { image: kitchen, altText: "placeholder" },
@@ -73,14 +81,14 @@ export const projectsArray: Home[] = [
       { image: bedroom, altText: "placeholder" },
     ],
     thumbnailImage: { image: sideBarn, altText: "placeholder" },
-    thumbnailCaption: [formatName({ name: HomeType.guestBarn }), "2018"],
+    thumbnailCaption: [formatName({ name: HomeType.guestBarn })],
     imageArray: [
       { image: sideDrone, altText: "placeholder" },
       { image: library, altText: "placeholder" },
       { image: grandmasPiano, altText: "placeholder" },
     ],
     footerImage: { image: campfire, altText: "placeholder" },
-    topText: `Built in 2018 by Hudson Valley Homes & Renovations in collaboration with Bone Hollow Studio.  By design, the structure appears as an unassuming barn from the road. In reality it functions as the soul of the property - guest house, pool house, music room and great room.`,
+    topText: `This home is the result of a collaboration between Hudson Valley Homes & Renovations and Bone Hollow Studio.  By design, the structure appears as an unassuming barn from the road. In reality it functions as the soul of the property - guest house, pool house, music room and great room.`,
     creditTextArray: [
       `Builder: Hudson Valley Homes & Renovations`,
       `Designer: Bone Hollow Studio`,
@@ -92,7 +100,7 @@ export const projectsArray: Home[] = [
   {
     name: HomeType.meadowView,
     thumbnailImage: { image: corner, altText: "placeholder" },
-    thumbnailCaption: [formatName({ name: HomeType.meadowView }), "2022"],
+    thumbnailCaption: [formatName({ name: HomeType.meadowView })],
     coverImageArray: [
       { image: above, altText: "placeholder" },
       { image: windowCorner, altText: "placeholder" },
@@ -103,7 +111,7 @@ export const projectsArray: Home[] = [
       { image: officeWall, altText: "placeholder" },
     ],
     footerImage: { image: mantle, altText: "placeholder" },
-    topText: `Built in 2022 this home represents our approach to connecting the build and natural environment.  Textures and organic elements are the stars.`,
+    topText: `This home represents our approach to connecting the build and natural environment.  Textures and organic elements are the stars.`,
     creditTextArray: [
       `Builder: Hudson Valley Homes & Renovations`,
       `Designer: Bone Hollow Studio`,
@@ -125,8 +133,8 @@ export const projectsArray: Home[] = [
       { image: owlHall, altText: "placeholder" },
     ],
     footerImage: { image: owlFoot, altText: "placeholder" },
-    thumbnailCaption: [formatName({ name: HomeType.owlsNest }), "2022"],
-    topText: `Built in 2022, this home is named for the great horned owl sightings on the property. The upstairs is intimate while the great room is modern and elegant, perfect for showcasing artwork.`,
+    thumbnailCaption: [formatName({ name: HomeType.owlsNest })],
+    topText: `This home is named for the great horned owl sightings on the property. The upstairs is intimate while the great room is modern and elegant, perfect for showcasing artwork.`,
     creditTextArray: [
       `Builder: Hudson Valley Homes & Renovations`,
       `Designer: Bone Hollow Studio`,
@@ -137,6 +145,19 @@ export const projectsArray: Home[] = [
     ],
     textLeft: `We worked with the view, particularly out the back of the house where the gentle upward slope of the woods and stone wall provide great depth. We knew we wanted tall windows and glass doors to capture it.`,
   },
+  {
+    name: HomeType.splitRock,
+    thumbnailImage: { image: splitRock, altText: "placeholder" },
+    coverImageArray: [{ image: splitKitchen, altText: "placeholder" }, { image: woodBathroom, altText: "placeholder" }],
+    imageArray: [{ image: splitBathroom, altText: "placeholder" }, { image: splitLivingRoom, altText: "placeholder" }],
+    footerImage: { image: splitTile, altText: "placeholder" },
+    thumbnailCaption: [formatName({ name: HomeType.splitRock })],
+    topText: `This contemporary custom build is lofty and bright. Wideboard white oak flooring runs throughout and a large, two-story vaulted Great Room anchors the space.  A woodburning fireplace is at its center, clad in handmade encaustic tile in a perfect neutral shade.`,
+    creditTextArray: [`Builder: Hudson Valley Homes & Renovations`,
+      `Designer: Bone Hollow Studio`,],
+    textRight: [`Outdoor rooms have been created for entertaining with a dining area, sitting area, an incredible outdoor kitchen and a fire pit.`, `“This floor to ceiling fireplace designed by @bonehollowstudio embraces every ounce of variation in tone and thickness that our hand hewn cement tiles are known for,  It’s a surface that looks as warm and comfortable as your favorite down duvet.”`],
+    textLeft: `“Love seeing a developer with this taste level in my neck of the woods and another woman to boot!”`
+  }
 ];
 
 export const aboutImageArray: Image[] = [

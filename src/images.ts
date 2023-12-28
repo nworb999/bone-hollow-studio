@@ -50,8 +50,23 @@ import kitchenOwl from "../public/assets/owlsNest/kitchenOwl.jpg";
 import owlBed from "../public/assets/owlsNest/owlBed.jpg";
 import owlHall from "../public/assets/owlsNest/owlHall.jpg";
 
+import splitBathroom from "../public/assets/splitRock/splitBathroom.jpg"
+import splitKitchen from "../public/assets/splitRock/splitKitchen.jpg"
+import splitLivingRoom from "../public/assets/splitRock/splitLivingRoom.jpg"
+import splitOutside from "../public/assets/splitRock/splitOutside.jpg"
+import splitRock from "../public/assets/splitRock/splitRock.jpg"
+import splitTile from "../public/assets/splitRock/splitTile.jpg"
+import woodBathroom from "../public/assets/splitRock/woodBathroom.jpg"
+
 const fallBackImage = livingroom;
 export {
+  splitBathroom,
+  splitKitchen,
+  splitLivingRoom,
+  splitOutside,
+  splitRock,
+  splitTile,
+  woodBathroom,
   livingroom,
   kitchenOwl,
   owlBed,
