@@ -5,35 +5,14 @@ import navStyles from "../styles/navbar.module.css";
 
 export default function NavBar() {
 
-  const [scrollTop, setScrollTop] = useState(0);
-  const [headerClr, setHeaderClr] = useState(false);
-
-  const num: number = 10;
-
-  useEffect(() => {
-    function onScroll() {
-      let currentPosition = window.pageYOffset;
-      setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
-    }
-    scrollTop >= num ? setHeaderClr(true) : setHeaderClr(false);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-
-  }, [scrollTop]);
-
-
-  const handleClick = () => {
-    document.body.classList.add("transparent-nav");
-  };
-
   const router = useRouter();
   return (
     <>
-      <nav className={headerClr ? 'navbg' : ''}>
+      <nav className={navStyles.navbg}>
         <div className={navStyles.about}>
           <Link href="/about">
             <a
-              onClick={handleClick}
+
               className={router.pathname == "/about" ? "active" : ""}
             >
               <div className={navStyles.small_text}>about</div>
@@ -43,7 +22,7 @@ export default function NavBar() {
         <div className={navStyles.homes}>
           <Link href="/projects">
             <a
-              onClick={handleClick}
+
               className={router.pathname.includes("/projects") ? "active" : ""}
             >
               <div className={navStyles.small_text}>projects</div>
@@ -52,7 +31,7 @@ export default function NavBar() {
         </div>
         <div className={navStyles.title}>
           <Link href="/">
-            <a onClick={handleClick}>
+            <a>
               <div className={navStyles.big_text}>bone hollow studio</div>
             </a>
           </Link>
@@ -60,7 +39,6 @@ export default function NavBar() {
         <div className={navStyles.hudson_valley}>
           <Link href="/hudsonValley">
             <a
-              onClick={handleClick}
               className={router.pathname == "/hudsonValley" ? "active" : ""}
             >
               <div className={navStyles.small_text}>hudson valley</div>
@@ -70,7 +48,6 @@ export default function NavBar() {
         <div className={navStyles.contact}>
           <Link href="/contact">
             <a
-              onClick={handleClick}
               className={router.pathname == "/contact" ? "active" : ""}
             >
               <div className={navStyles.small_text}>contact</div>
