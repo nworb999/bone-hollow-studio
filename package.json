@@ -16,7 +16,7 @@
     "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
-    "@types/node": "20.0.0",
+    "@types/node": "20.10.0",
     "@types/react": "18.0.9",
     "@types/react-burger-menu": "^2.8.3",
     "@types/react-dom": "18.0.3",
