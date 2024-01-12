@@ -20,40 +20,39 @@ export default function HomeButton({
   };
   return (
     <div className={styles.article_style}>
-      {/* <div className={styles.image_wrapper}> */}
-      <Link
-        href={`/projects/${encodeURIComponent(home.name)}`}
-        as={`/projects/${encodeURIComponent(home.name)}`}
-        passHref
-        key={index}
-      >
-        <a
-          onClick={() => handleClick({ home })}
-          key={index}
+      <div className={styles.image_wrapper}>
+        <Link
           href={`/projects/${encodeURIComponent(home.name)}`}
-          ref={`/projects/${encodeURIComponent(home.name)}`}
+          as={`/projects/${encodeURIComponent(home.name)}`}
+          passHref
+          key={index}
         >
-          <Image
-            // className={styles.image}
-            alt={home.thumbnailImage.altText}
-            src={home.thumbnailImage.image}
-            width={1000}
-            height={800}
-            layout="responsive"
-            objectFit="contain"
+          <a
+            onClick={() => handleClick({ home })}
             key={index}
-          />
-        </a>
-      </Link>
-      <div className={styles.home_caption}>
-        {/* <div className={styles.text_left}> */}
-        <p className={styles.small_bold_text} color="black">
-          <b>{home.thumbnailCaption[0]}</b>
-          {home.thumbnailCaption[1]}{" "}
-        </p>
-        {/* </div> */}
+            href={`/projects/${encodeURIComponent(home.name)}`}
+            ref={`/projects/${encodeURIComponent(home.name)}`}
+          >
+            <Image
+              className={styles.image}
+              alt={home.thumbnailImage.altText}
+              src={home.thumbnailImage.image}
+              width={1000}
+              height={800}
+              layout="responsive"
+              objectFit="contain"
+              key={index}
+            />
+          </a>
+        </Link>
+        <div className={styles.home_caption}>
+
+          <p className={styles.small_bold_text}>
+            <b>{home.thumbnailCaption[0]}</b>
+            {home.thumbnailCaption[1]}{" "}
+          </p>
+        </div>
       </div>
-      {/* </div> */}
     </div>
   );
 }

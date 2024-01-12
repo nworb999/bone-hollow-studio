@@ -7,7 +7,7 @@ export default function NavBar() {
   const scrollTop = useRef(0);
   const [headerClr, setHeaderClr] = useState(false);
 
-  const num: Number = 10;
+  const num = 10;
 
   useEffect(() => {
     function onScroll() {

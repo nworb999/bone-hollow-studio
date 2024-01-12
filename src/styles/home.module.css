@@ -72,17 +72,17 @@
 
 .image {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-1%, -1%);
   max-width: 810px;
 }
 
 .image-wrapper {
   overflow: hidden;
   position: relative;
-  width: 37vw;
-  height: 50vh;
+  width: 37vw; 
+  height: 50vh; 
   text-align: center;
   margin: 1vw;
   transition: opacity 0.2s;
