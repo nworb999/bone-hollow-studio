@@ -1,0 +1,39 @@
+.carousel {
+    position: relative;
+    overflow: visible;
+    padding-bottom: 6rem;
+}
+
+
+.leftArrow, .rightArrow {
+    position: absolute;
+    bottom: 10%; 
+    color: #263430;
+    font-size: 42px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+}
+
+.leftArrow {
+    left: 40%;
+    transform: translateX(-60%);
+}
+
+.rightArrow {
+    right: 40%;
+    transform: translateX(-60%);
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media only screen and (max-width: 611px) {
+    .carousel {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+}
