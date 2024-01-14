@@ -37,8 +37,8 @@ const Home: NextPage = () => {
       <Head>
         <title>{formatName({ name: home?.name }) ?? "homes"}</title>
       </Head>
-      <div id="empty-div-row"></div>
-      <Script src="transparent.js" strategy="lazyOnload" />
+      {/* <div id="empty-div-row"></div>
+      <Script src="transparent.js" strategy="lazyOnload" /> */}
       <div className={styles.article_style}>
         <Content alignment="center">
           <p className={styles.header_text}>
@@ -65,6 +65,7 @@ const Home: NextPage = () => {
 
             <em>{home?.creditTextArray ? home.creditTextArray[2] : ""}</em>
           </p>
+          <br />
           <p className={styles.small_bold_text}>
             {home?.topText ? home.topText : ""}
           </p>

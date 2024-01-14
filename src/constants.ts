@@ -2,7 +2,7 @@ import { Home, HomeType, Image } from "./types";
 import {
   livingroom,
   splitRock,
-  splitBathroom,
+  splitFirePlace,
   splitKitchen,
   splitLivingRoom,
   splitOutside,
@@ -149,13 +149,13 @@ export const projectsArray: Home[] = [
     name: HomeType.splitRock,
     thumbnailImage: { image: splitRock, altText: "placeholder" },
     coverImageArray: [{ image: splitKitchen, altText: "placeholder" }, { image: woodBathroom, altText: "placeholder" }],
-    imageArray: [{ image: splitBathroom, altText: "placeholder" }, { image: splitLivingRoom, altText: "placeholder" }],
+    imageArray: [{ image: splitLivingRoom, altText: "placeholder" }, { image: splitFirePlace, altText: "placeholder" }, { image: splitOutside, altText: "placeholder" }],
     footerImage: { image: splitTile, altText: "placeholder" },
     thumbnailCaption: [formatName({ name: HomeType.splitRock })],
-    topText: `This contemporary custom build is lofty and bright. Wideboard white oak flooring runs throughout and a large, two-story vaulted Great Room anchors the space.  A woodburning fireplace is at its center, clad in handmade encaustic tile in a perfect neutral shade.`,
+    topText: `This contemporary custom build is lofty and bright. Wideboard white oak flooring runs throughout and a large, two-story vaulted Great Room anchors the space.  A woodburning fireplace is at its center, clad in handmade encaustic tile in a perfect neutral shade. Outdoor rooms have been created for entertaining with a dining area, sitting area, an incredible outdoor kitchen and a fire pit.`,
     creditTextArray: [`Builder: Hudson Valley Homes & Renovations`,
       `Designer: Bone Hollow Studio`,],
-    textRight: [`Outdoor rooms have been created for entertaining with a dining area, sitting area, an incredible outdoor kitchen and a fire pit.`, `“This floor to ceiling fireplace designed by @bonehollowstudio embraces every ounce of variation in tone and thickness that our hand hewn cement tiles are known for,  It’s a surface that looks as warm and comfortable as your favorite down duvet.”`],
+    textRight: `“This floor to ceiling fireplace designed by Bone Hollow Studio embraces every ounce of variation in tone and thickness that our hand hewn cement tiles are known for.  It’s a surface that looks as warm and comfortable as your favorite down duvet.” -- Zia Tile`,
     textLeft: `“Love seeing a developer with this taste level in my neck of the woods and another woman to boot!”`
   }
 ];
@@ -174,29 +174,29 @@ export const hudsonValleyImageArray: Image[] = [
 ];
 
 export const aboutTextArray: string[] = [
-  `Bone Hollow Studio is a woman-owned and operated development company.  
+  `Bone Hollow Studio is a woman - owned and operated development company.  
    Our unique approach allows us to create custom homes that integrate the 
-   natural appeal of their locations. Our ultimate goal is to create a 
+   natural appeal of their locations.  Our ultimate goal is to create a 
    fusion of architecture, landscape, and interior design with the environment 
-   taking the lead. We focus on building sustainable homes with reduced life-cycle 
+   taking the lead.  We focus on building sustainable homes with reduced life - cycle 
    environmental impacts.`,
-  `Our homes are characterized by restrained, neutral palettes and an elegant minimalism that allow details to shine. With our curated interiors, every element can build a dialogue. The outcome is a clean and modern space that is livable and warm.`,
-  `Erika grew up in Berlin, Germany and the American Midwest. A
+  `Our homes are characterized by restrained, neutral palettes and an elegant minimalism that allow details to shine.  With our curated interiors, every element can build a dialogue.  The outcome is a clean and modern space that is livable and warm.`,
+  `Erika grew up in Berlin, Germany and the American Midwest.  A
     graduate of Northwestern University, she has over 15 years of
-    experience in producing commercials and special effects for an
-    illustrious client base, amongst them Nike, Coca-Cola,
-    McDonald's, Chevrolet, and Anheuser Busch. Erika has also
-    worked in development and event planning for non-profits,
-    including Jersey Battered Women's Service.
+experience in producing commercials and special effects for an
+    illustrious client base, amongst them Nike, Coca - Cola,
+  McDonald's, Chevrolet, and Anheuser Busch. Erika has also
+worked in development and event planning for non - profits,
+  including Jersey Battered Women's Service.
     `,
   `Erika's latest work with the New York-based interior
-    designer, Amanda Rehbein Studio, has segued into the creation of
-    her company, Bone Hollow Studio. With a background in
-    advertising production and styling, Erika combines her passion
-    for creative design with a natural aptitude for project
-    management. She believes one's home should be unique,
+designer, Amanda Rehbein Studio, has segued into the creation of
+    her company, Bone Hollow Studio.  With a background in
+  advertising production and styling, Erika combines her passion
+for creative design with a natural aptitude for project
+    management.  She believes one's home should be unique,
     reflecting a deeply personal connection with the land.
-    Erika's goal is to create spaces that are at once impactful
+  Erika's goal is to create spaces that are at once impactful
     and livable, timeless and comfortable.`,
 ];
 
@@ -222,7 +222,7 @@ export const indexTextArray: string[] = [
   `Bone Hollow Studio is the meeting of rural tranquility and custom design.`,
   `Located in New York’s Hudson Valley, we specialize in curated and welcoming homes.`,
   `A boutique development company.`,
-  `Our work is founded on the belief that form and function are the sine qua non of a well-designed home.`,
+  `Our work is founded on the belief that form and function are the sine qua non of a well - designed home.`,
   `We apply that perspective to projects of every size, from home furnishing to new construction.`,
   `The spaces we create are characterized by luxurious textures, quality materials, and a minimalistic style, because we believe that the way your home feels is just as significant as how it looks.`,
   `In collaboration with local trades.`,

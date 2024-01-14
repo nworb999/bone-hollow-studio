@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       <Head>
         <title>about</title>
       </Head>
-      <Script src="transparent.js" strategy="lazyOnload" />
+      {/* <Script src="transparent.js" strategy="lazyOnload" /> */}
       <div className={styles.main_style}>
         <div id="empty-div-row"></div>
         <Content alignment="center">
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
           <Content alignment="right">
             <p className={styles.small_bold_text}>{aboutTextArray[0]}</p>
             <p className={styles.small_bold_text}>{aboutTextArray[1]}</p>
-            <p>
+            <div>
               <ul>
                 <li>
                   <u>
@@ -43,10 +43,10 @@ const Home: NextPage = () => {
                   </u>
                 </li>
               </ul>
-            </p>
+            </div>
           </Content>
         </div>
-        <p className={styles.header_text} style={{ marginBottom: "2rem" }}>
+        <p className={styles.header_text} style={{ marginBottom: "1rem" }}>
           Erika Brown
         </p>
         <p
