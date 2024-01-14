@@ -12,8 +12,8 @@ const Home: NextPage = () => {
       <Head>
         <title>hudson valley</title>
       </Head>
-      <Script src="transparent.js" strategy="lazyOnload" />
-      <div id="empty-div-row"></div>
+      {/* <Script src="transparent.js" strategy="lazyOnload" />
+      <div id="empty-div-row"></div> */}
       <div className={styles.main_style}>
         <p className={styles.header_text}>hudson valley</p>
         <div className={styles.home_cover}>

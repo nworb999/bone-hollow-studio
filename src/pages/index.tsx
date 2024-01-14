@@ -5,7 +5,6 @@ import Content from "../components/Content"
 import DynamicContent from '../components/DynamicContent';
 import { indexTextArray, indexImageArray } from "../constants";
 import styles from "../styles/home.module.css";
-import Script from "next/script";
 
 const Home: NextPage = () => {
 
@@ -15,7 +14,7 @@ const Home: NextPage = () => {
       <Head>
         <title>bone hollow studio - homepage</title>
       </Head>
-      <Script src="transparent.js" strategy="lazyOnload" />
+      {/* <Script src="transparent.js" strategy="lazyOnload" /> */}
       <div className={styles.main_style}>
         <Image
           alt={indexImageArray[0].altText}
@@ -57,6 +56,7 @@ const Home: NextPage = () => {
               width={500}
               height={500}
               objectFit="cover"
+              priority
             />
           </Content>
         ) : (
@@ -74,6 +74,7 @@ const Home: NextPage = () => {
           objectFit="cover"
           height="100vh"
           width="100vw"
+          priority
         />
       </div>
       <div className={styles.section_style}>
@@ -90,6 +91,7 @@ const Home: NextPage = () => {
               width={500}
               height={500}
               objectFit="cover"
+              priority
             />
           </Content>
         ))} />
@@ -101,6 +103,7 @@ const Home: NextPage = () => {
               width={500}
               height={500}
               objectFit="cover"
+              priority
             />
           </Content>
         ) : (
@@ -129,6 +132,7 @@ const Home: NextPage = () => {
             width={500}
             height={500}
             objectFit="cover"
+            priority
           />
         </Content>
       </div>
@@ -177,7 +181,9 @@ const Home: NextPage = () => {
         />
       </div>
       <Content alignment="center">
-        <p className={styles.huge_bold_text}>{indexTextArray[8]}</p>
+        <div className={styles.bottom_page_text}>
+          <p className={styles.huge_bold_text}>{indexTextArray[8]}</p>
+        </div>
       </Content>
     </>
   );

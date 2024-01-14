@@ -7,7 +7,7 @@
   grid-auto-rows: minmax(100px, auto);
   text-align: left;
   height: 320px;
-  padding: 2.5rem;
+  padding: 3rem;
   margin-top: auto;
 }
 
@@ -16,6 +16,15 @@
   color: #c0c0c0;
   text-decoration: none;
 }
+
+.footer a:active {
+  font-weight: bold;
+}
+
+.footer a:hover {
+  font-style: italic;
+}
+
 
 .footer_title {
   font-family: "Inconsolata", monospace;
@@ -54,8 +63,7 @@
 }
 
 .footer_image {
-  margin: 1rem;
-  margin-bottom: 7rem;
+  margin: 1rem 1rem 7rem;
 }
 
 .footer_text {

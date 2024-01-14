@@ -50,7 +50,7 @@ import kitchenOwl from "../public/assets/owlsNest/kitchenOwl.jpg";
 import owlBed from "../public/assets/owlsNest/owlBed.jpg";
 import owlHall from "../public/assets/owlsNest/owlHall.jpg";
 
-import splitBathroom from "../public/assets/splitRock/splitBathroom.jpg"
+import splitFirePlace from "../public/assets/splitRock/splitFirePlace.jpg"
 import splitKitchen from "../public/assets/splitRock/splitKitchen.jpg"
 import splitLivingRoom from "../public/assets/splitRock/splitLivingRoom.jpg"
 import splitOutside from "../public/assets/splitRock/splitOutside.jpg"
@@ -60,7 +60,7 @@ import woodBathroom from "../public/assets/splitRock/woodBathroom.jpg"
 
 const fallBackImage = livingroom;
 export {
-  splitBathroom,
+  splitFirePlace,
   splitKitchen,
   splitLivingRoom,
   splitOutside,
