@@ -1,14 +1,15 @@
 import type { NextPage } from "next";
+import Script from "next/script";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from "../../styles/home.module.css";
 import footerStyles from "../../styles/footer.module.css";
 import Content from "../../components/Content"
+import Carousel from '../../components/Carousel';
 import { fallBackImage } from "../../images";
 import { projectsArray } from "../../constants";
-import Script from "next/script";
 import { formatName, useWindowSize } from "../../utils";
-import Head from "next/head";
 
 export const config = {
   unstable_includeFiles: [
@@ -148,19 +149,8 @@ const Home: NextPage = () => {
         </Content>
       </div>
 
-      <div id="coverPhoto" className={styles.home_cover}>
-        <Image
-          alt={home?.coverImageArray ? home.coverImageArray[1]?.altText : ""}
-          src={
-            home?.coverImageArray
-              ? home.coverImageArray[1]?.image
-              : fallBackImage
-          }
-          layout="responsive"
-          objectPosition="relative"
-          objectFit="cover"
-          priority
-        />
+      <div>
+        <Carousel images={home?.coverImageArray ? home?.coverImageArray.map(({ image }) => image) : [fallBackImage]} />
       </div>
 
       <div className={footerStyles.footer_image}>
