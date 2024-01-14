@@ -11,8 +11,8 @@ const Home: NextPage = () => {
       <Head>
         <title>contact</title>
       </Head>
-      <Script src="transparent.js" strategy="lazyOnload" />
-      <div id="empty-div-row"></div>
+      {/* <Script src="transparent.js" strategy="lazyOnload" />
+      <div id="empty-div-row"></div> */}
       <div className={styles.main_style}>
         <p className={styles.header_text}>contact</p>
         <div className={styles.contact_container}>

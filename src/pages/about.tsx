@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       <Head>
         <title>about</title>
       </Head>
-      <Script src="transparent.js" strategy="lazyOnload" />
+      {/* <Script src="transparent.js" strategy="lazyOnload" /> */}
       <div className={styles.main_style}>
         <div id="empty-div-row"></div>
         <Content alignment="center">
