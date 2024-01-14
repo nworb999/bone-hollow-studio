@@ -47,7 +47,7 @@
 }
 
 .home_caption {
-  text-align: left;
+  text-align: center;
   padding-top: 0px;
   margin: 0;
   font-size: 1.25rem;
@@ -101,7 +101,7 @@
   font-family: "Chivo", sans-serif;
   align-items: center;
   color: #263430;
-  max-width: 80%;
+  max-width: 70%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 6rem;
@@ -171,6 +171,11 @@
   text-align: right;
   margin: 1rem;
 }
+
+.bottom_page_text {
+  padding: 1rem;
+}
+
 
 @media only screen and (max-width: 611px) {
   .section_style {

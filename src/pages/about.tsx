@@ -46,7 +46,7 @@ const Home: NextPage = () => {
             </div>
           </Content>
         </div>
-        <p className={styles.header_text} style={{ marginBottom: "2rem" }}>
+        <p className={styles.header_text} style={{ marginBottom: "1rem" }}>
           Erika Brown
         </p>
         <p

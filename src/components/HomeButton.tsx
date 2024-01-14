@@ -46,7 +46,14 @@ export default function HomeButton({
           </a>
         </Link>
         <div className={styles.home_caption}>
-          <b>{home.thumbnailCaption[0]}</b>
+          <Link
+            href={`/projects/${encodeURIComponent(home.name)}`}
+            as={`/projects/${encodeURIComponent(home.name)}`}
+            passHref
+            key={index}
+          >
+            <a>{home.thumbnailCaption[0]}</a>
+          </Link>
         </div>
       </div>
     </div>

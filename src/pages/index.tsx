@@ -5,7 +5,6 @@ import Content from "../components/Content"
 import DynamicContent from '../components/DynamicContent';
 import { indexTextArray, indexImageArray } from "../constants";
 import styles from "../styles/home.module.css";
-import Script from "next/script";
 
 const Home: NextPage = () => {
 
@@ -182,7 +181,9 @@ const Home: NextPage = () => {
         />
       </div>
       <Content alignment="center">
-        <p className={styles.huge_bold_text}>{indexTextArray[8]}</p>
+        <div className={styles.bottom_page_text}>
+          <p className={styles.huge_bold_text}>{indexTextArray[8]}</p>
+        </div>
       </Content>
     </>
   );

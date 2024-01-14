@@ -176,7 +176,7 @@ export const hudsonValleyImageArray: Image[] = [
 export const aboutTextArray: string[] = [
   `Bone Hollow Studio is a woman - owned and operated development company.  
    Our unique approach allows us to create custom homes that integrate the 
-   natural appeal of their locations.Our ultimate goal is to create a 
+   natural appeal of their locations.  Our ultimate goal is to create a 
    fusion of architecture, landscape, and interior design with the environment 
    taking the lead.  We focus on building sustainable homes with reduced life - cycle 
    environmental impacts.`,
