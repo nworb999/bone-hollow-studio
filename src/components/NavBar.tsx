@@ -1,9 +1,29 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import navStyles from "../styles/navbar.module.css";
 
 export default function NavBar() {
+
+  const scrollTop = useRef(0);
+  const [headerClr, setHeaderClr] = useState(false);
+
+  const num: number = 10;
+
+  useEffect(() => {
+    function onScroll() {
+      let currentPosition = window.pageYOffset;
+      scrollTop.current = currentPosition <= 0 ? 0 : currentPosition;
+    }
+    const scrollValue = scrollTop.current;
+    scrollValue >= num ? setHeaderClr(true) : setHeaderClr(false);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  });
+
+  const handleClick = () => {
+    document.body.classList.add("transparent-nav");
+  };
 
   const router = useRouter();
   return (
@@ -58,4 +78,3 @@ export default function NavBar() {
     </>
   );
 }
-

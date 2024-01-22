@@ -3,14 +3,9 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from "../../styles/home.module.css";
 import footerStyles from "../../styles/footer.module.css";
+import Content from "../../components/Content"
 import { fallBackImage } from "../../images";
 import { projectsArray } from "../../constants";
-
-import {
-  CenterContent,
-  LeftContent,
-  RightContent,
-} from "../../components/Containers";
 import Script from "next/script";
 import { formatName, useWindowSize } from "../../utils";
 import Head from "next/head";
@@ -44,23 +39,24 @@ const Home: NextPage = () => {
       {/* <div id="empty-div-row"></div>
       <Script src="transparent.js" strategy="lazyOnload" /> */}
       <div className={styles.article_style}>
-        <CenterContent>
+        <Content alignment="center">
           <p className={styles.header_text}>
             {formatName({ name: home?.name })}
           </p>
-        </CenterContent>
+        </Content>
       </div>
       <div className={styles.section_style}>
-        <LeftContent>
+        <Content alignment="left">
           <Image
             alt={home?.imageArray ? home.imageArray[0]?.altText : ""}
             src={home?.imageArray ? home.imageArray[0]?.image : fallBackImage}
             width={500}
             height={500}
             objectFit="cover"
+            priority
           />
-        </LeftContent>
-        <RightContent>
+        </Content>
+        <Content alignment="right">
           <p className={styles.small_bold_text}>
             <em>{home?.creditTextArray ? home.creditTextArray[0] : ""}</em>
 
@@ -72,7 +68,7 @@ const Home: NextPage = () => {
           <p className={styles.small_bold_text}>
             {home?.topText ? home.topText : ""}
           </p>
-        </RightContent>
+        </Content>
       </div>
       <div id="coverPhoto" className={styles.home_cover}>
         {" "}
@@ -86,28 +82,30 @@ const Home: NextPage = () => {
           layout="responsive"
           objectPosition="relative"
           objectFit="cover"
+          priority
         />
       </div>
       <div className={styles.section_style}>
         {mobileOrderFlag ? (
-          <RightContent>
-            <div className={styles.bold_text}>
+          <Content alignment="right">
+            <p className={styles.bold_text}>
               {handleTextString(home?.textRight)}
-            </div>
-          </RightContent>
+            </p>
+          </Content>
         ) : (
-          <LeftContent>
+          <Content alignment="left">
             <Image
               alt={home?.imageArray ? home.imageArray[1]?.altText : ""}
               src={home?.imageArray ? home.imageArray[1]?.image : fallBackImage}
               width={500}
               height={500}
               objectFit="cover"
+              priority
             />
-          </LeftContent>
+          </Content>
         )}
         {mobileOrderFlag ? (
-          <LeftContent>
+          <Content alignment="left">
             {" "}
             <Image
               alt={home?.imageArray ? home.imageArray[1]?.altText : ""}
@@ -115,37 +113,39 @@ const Home: NextPage = () => {
               width={500}
               height={500}
               objectFit="cover"
+              priority
             />{" "}
-          </LeftContent>
+          </Content>
         ) : (
-          <RightContent>
-            <div className={styles.bold_text}>
+          <Content alignment="right">
+            <p className={styles.bold_text}>
               {handleTextString(home?.textRight)}
-            </div>
-          </RightContent>
+            </p>
+          </Content>
         )}
         {mobileOrderFlag ? (
-          <RightContent>
-            <div className={styles.bold_text}>
+          <Content alignment="right">
+            <p className={styles.bold_text}>
               {handleTextString(home?.textLeft)}
-            </div>
-          </RightContent>
+            </p>
+          </Content>
         ) : (
-          <LeftContent>
-            <div className={styles.bold_text}>
+          <Content alignment="left">
+            <p className={styles.bold_text}>
               {handleTextString(home?.textLeft)}
-            </div>
-          </LeftContent>
+            </p>
+          </Content>
         )}
-        <RightContent>
+        <Content alignment="right">
           <Image
             alt={home?.imageArray ? home.imageArray[2]?.altText : ""}
             src={home?.imageArray ? home.imageArray[2]?.image : fallBackImage}
             width={500}
             height={500}
             objectFit="cover"
+            priority
           />
-        </RightContent>
+        </Content>
       </div>
 
       <div id="coverPhoto" className={styles.home_cover}>
@@ -159,11 +159,12 @@ const Home: NextPage = () => {
           layout="responsive"
           objectPosition="relative"
           objectFit="cover"
+          priority
         />
       </div>
 
       <div className={footerStyles.footer_image}>
-        <CenterContent>
+        <Content alignment="center">
           {
             <Image
               alt={home?.footerImage ? home.footerImage?.altText : ""}
@@ -171,9 +172,10 @@ const Home: NextPage = () => {
               width={500}
               height={500}
               objectFit="cover"
+              priority
             />
           }
-        </CenterContent>
+        </Content>
       </div>
     </>
   );

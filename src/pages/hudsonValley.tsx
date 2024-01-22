@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Script from "next/script";
-import { CenterContent } from "../components/Containers";
+import Content from "../components/Content"
 import { hudsonValleyImageArray } from "../constants";
 import Image from "next/image";
 import styles from "../styles/home.module.css";
@@ -25,10 +25,11 @@ const Home: NextPage = () => {
             objectFit="cover"
             height="100vh"
             width="100vw"
+            priority
           />
         </div>
         <div className={styles.contact_container}>
-          <CenterContent>
+          <Content alignment="center">
             <p className={styles.small_header_text}>recreation</p>
             <p className={styles.contact_text}>
               <strong>
@@ -68,10 +69,10 @@ const Home: NextPage = () => {
               Ulster County has done an amazing job creating rail trails that
               are bike and hike ready.
             </p>
-          </CenterContent>
+          </Content>
         </div>
         <div className={styles.contact_container}>
-          <CenterContent>
+          <Content alignment="center">
             <p className={styles.small_header_text}>food and lodging</p>
             <p className={styles.contact_text}>
               <strong>
@@ -130,7 +131,7 @@ const Home: NextPage = () => {
               <br />
               <br />
             </p>
-          </CenterContent>
+          </Content>
         </div>
       </div>
     </>

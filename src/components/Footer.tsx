@@ -24,7 +24,7 @@ export default function Footer() {
           <p>© bone hollow studio llc</p>
           <p>
             {" "}
-            <a href="https://www.instagram.com/cy_kim___/">
+            <a href="https://www.cy-kim.com/about">
               designed by <u>cy kim</u>
             </a>
           </p>
@@ -44,4 +44,3 @@ export default function Footer() {
     </>
   );
 }
-

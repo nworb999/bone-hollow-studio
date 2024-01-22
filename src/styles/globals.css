@@ -67,6 +67,11 @@ nav a:hover {
 
 nav a.active {
   border-color: #263430;
+  font-weight: bold;
+}
+
+nav a:hover {
+  font-style: italic;
 }
 
 h1 {
@@ -86,15 +91,14 @@ ul {
 
 a {
   color: #263430;
-  /* color: rgb(38, 51, 48); */
   text-decoration: none;
 }
 
-p a:active {
+a:active {
   font-weight: bold;
 }
 
-p a:hover {
+a:hover {
   font-style: italic;
 }
 
