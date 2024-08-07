@@ -81,6 +81,7 @@ const Home: NextPage = () => {
         <DynamicContent render={mobileOrderFlag => (mobileOrderFlag ? (
           <Content alignment="right">
             <p className={styles.bold_text}>{indexTextArray[2]}</p>
+            <p></p>
             <p className={styles.small_bold_text}>{indexTextArray[3]}</p>
           </Content>
         ) : (
@@ -109,6 +110,7 @@ const Home: NextPage = () => {
         ) : (
           <Content alignment="right">
             <p className={styles.bold_text}>{indexTextArray[2]}</p>
+            <p></p>
             <p className={styles.small_bold_text}>{indexTextArray[3]}</p>
           </Content>
         ))} />
@@ -117,11 +119,13 @@ const Home: NextPage = () => {
         <DynamicContent render={mobileOrderFlag => (mobileOrderFlag ? (
           <Content alignment="right">
             <p className={styles.bold_text}>{indexTextArray[4]}</p>
+            <p></p>
             <p className={styles.small_bold_text}>{indexTextArray[5]}</p>
           </Content>
         ) : (
           <Content alignment="left">
             <p className={styles.bold_text}>{indexTextArray[4]}</p>
+            <p></p>
             <p className={styles.small_bold_text}>{indexTextArray[5]}</p>
           </Content>
         ))} />
@@ -151,11 +155,13 @@ const Home: NextPage = () => {
         <DynamicContent render={mobileOrderFlag => (mobileOrderFlag ? (
           <Content alignment="right">
             <p className={styles.bold_text}>{indexTextArray[6]}</p>
+            <p></p>
             <p className={styles.small_bold_text}>{indexTextArray[7]}</p>
           </Content>
         ) : (
           <Content alignment="left">
             <p className={styles.bold_text}>{indexTextArray[6]}</p>
+            <p></p>
             <p className={styles.small_bold_text}>{indexTextArray[7]}</p>
           </Content>
         ))} />
