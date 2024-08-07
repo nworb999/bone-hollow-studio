@@ -172,9 +172,9 @@ export const projectsArray: Home[] = [
   {
     name: HomeType.lostQuarry,
     thumbnailImage: { image: front, altText: "placeholder" },
-    coverImageArray: [{ image: bathroomQuarry, altText: "placeholder" }, { image: officeQuarry, altText: "placeholder" }],
-    imageArray: [{ image: recroomQuarry, altText: "placeholder" }, { image: kitchensideQuarry, altText: "placeholder" }, { image: twinQuarry, altText: "placeholder" }],
-    footerImage: { image: cornerQuarry, altText: "placeholder" },
+    coverImageArray: [{ image: kitchensideQuarry, altText: "placeholder" }, { image: officeQuarry, altText: "placeholder" }],
+    imageArray: [{ image: cornerQuarry, altText: "placeholder" }, { image: fireplaceQuarry, altText: "placeholder" }, { image: reccornerQuarry, altText: "placeholder" }],
+    footerImage: { image: bathroomQuarry, altText: "placeholder" },
     thumbnailCaption: [formatName({ name: HomeType.lostQuarry })],
     topText: `Lost Quarry Farm is your quintessential country farmhouse, set back from a quiet dirt road on five acres of lawn and woodlands with classic nine-over-nine windows and two brick chimneys lining the facade. Inside, historical details have been added to bring warmth and history to the new home.`,
     creditTextArray: [`Builder: Hudson Valley Homes & Renovations`,
