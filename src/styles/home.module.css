@@ -25,12 +25,6 @@
   padding-bottom: 6rem;
 }
 
-.media_style {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-}
-
 .home_cover {
   z-index: -1;
   overflow: visible;
@@ -53,15 +47,8 @@
 }
 
 .home_caption {
-  text-align: center;
+  margin-top: 0px;
   padding-top: 0px;
-  margin: 0;
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
-  font-family: "Inconsolata", monospace;
-  flex-direction: column;
-  color: #263430;
 }
 
 .leaf_button a {
@@ -72,7 +59,7 @@
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
-  font-family: "Inconsolata", monospace;
+  font-family: "Open Sans";
   flex-direction: column;
   color: #263430;
 }
@@ -81,33 +68,15 @@
   border-color: #263430;
 }
 
-.image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-1%, -1%);
-  max-width: 810px;
-}
-
-.image-wrapper {
-  overflow: hidden;
-  position: relative;
-  width: 37vw;
-  height: 50vh;
-  text-align: center;
-  margin: 1vw;
-  transition: opacity 0.2s;
-}
-
 /* text styles */
 
 .huge_bold_text {
-  font-size: 2.25rem;
+  font-size: 2rem;
   justify-content: center;
-  font-family: "Inconsolata", monospace;
+  font-family: "Chivo", sans-serif;
   align-items: center;
-  color: #263430;
-  max-width: 70%;
+  color: #000000;
+  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 6rem;
@@ -115,39 +84,38 @@
 }
 
 .bold_text {
-  margin: 0;
   font-size: 1.25rem;
   display: flex;
   justify-content: center;
-  font-family: "Inconsolata", monospace;
+  font-family: "Open Sans";
   flex-direction: column;
-  color: #263430;
+  color: #000000;
 }
 
 .small_bold_text {
-  margin: 0;
+  /* margin: 0; */
   font-size: 1rem;
   display: flex;
   justify-content: center;
-  font-family: "Inconsolata", monospace;
+  font-family: "Open Sans";
   flex-direction: column;
-  color: #263430;
+  color: #000000;
 }
 
 .contact_text {
   margin: 0;
   padding: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   inline-size: 35rem;
   overflow: hidden;
   justify-content: center;
-  font-family: "Inconsolata", monospace;
-  color: #263430;
+  font-family: "Open Sans";
+  color: #000000;
 }
 
 .header_text {
-  color: #263430;
-  font-size: 2.75rem;
+  color: #375051;
+  font-size: 2.5rem;
   margin: 0;
   align-content: center;
   margin-bottom: 4rem;
@@ -156,11 +124,11 @@
 }
 
 .small_header_text {
-  color: #263430;
-  font-size: 1.75rem;
+  color: #375051;
+  font-size: 1.5rem;
   margin: 0;
   margin-bottom: 1.5rem;
-  font-family: "Inconsolata", monospace;
+  font-family: "Chivo", sans-serif;
 }
 
 .center_text {
@@ -176,10 +144,6 @@
 .text_right {
   text-align: right;
   margin: 1rem;
-}
-
-.bottom_page_text {
-  padding: 1rem;
 }
 
 @media only screen and (max-width: 611px) {
