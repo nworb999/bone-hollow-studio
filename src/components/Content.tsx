@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
-import { LeftContent, RightContent, CenterContent } from './Containers';
+import { LeftContent, RightContent, CenterContent, MediaContent } from './Containers';
 
 type ContentProps = {
-    alignment: 'left' | 'right' | 'center';
+    alignment: 'left' | 'right' | 'center' | 'media';
     children: ReactNode;
 };
 
@@ -14,6 +14,8 @@ const Content: React.FC<ContentProps> = ({ alignment, children }) => {
             return <RightContent>{children}</RightContent>;
         case 'center':
             return <CenterContent>{children}</CenterContent>;
+        case 'media':
+            return <MediaContent>{children}</MediaContent>;
         default:
             return null;
     }

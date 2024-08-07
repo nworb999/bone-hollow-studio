@@ -23,9 +23,11 @@ export default function Footer() {
         <div className={styles.footer_copyright}>
           <p>© bone hollow studio llc</p>
           <p>
-            {" "}
-            <a href="https://www.cy-kim.com/about">
-              designed by <u>cy kim</u>
+            {" "}designed by{" "}
+            <a href="https://github.com/cy-kim">
+              <u>cy kim</u>,
+            </a>  built by {" "}<a href="https://nworb.io">
+              <u>emma brown</u>
             </a>
           </p>
         </div>

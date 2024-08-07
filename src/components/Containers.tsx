@@ -22,6 +22,17 @@ export function RightContent({ children }: LayoutProps) {
   );
 }
 
+export function MediaContent({ children }: LayoutProps) {
+  return (
+    <>
+      {" "}
+      <div className={styles.media_style}>
+        <div className={styles.text_left}>{children}</div>
+      </div>
+    </>
+  );
+}
+
 export function CenterContent({ children }: LayoutProps) {
   return (
     <>

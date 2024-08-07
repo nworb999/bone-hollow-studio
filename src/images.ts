@@ -10,7 +10,7 @@ import first from "../public/assets/index/first.jpg";
 
 /* about pics **/
 import erika from "../public/assets/about/erika.jpg";
-import umbrellas from "../public/assets/about/umbrellas.jpg";
+import houseErika from "../public/assets/about/house-shot.jpg";
 
 /* hudson valley pics */
 import droneOwl from "../public/assets/hudsonValley/droneOwl.jpg";
@@ -58,6 +58,18 @@ import splitRock from "../public/assets/splitRock/splitRock.jpg"
 import splitTile from "../public/assets/splitRock/splitTile.jpg"
 import woodBathroom from "../public/assets/splitRock/woodBathroom.jpg"
 
+import bathroomQuarry from "../public/assets/lostQuarry/bathroom.jpg"
+import cornerQuarry from "../public/assets/lostQuarry/corner.jpg"
+import fireplaceQuarry from "../public/assets/lostQuarry/fireplace.jpg"
+import front from "../public/assets/lostQuarry/front.jpg"
+import kitchenQuarry from "../public/assets/lostQuarry/kitchen.jpg"
+import kitchensideQuarry from "../public/assets/lostQuarry/kitchenside.jpg"
+import officeQuarry from "../public/assets/lostQuarry/office.jpg"
+import reccornerQuarry from "../public/assets/lostQuarry/reccorner.jpg"
+import recroomQuarry from "../public/assets/lostQuarry/recroom.jpg"
+import twinQuarry from "../public/assets/lostQuarry/twin.jpg"
+import wideQuarry from "../public/assets/lostQuarry/wide.jpg"
+
 const fallBackImage = livingroom;
 export {
   splitFirePlace,
@@ -66,6 +78,17 @@ export {
   splitOutside,
   splitRock,
   splitTile,
+  bathroomQuarry,
+  cornerQuarry,
+  fireplaceQuarry,
+  front,
+  kitchenQuarry,
+  kitchensideQuarry,
+  officeQuarry,
+  reccornerQuarry,
+  recroomQuarry,
+  twinQuarry,
+  wideQuarry,
   woodBathroom,
   livingroom,
   kitchenOwl,
@@ -84,7 +107,7 @@ export {
   first,
   erika,
   owlPond,
-  umbrellas,
+  houseErika,
   corner,
   above,
   office,

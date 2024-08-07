@@ -7,6 +7,17 @@ import {
   splitLivingRoom,
   splitOutside,
   splitTile,
+  bathroomQuarry,
+  cornerQuarry,
+  fireplaceQuarry,
+  front,
+  kitchenQuarry,
+  kitchensideQuarry,
+  officeQuarry,
+  reccornerQuarry,
+  recroomQuarry,
+  twinQuarry,
+  wideQuarry,
   fallBackImage,
   droneOwl,
   owlHall,
@@ -18,7 +29,7 @@ import {
   erika,
   book,
   owlPond,
-  umbrellas,
+  houseErika,
   corner,
   first,
   above,
@@ -157,12 +168,26 @@ export const projectsArray: Home[] = [
       `Designer: Bone Hollow Studio`,],
     textRight: `“This floor to ceiling fireplace designed by Bone Hollow Studio embraces every ounce of variation in tone and thickness that our hand hewn cement tiles are known for.  It’s a surface that looks as warm and comfortable as your favorite down duvet.” -- Zia Tile`,
     textLeft: `“Love seeing a developer with this taste level in my neck of the woods and another woman to boot!”`
+  },
+  {
+    name: HomeType.lostQuarry,
+    thumbnailImage: { image: front, altText: "placeholder" },
+    coverImageArray: [{ image: bathroomQuarry, altText: "placeholder" }, { image: officeQuarry, altText: "placeholder" }],
+    imageArray: [{ image: recroomQuarry, altText: "placeholder" }, { image: kitchensideQuarry, altText: "placeholder" }, { image: twinQuarry, altText: "placeholder" }],
+    footerImage: { image: cornerQuarry, altText: "placeholder" },
+    thumbnailCaption: [formatName({ name: HomeType.lostQuarry })],
+    topText: `Lost Quarry Farm is your quintessential country farmhouse, set back from a quiet dirt road on five acres of lawn and woodlands with classic nine-over-nine windows and two brick chimneys lining the facade. Inside, historical details have been added to bring warmth and history to the new home.`,
+    creditTextArray: [`Builder: Hudson Valley Homes & Renovations`,
+      `Designer: Bone Hollow Studio`,],
+    textRight: [`The kitchen is the heart of the home with plenty of room to congregate around a large central island, room for a 12-person dining table and loads of storage space.`, `The magic is in the details here, with classic Carrara marble countertops, handmade tiles, deVOL task lighting and a beautiful mix of chrome and brass hardware.`],
+    textLeft: [`The rhythm of this home is easy and quiet with bold and lively moments meant to bring people together.`, `Modernist sensibilities provide a foundation while antiquities and curated details imbue and balance.`]
   }
 ];
 
 export const aboutImageArray: Image[] = [
-  { image: umbrellas, altText: "chairs" },
   { image: erika, altText: "door" },
+  { image: houseErika, altText: "chairs" }
+  ,
 ];
 
 export const hudsonValleyImageArray: Image[] = [
@@ -181,7 +206,7 @@ export const aboutTextArray: string[] = [
    taking the lead.  We focus on building sustainable homes with reduced life - cycle 
    environmental impacts.`,
   `Our homes are characterized by restrained, neutral palettes and an elegant minimalism that allow details to shine.  With our curated interiors, every element can build a dialogue.  The outcome is a clean and modern space that is livable and warm.`,
-  `Erika grew up in Berlin, Germany and the American Midwest.  A
+  `Erika grew up in Berlin, Germany and the American Midwest.`, `A
     graduate of Northwestern University, she has over 15 years of
 experience in producing commercials and special effects for an
     illustrious client base, amongst them Nike, Coca - Cola,
@@ -199,6 +224,8 @@ for creative design with a natural aptitude for project
   Erika's goal is to create spaces that are at once impactful
     and livable, timeless and comfortable.`,
 ];
+
+export const pressArray: string[] = []
 
 export const indexImageArray: Image[] = [
   {
