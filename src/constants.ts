@@ -182,12 +182,11 @@ export const projectsArray: Home[] = [
     textRight: [`The kitchen is the heart of the home with plenty of room to congregate around a large central island, room for a 12-person dining table and loads of storage space.`, `The magic is in the details here, with classic Carrara marble countertops, handmade tiles, deVOL task lighting and a beautiful mix of chrome and brass hardware.`],
     textLeft: [`The rhythm of this home is easy and quiet with bold and lively moments meant to bring people together.`, `Modernist sensibilities provide a foundation while antiquities and curated details imbue and balance.`]
   }
-];
+].reverse();
 
 export const aboutImageArray: Image[] = [
-  { image: erika, altText: "door" },
-  { image: houseErika, altText: "chairs" }
-  ,
+  { image: houseErika, altText: "chairs" },
+  { image: erika, altText: "door" }
 ];
 
 export const hudsonValleyImageArray: Image[] = [

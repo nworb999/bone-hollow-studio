@@ -101,8 +101,7 @@ const Home: NextPage = () => {
                     had an accepted offer within three days for a really sweet
                     four-bedroom home at 159 Bone Hollow Road in the Ulster County
                     hamlet of Accord. The 3,282-square-foot new house on 5.2 acres
-                    was listed for $2.145 million with Laurel Sweeney, of
-                    Berkshire Hathaway HomeServices Nutshell Realty in High Falls.
+                    was listed for $2.145 million.
                   </p><p>
                     With superb construction by local builder Hudson Valley Homes
                     & Renovations, the contemporary offers a big-volume great room
