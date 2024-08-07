@@ -7,7 +7,7 @@
   grid-auto-rows: minmax(100px, auto);
   text-align: left;
   height: 320px;
-  padding: 3rem;
+  padding: 2.5rem;
   margin-top: auto;
 }
 
@@ -24,7 +24,6 @@
 .footer a:hover {
   font-style: italic;
 }
-
 
 .footer_title {
   font-family: "Inconsolata", monospace;
@@ -63,7 +62,8 @@
 }
 
 .footer_image {
-  margin: 1rem 1rem 7rem;
+  margin: 1rem;
+  margin-bottom: 6rem;
 }
 
 .footer_text {
